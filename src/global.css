@@ -1,0 +1,134 @@
+/* global css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1020px){
+  p{
+    font-size: small;
+  }
+}
+
+body {
+  background-color: #000;
+  height: 100vh;
+}
+
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.btn-contato button {
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #00ff08;
+  border: 0;
+  border-radius: 30px;
+  transition: all.2s;
+}
+.linkedin button {
+  background-color: rgba(23, 23, 234, 0.873);
+  color: #fff;
+}
+.linkedin button:hover {
+  box-shadow: 0px 0px 8px rgb(31, 31, 244);
+  transform: scale(1.05);
+}
+
+.curriculo button, .github button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(45, 45, 45);
+  margin-bottom: 25px;
+
+}
+.curriculo button:hover, .github button:hover {
+  box-shadow: 0px 0px 8px rgb(30, 30, 30);
+  transform: scale(1.05);
+}
+@media (max-width: 1020px) {
+  .curriculo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .curriculo button{
+    font-size: small;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+button:hover {
+  box-shadow: 0px 0px 8px #00ff08;
+  transform: scale(1.05);
+}
+
+.titulo {
+  color: #fff;
+  font-size: 38px;
+  text-align: center;
+}
+
+h2 span {
+  color: #00ff08;
+}
+
+.btn-social button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #00ff08;
+  font-size: 25px;
+  cursor: pointer;
+  padding-top: 8px;
+  margin: 0 5px;
+  transition: all.2s;
+}
+
+/* gerais */
+@media (max-width: 1020px) {
+  .flex {
+    flex-direction: column;
+  }
+  h2.titulo {
+    font-size: 34px;
+    text-align: center;
+    line-height: 30px;
+  }
+}
+
+
+
+/* Atribui estilos básicos à scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* largura da scrollbar */
+}
+
+/* Define o estilo da track (pista) */
+::-webkit-scrollbar-track {
+  background: #e2e1e1; /* cor de fundo da pista */
+  border-radius: 10px; /* cantos arredondados */
+}
+
+/* Define o estilo do thumb (polegar) */
+::-webkit-scrollbar-thumb {
+  background: #888888; /* cor do polegar */
+  border-radius: 10px; /* cantos arredondados */
+}
+
+/* Define o estilo do thumb ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* cor do polegar ao passar o mouse */
+}
+
