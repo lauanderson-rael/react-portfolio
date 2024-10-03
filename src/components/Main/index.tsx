@@ -1,4 +1,8 @@
 import { Container, Footer, SessaoFormulario } from "./styles";
+import { FaCloudDownloadAlt, FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
+import { ContainerSkills } from "./containerSkills";
+import ProjectCard from "./projectCard";
 import Foto from "../../assets/lau-circle1.png";
 import Foto2 from "../../assets/foto2.jpg";
 import Logo from "../../assets/logo22.png";
@@ -6,14 +10,7 @@ import p1 from "../../assets/p1.png"
 import p2 from "../../assets/p2.png"
 import p3 from "../../assets/p3.png"
 // import p4 from "../../assets/p4.png"
-import { FaInstagram } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { IoIosMail } from "react-icons/io";
-import { FaCloudDownloadAlt } from "react-icons/fa";
-import { ContainerSkills } from "./containerSkills";
-import ProjectCard from "./projectCard";
+
 export function Main() {
   return (
     <>
