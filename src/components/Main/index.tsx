@@ -83,7 +83,7 @@ export function Main() {
 
                 <div className="btn-contato curriculo">
                   <a
-                    href="https://drive.google.com/file/d/10ktgf0D4q4bLwZXNOTFA1PsaG7lm1-Pr/view?usp=drivesdk"
+                    href="https://drive.google.com/file/d/13ZmWZDWJdG8-xzIqT_NeVmCnrkT0p21Q/view?usp=drivesdk"
                     target="blank"
                     download={"curriculo.pdf"}>
                     <button> <FaCloudDownloadAlt style={{ width: "30px" }} /> Currículo</button>
