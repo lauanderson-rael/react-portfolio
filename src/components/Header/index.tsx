@@ -1,14 +1,14 @@
 import { Container } from "./styles";
-// import Logo from "../../assets/logo22.png";
 import { IoMdClose } from "react-icons/io";
 import { BsList } from "react-icons/bs";
 import { PiCodeFill } from "react-icons/pi";
+import { useRef } from "react";
+import { useThemeContext } from "../../context/contextTheme";
 import "../Main/index";
 
-import { useRef } from "react";
 
 export function Header() {
-  // Iniciando const com o tipo HTMLDivElement | null
+  // obtendo uma tag "div" do nosso documento jsx atraves de useRef
   const referencia1 = useRef<HTMLDivElement | null>(null);
   const AbrirMenu = () => {
     if (referencia1.current) {
@@ -23,10 +23,13 @@ export function Header() {
     }
   };
 
+  const { isDarkMode, toggleTheme } = useThemeContext();
+
+
   return (
     <Container>
-      <div className="interface">
-        <div className="logo">
+      <div className={isDarkMode ? 'light-mode interface' : 'dark-mode interface'}>
+        <div className="logo">  
           <a href="#">
           <div style={{color: '#00ff08', fontSize: '40px'}}>  <PiCodeFill/> </div>
           </a>
@@ -46,6 +49,9 @@ export function Header() {
             <li>
               <a href="#projetos">Projetos</a>
             </li>
+            <div onClick={toggleTheme}>
+              <a href="#theme">Mudar Tema</a>
+            </div>
           </ul>
         </nav>
 

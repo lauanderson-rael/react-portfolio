@@ -12,6 +12,7 @@ import p3 from "../../assets/p3.png"
 import p4 from "../../assets/p4.png"
 
 export function Main() {
+ 
   return (
     <>
       <Container>

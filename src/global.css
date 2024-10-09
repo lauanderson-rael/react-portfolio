@@ -108,27 +108,34 @@ h2 span {
   }
 }
 
+/* temas */
+.light-mode {
+  background: white;
+  color: black;
+
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+/*fim temas */
 
 
 /* Atribui estilos básicos à scrollbar */
 ::-webkit-scrollbar {
-  width: 10px; /* largura da scrollbar */
+  width: 10px; 
 }
 
-/* Define o estilo da track (pista) */
 ::-webkit-scrollbar-track {
-  background: #e2e1e1; /* cor de fundo da pista */
-  border-radius: 10px; /* cantos arredondados */
+  background: #e2e1e1; 
+  border-radius: 10px;
 }
-
-/* Define o estilo do thumb (polegar) */
 ::-webkit-scrollbar-thumb {
-  background: #888888; /* cor do polegar */
-  border-radius: 10px; /* cantos arredondados */
+  background: #888888; 
+  border-radius: 10px; 
 }
 
-/* Define o estilo do thumb ao passar o mouse */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; /* cor do polegar ao passar o mouse */
+  background: #555;
 }
 

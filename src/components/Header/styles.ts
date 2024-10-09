@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
+
 box-shadow: 0 0 40px 10px #ffffff1d;
   background: black;
   padding: 10px;
@@ -8,7 +9,6 @@ box-shadow: 0 0 40px 10px #ffffff1d;
   position: sticky;
   top: 0;
   z-index: 3000;
-
 
   .barra-lateral {
     display: none;
