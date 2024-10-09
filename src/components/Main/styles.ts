@@ -238,13 +238,14 @@ export const Container = styled.main`
 
 
 // SESSAO PORTIFOLIO - TELA 4
+
   .portfolio {
-    // padding: 80px 4%;
     margin-top: 30px;
 
-    .flex {
-      justify-content: space-around;
-      margin-top: 60px;
+    .grid {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     }
   }
 
@@ -265,10 +266,13 @@ export const Container = styled.main`
       max-width: 360px;
       margin: 0 auto;
     }
-    .portfolio .flex {
-      /* gap: 40px; */
+    .portfolio .grid {
+      display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+     
+      
     }
   }
 `;

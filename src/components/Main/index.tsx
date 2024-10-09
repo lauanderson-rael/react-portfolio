@@ -9,7 +9,7 @@ import Logo from "../../assets/logo22.png";
 import p1 from "../../assets/p1.png"
 import p2 from "../../assets/p2.png"
 import p3 from "../../assets/p3.png"
-// import p4 from "../../assets/p4.png"
+import p4 from "../../assets/p4.png"
 
 export function Main() {
   return (
@@ -135,7 +135,7 @@ export function Main() {
             <h2 className="titulo">
               Meus <span>Projetos</span>
             </h2>
-            <div className="flex">
+            <div className="grid">
             <ProjectCard
               image={p1}
               title="Site de Zebras de Futebol"
@@ -160,14 +160,15 @@ export function Main() {
               repoLink="https://github.com/lauanderson-rael/react-todo-list"
               technologies={['React', 'CSS', 'JavaScript']}
             />
-            {/* <ProjectCard
+           
+            <ProjectCard
               image={p4}
               title="ADS - IFMA CN"
               description="Site estático desenvolvido com html e CSS. Esse projeto foi uma atividade proposta pelo professor da disciplina de Programação Web, do meu curso de Analise e desenvolvimento de sistemas."
               projectLink="https://atividade-dev-web.vercel.app/"
               repoLink="https://github.com/lauanderson-rael/html-atividade1"
-              technologies={['React', 'CSS', 'JavaScript']}
-            /> */}
+              technologies={['Html', 'CSS']}
+            />
 
             </div>
           </div>

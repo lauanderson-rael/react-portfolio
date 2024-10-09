@@ -39,7 +39,7 @@ body {
 }
 .linkedin button:hover {
   box-shadow: 0px 0px 8px rgb(31, 31, 244);
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .curriculo button, .github button {
@@ -50,7 +50,7 @@ body {
 }
 .curriculo button:hover, .github button:hover {
   box-shadow: 0px 0px 8px rgb(30, 30, 30);
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 @media (max-width: 1020px) {
   .curriculo{
@@ -70,7 +70,7 @@ body {
 
 button:hover {
   box-shadow: 0px 0px 8px #00ff08;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .titulo {

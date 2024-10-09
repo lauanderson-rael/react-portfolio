@@ -35,7 +35,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <span style={{margin: "0 10px"}}></span>
           <a href={repoLink} target="_blank" rel="noopener noreferrer" className="project-link">
             <FaCodeBranch className='icon-link' />
-            Repositorio
+            Repositório
           </a>
         </div>
         <div className="project-technologies">
