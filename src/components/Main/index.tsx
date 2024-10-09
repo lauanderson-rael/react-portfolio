@@ -1,11 +1,11 @@
 import { Container, Footer, SessaoFormulario } from "./styles";
 import { FaCloudDownloadAlt, FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
+import { PiCodeFill } from "react-icons/pi";
 import { ContainerSkills } from "./containerSkills";
 import ProjectCard from "./projectCard";
 import Foto from "../../assets/lau-circle1.png";
 import Foto2 from "../../assets/foto2.jpg";
-import Logo from "../../assets/logo22.png";
 import p1 from "../../assets/p1.png"
 import p2 from "../../assets/p2.png"
 import p3 from "../../assets/p3.png"
@@ -243,7 +243,7 @@ export function Main() {
             </div>
 
             <div className="logo-footer">
-              <img src={Logo} alt="Logotipo portfolio" />
+               <div style={{color: '#00ff08', fontSize: '40px'}}>  <PiCodeFill/> </div>
             </div>
           </div>
         </div>

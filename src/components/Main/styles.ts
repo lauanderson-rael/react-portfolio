@@ -184,7 +184,9 @@ export const Container = styled.main`
     gap: 60px;
   }
 
+
 // COMPONENTES- SKILLS
+
   .especialidades-box {
     color: #fff;
     padding: 20px;
@@ -399,9 +401,9 @@ export const Footer = styled.footer`
       text-align: center;
     }
 
-    img {
+    .logo-footer{
     display: none;
     }
-
+    
   }
 `;

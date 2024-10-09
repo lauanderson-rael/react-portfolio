@@ -1,7 +1,8 @@
 import { Container } from "./styles";
-import Logo from "../../assets/logo22.png";
+// import Logo from "../../assets/logo22.png";
 import { IoMdClose } from "react-icons/io";
 import { BsList } from "react-icons/bs";
+import { PiCodeFill } from "react-icons/pi";
 import "../Main/index";
 
 import { useRef } from "react";
@@ -27,7 +28,7 @@ export function Header() {
       <div className="interface">
         <div className="logo">
           <a href="#">
-            <img src={Logo} alt="logo" />
+          <div style={{color: '#00ff08', fontSize: '40px'}}>  <PiCodeFill/> </div>
           </a>
         </div>
 
