@@ -1,13 +1,13 @@
 
 import { SiExpress, SiJavascript, SiPostgresql, SiTailwindcss, SiTypescript } from "react-icons/si";
-import { FaGitAlt, FaGithub, FaNodeJs, FaReact } from "react-icons/fa";
+import { FaGitAlt, FaGithub, FaNodeJs, FaReact, FaDocker } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
 
 export const ContainerSkills = () =>{
 
     return (
-    <>   
-        <div className="especialidades-box"> 
+    <>
+        <div className="especialidades-box">
             <strong>Front-end</strong>
               <div className="flex-skills" style={{color: '#b5b5b5'}}>
                 <div className="center">
@@ -36,7 +36,7 @@ export const ContainerSkills = () =>{
                   <div className="icone"> <FaNodeJs/></div>
                   <p>Node.js</p>
                 </div>
-                
+
                 <div className="center">
                   <div className="icone"> <SiExpress/></div>
                   <p>Express.js</p>
@@ -52,7 +52,7 @@ export const ContainerSkills = () =>{
         <div className="especialidades-box">
             <strong>Ferramentas e Controle de Versão</strong>
               <div className="flex-skills" style={{color: '#b5b5b5'}}>
-              <div className="center">
+                <div className="center">
                   <div className="icone"> <VscVscode/></div>
                   <p>VS Code</p>
                 </div>
@@ -62,11 +62,16 @@ export const ContainerSkills = () =>{
                   <p>Git</p>
                 </div>
 
-              <div className="center">
+                <div className="center">
                   <div className="icone"> <FaGithub/></div>
                   <p>Github</p>
                 </div>
-                
+
+                <div className="center">
+                  <div className="icone"> <FaDocker/></div>
+                  <p>Docker</p>
+                </div>
+
               </div>
         </div>
     </>

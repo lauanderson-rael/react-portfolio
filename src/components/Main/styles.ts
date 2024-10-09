@@ -4,7 +4,7 @@ export const Container = styled.main`
   // TELA 1
   section.topo-do-site {
     padding: 100px 4%;
-    padding-top: 50px;  
+    padding-top: 50px;
     // ultima atualizacao linha de cima
 
     .flex {
@@ -341,7 +341,6 @@ export const SessaoFormulario = styled.section`
       box-shadow: 0px 0px 8px #00ff08;
       transform: scale(1.03);
     }
-  }
   // limpar
 
   @media (max-width: 1020px){
@@ -360,7 +359,7 @@ export const Footer = styled.footer`
   img {
     width: 75px;
     height: auto;
-    
+
   }
 
   .flex {
