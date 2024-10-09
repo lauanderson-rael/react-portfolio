@@ -1,8 +1,8 @@
 import React from 'react';
 import { IoOpen } from "react-icons/io5";
 import { FaCodeBranch } from "react-icons/fa";
+import { ContainerCards } from './stylesProjectCard';
 
-import './projectCard.css'; // Importa o CSS para estilizar o componente
 
 interface ProjectCardProps {
   image: string;
@@ -22,6 +22,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   technologies,
 }) => {
   return (
+   <ContainerCards>
     <div className="project-card">
       <img src={image} alt={title} className="project-image" />
       <div className="project-content">
@@ -47,6 +48,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       </div>
     </div>
+    </ContainerCards>
   );
 };
 

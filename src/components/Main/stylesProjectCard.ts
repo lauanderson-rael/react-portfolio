@@ -1,3 +1,6 @@
+import styled from "styled-components";
+
+export const ContainerCards = styled.div`
 .project-card {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -82,3 +85,6 @@
   }
 
 }
+
+
+`;
