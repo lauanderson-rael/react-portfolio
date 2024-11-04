@@ -10,6 +10,7 @@ import p1 from "../../assets/p1.png"
 import p2 from "../../assets/p2.png"
 import p3 from "../../assets/p3.png"
 import p4 from "../../assets/p4.png"
+import p5 from '../../assets/p5.png'
 
 export function Main() {
   return (
@@ -69,9 +70,9 @@ export function Main() {
                   <img src={Foto2} alt="foto sessão sobre" />
                 </div>
                 <p>
-                  Apaixonado por desafios e tecnologia, sou um desenvolvedor front-end com experiência em HTML, CSS, JavaScript, ReactJS , 
-                  TypeScript e Node.js. Atualmente, estou me aprofundando no back-end para me tornar um desenvolvedor full stack. Estou 
-                  cursando o 3º semestre de Análise e Desenvolvimento de Sistemas. Adoro explorar novas tecnologias, desafiar minhas 
+                  Apaixonado por desafios e tecnologia, sou um desenvolvedor front-end com experiência em HTML, CSS, JavaScript, ReactJS ,
+                  TypeScript e Node.js. Atualmente, estou me aprofundando no back-end para me tornar um desenvolvedor full stack. Estou
+                  cursando o 3º semestre de Análise e Desenvolvimento de Sistemas. Adoro explorar novas tecnologias, desafiar minhas
                   habilidades com os códigos e utilizá-las para criar soluções inovadoras e de alta qualidade.
 
                 </p>
@@ -153,6 +154,14 @@ export function Main() {
               technologies={['React', 'CSS', 'JavaScript']}
             />
             <ProjectCard
+              image={p5}
+              title="Blog de Emagrecimento"
+              description="Nesse projeto criei um blog básico com consumo de uma Api e requisições GET com Fetch"
+              projectLink="https://react-blog-puce-nine.vercel.app/"
+              repoLink="https://github.com/lauanderson-rael/react-blog"
+              technologies={['React', 'CSS', 'JavaScript']}
+            />
+            <ProjectCard
               image={p3}
               title="Todo List"
               description="Nesse projeto desenvolvi um Todo List básico utilizando a biblioteca React. Pude abordar o uso de alguns Hooks do react, como useState"
@@ -160,7 +169,7 @@ export function Main() {
               repoLink="https://github.com/lauanderson-rael/react-todo-list"
               technologies={['React', 'CSS', 'JavaScript']}
             />
-           
+
             <ProjectCard
               image={p4}
               title="ADS - IFMA CN"
@@ -212,7 +221,7 @@ export function Main() {
       <Footer>
         <div className="line-footer">
           <div className="flex">
-          
+
             <div className="btn-social">
              <a href="https://www.instagram.com/lauanderson.rael?igsh=MWMxNDZjN3VhdjA3Nw==" target="blank">
                 <button>
