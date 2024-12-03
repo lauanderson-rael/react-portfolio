@@ -1,9 +1,9 @@
+import { Link } from "react-router-dom";
 import { Container } from "./styles";
-// import Logo from "../../assets/logo22.png";
 import { IoMdClose } from "react-icons/io";
 import { BsList } from "react-icons/bs";
 import { PiCodeFill } from "react-icons/pi";
-import "../Main/index";
+import "../../pages/Main/index"
 
 import { useRef } from "react";
 
@@ -45,6 +45,9 @@ export function Header() {
             </li>
             <li>
               <a href="#projetos">Projetos</a>
+            </li>
+            <li>
+              <Link to={'/blog'}>Blog</Link>
             </li>
           </ul>
         </nav>

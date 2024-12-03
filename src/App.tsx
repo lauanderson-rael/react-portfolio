@@ -1,11 +1,30 @@
-import { Header } from "./components/Header";
-import { Main } from "./components/Main";
+
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { Main } from "./pages/Main";
+import Blog from "./pages/Blog";
+
+
+// function Layout() {
+//   return (
+//     <div>
+//       <Header></Header>
+//       <main>
+//         <Outlet /> {/* Renderiza as rotas filhas */}
+//       </main>
+//     </div>
+//   );
+// }
 
 function App() {
   return (
     <>
-      <Header />
-      <Main />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main />} /> {/* Rota inicial */}
+          <Route path="/blog" element={<Blog/>} />
+        </Routes>
+      </BrowserRouter>
+
     </>
   );
 }

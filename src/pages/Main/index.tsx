@@ -1,5 +1,6 @@
 import { Container, Footer, SessaoFormulario } from "./styles";
 import { FaCloudDownloadAlt, FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { MdDoubleArrow} from "react-icons/md";
 import { IoIosMail } from "react-icons/io";
 import { PiCodeFill } from "react-icons/pi";
 import { ContainerSkills } from "./containerSkills";
@@ -11,13 +12,15 @@ import p2 from "../../assets/p2.png"
 import p3 from "../../assets/p3.png"
 import p4 from "../../assets/p4.png"
 import p5 from '../../assets/p5.png'
+import { Header } from "../../components/Header";
 
 export function Main() {
   return (
     <>
+      <Header/>
       <Container>
         <section className="topo-do-site">
-          <div className="interface">
+          <div className="interface topoo" >
             <div className="flex">
               <div className="txt-topo-site">
 
@@ -44,13 +47,21 @@ export function Main() {
                       <button><FaGithub style={{ width: "30px" }} /> GitHub</button>
                     </a>
                   </div>
+
                 </div>
+
               </div>
+
 
               <div className="img-topo-site">
                 <img src={Foto} alt="foto perfil" />
               </div>
+
             </div>
+
+              <div className="arrow-desktop">
+                    < MdDoubleArrow fill="#fff" size={50} />
+              </div>
 
           </div>
         </section>
@@ -87,7 +98,7 @@ export function Main() {
                     href="https://drive.google.com/file/d/13ZmWZDWJdG8-xzIqT_NeVmCnrkT0p21Q/view?usp=drivesdk"
                     target="blank"
                     download={"curriculo.pdf"}>
-                    <button> <FaCloudDownloadAlt style={{ width: "30px" }} /> Currículo</button>
+                    <button> <FaCloudDownloadAlt style={{ width: "30px" }} /> Download CV</button>
                   </a>
                 </div>
 

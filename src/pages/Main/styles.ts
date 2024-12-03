@@ -1,15 +1,30 @@
 import styled from "styled-components";
 
 export const Container = styled.main`
+
   // TELA 1
   section.topo-do-site {
-    padding: 100px 4%;
-    padding-top: 50px;
+    padding: 100px 12%;
+    height: 80dvh;
+    /* padding-top: 50px; */
     // ultima atualizacao linha de cima
 
     .flex {
       justify-content: space-around;
       align-items: center;
+    }
+    .arrow-desktop{
+      rotate: 90deg;
+      margin-top: 30px;
+      display: grid;
+      place-items: center;
+      position: relative;
+      animation: flutuar 2s ease-in-out infinite alternate;
+    }
+
+    .arrow-mobile{
+      display: grid;
+      place-items: center;
     }
 
     .txt-topo-site strong {
@@ -35,10 +50,8 @@ export const Container = styled.main`
       height: 300px;
       border: 8px solid #00ff08;
       border-radius: 50%;
-
       position: relative; // para funcionar animacao
-      animation: flutuar 2s ease-in-out infinite alternate;
-
+      //animation: flutuar 2s ease-in-out infinite alternate;
       filter: drop-shadow(0 0 0.8rem #00ff08);
       box-shadow: 1px 1px 0.5rem #00ff08;
     }
@@ -55,10 +68,15 @@ export const Container = styled.main`
     }
     //responsivo
     @media (max-width: 1020px) {
-      /* height: 100vh; */
+      .img-topo-site img{
+        animation: flutuar 2s ease-in-out infinite alternate;
+      }
       padding: 10px 8%;
-      /* margin-bottom: 60px; */
 
+      .arrow-desktop{
+        display: none;
+      }
+    
       .btn-contato button{
         font-size: small;
       }
@@ -74,9 +92,10 @@ export const Container = styled.main`
       }
       .flex {
         flex-direction: column-reverse;
-        gap: 40px;
+        height: 90dvh;
 
       }
+
       .img-topo-site img {
         width: 250px;
         height: 250px;
@@ -100,7 +119,8 @@ export const Container = styled.main`
 
   // SESSAO SOBRE - TELA 2
   .sobre {
-    padding: 80px 0;
+    margin-top: 40px;
+    padding: 80px 12%;
 
     .flex {
       align-items: center;
@@ -175,7 +195,7 @@ export const Container = styled.main`
 // ESPECIALIDADES - TELA 3
 .especialidades {
 
-  padding: 80px 4%;
+  padding: 80px 12%;
 
   h2 span {
     color: #00ff08;
@@ -243,10 +263,12 @@ export const Container = styled.main`
 
   .portfolio {
     margin-top: 30px;
+    padding: 80px 12%;
 
     .grid {
       margin-top: 40px;
       display: grid;
+      place-items:center;
       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     }
   }
@@ -273,8 +295,9 @@ export const Container = styled.main`
       flex-direction: column;
       justify-content: center;
       align-items: center;
-     
-      
+    }
+    .portfolio{
+      padding: 80px 1%;
     }
   }
 `;

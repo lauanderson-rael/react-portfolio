@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-box-shadow: 0 0 40px 10px #ffffff1d;
+  box-shadow: 0 0 40px 10px #ffffff1d;
   background: black;
   padding: 10px;
   padding-bottom: 0px;
@@ -31,7 +31,8 @@ box-shadow: 0 0 40px 10px #ffffff1d;
   }
 
   a {
-    color: #7c7c7c;
+    //color: #7c7c7c;
+    color: #c4c4c4;
     text-decoration: none;
     display: inline-block; // para dar zoon no hover
     transition: all.2s;

@@ -7,7 +7,7 @@ export const ContainerCards = styled.div`
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    max-width: 420px;
     margin: 16px;
     transition: transform 0.2s ease-in-out;
   }
