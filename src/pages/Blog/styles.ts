@@ -9,6 +9,7 @@ body{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+
 .container{
   display: flex;
   flex-direction: column;
@@ -29,45 +30,59 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 header{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(0, 198, 0);
+  /* padding: 0 12%; */
+  margin-bottom: 20px;
+  background-color: #d2d2d2;
   width: 100%;
-  color: white;
 }
 
 article{
-  width: 60%;
+  border: 1px solid #d3d3d3;
+  width: 40%;
   display: flex;
   flex-direction: column;
   border-radius: 7px;
   margin-bottom: 30px;
+  padding: 20px;
+  box-shadow: 0px 0px 7px #d3d3d3;
+
+  h2{
+    color: #fff;
+  }
 }
 article img{
   border-radius: 7px;
+  margin: 10px 0;
+  width: 100%;
+
 }
 
 article p, article span{
-  color: rgb(110, 110, 110);
+  color: #d2d2d2;
 }
 
 article button{
   margin-top: 10px;
-  border: 2px solid green;
-  background-color: white;
+  border: 2px solid #d3d3d3;
+  background-color: #d3d3d3;
   padding: 10px 0;
   border-radius: 7px;
   font-weight: 700;
-  color: green;
+  color: black;
   transition: all 0.3s;
+  width: 100%;
 }
 article button:hover{
   color: white;
-  background-color: green;
+  background-color: #00ff08;
+  border: 2px solid #00ff08;
 }
 
 
@@ -81,13 +96,6 @@ footer {
   text-align: center;
 }
 
-footer a{
-  color: gray;
-}
-
-footer a:hover{
-  color: white;
-}
 
 
 @media (max-width: 720px) {

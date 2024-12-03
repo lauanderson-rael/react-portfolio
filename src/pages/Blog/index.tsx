@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { Container } from "./styles";
 type Post = {
-    id: string;
+    _id: string;
     titulo: string;
     descricao: string;
     imgUrl: string;
@@ -26,42 +25,35 @@ type Post = {
       })
 
     }
-
     loadApi()
   }, [])
 
-  const api = 'https://backend-instabytes-776727787744.southamerica-east1.run.app'
-
-
+  
   return (
     <>
     <Container>
       <div className="container">
         <header>
-          <h2>LauBlog</h2>
+          <h2>Posts</h2>
         </header>
 
         <main style={{flex: 1}}>
 
         {nutri.map((item) => {
           return (
-            <article key={item.id}>
+            <article key={item._id}>
               <h2>{item.titulo}</h2>
-              <img src={`${api}/${item.id}.png`} alt={item.titulo} />
+              <img src={`https://backend-instabytes-776727787744.southamerica-east1.run.app/${item._id}.png`} alt={item.titulo} />
               <p>{item.descricao}</p>
-              <span> link: <strong>{item.link}</strong></span>
-              <button>Acessar</button>
+             
+              <a href={item.link}  target="_blank" rel="noopener noreferrer">
+                <button> Ler mais</button>
+              </a>
             </article>
           )
         })}
 
-        <Link to='/sobre'>Sobre</Link>
-
         </main>
-        <footer>
-          <p>2024 - Criado por <a href="https://lauanderson-portfolio.vercel.app/" target="blank">Lauanderson Rael</a></p>
-          <p><a href="mailto:hege@example.com">lauanderson38@gmail.com</a></p>
-        </footer>
       </div>
       </Container>
 

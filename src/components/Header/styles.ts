@@ -1,4 +1,11 @@
 import styled from "styled-components";
+import { useLocation } from "react-router-dom";
+
+const VerificarRota = () => {
+  const location = useLocation();
+  const isBlogPage = location.pathname === "/blog";
+  return isBlogPage;
+}
 
 export const Container = styled.header`
   box-shadow: 0 0 40px 10px #ffffff1d;
@@ -8,6 +15,10 @@ export const Container = styled.header`
   position: sticky;
   top: 0;
   z-index: 3000;
+
+  .header-blog{
+    display: ${() => (VerificarRota() ? "none" : "block")};
+  }
 
 
   .barra-lateral {

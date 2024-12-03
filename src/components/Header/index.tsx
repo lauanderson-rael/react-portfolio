@@ -4,7 +4,6 @@ import { IoMdClose } from "react-icons/io";
 import { BsList } from "react-icons/bs";
 import { PiCodeFill } from "react-icons/pi";
 import "../../pages/Main/index"
-
 import { useRef } from "react";
 
 export function Header() {
@@ -23,6 +22,7 @@ export function Header() {
     }
   };
 
+
   return (
     <Container>
       <div className="interface">
@@ -35,15 +35,15 @@ export function Header() {
         <nav className="menu-desktop">
           <ul>
             <li>
-              <a href="#">Início</a>
+            <Link to={'/'}>Início</Link>
             </li>
-            <li>
+            <li className="header-blog">
               <a href="#especialidades">Especialidades</a>
             </li>
-            <li>
+            <li className="header-blog">
               <a href="#sobre">Sobre</a>
             </li>
-            <li>
+            <li className="header-blog">
               <a href="#projetos">Projetos</a>
             </li>
             <li>
@@ -52,7 +52,7 @@ export function Header() {
           </ul>
         </nav>
 
-        <div className="btn-contato">
+        <div  className="btn-contato header-blog">
           <a href="#formulario">
             <button>Contato</button>
           </a>
@@ -66,7 +66,6 @@ export function Header() {
           </div>
 
 
-
           <div className="menu-mobile" ref={referencia1} onClick={FecharMenu}>
             <div className="btn-fechar">
               <i>
@@ -77,20 +76,24 @@ export function Header() {
             <nav>
               <ul>
                 <li>
-                  <a href="#">Início</a>
+                   <Link to={'/'}>Início</Link>
                 </li>
-                <li>
+                <li className="header-blog">
                   <a href="#especialidades">Especialidades</a>
                 </li>
-                <li>
+                <li className="header-blog">
                   <a href="#sobre">Sobre</a>
                 </li>
-                <li>
+                <li className="header-blog">
                   <a href="#projetos">Projetos</a>
                 </li>
-                <li>
+                <li className="header-blog">
                   <a href="#formulario">Contato</a>
                 </li>
+
+                <li>
+                  <Link to={'/blog'}>Blog</Link>
+               </li>
               </ul>
             </nav>
           </div>

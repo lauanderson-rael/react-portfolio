@@ -1,8 +1,6 @@
-import { Container, Footer, SessaoFormulario } from "./styles";
+import { Container, SessaoFormulario } from "./styles";
 import { FaCloudDownloadAlt, FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { MdDoubleArrow} from "react-icons/md";
-import { IoIosMail } from "react-icons/io";
-import { PiCodeFill } from "react-icons/pi";
 import { ContainerSkills } from "./containerSkills";
 import ProjectCard from "./projectCard";
 import Foto from "../../assets/lau-circle1.png";
@@ -12,12 +10,11 @@ import p2 from "../../assets/p2.png"
 import p3 from "../../assets/p3.png"
 import p4 from "../../assets/p4.png"
 import p5 from '../../assets/p5.png'
-import { Header } from "../../components/Header";
 
 export function Main() {
   return (
     <>
-      <Header/>
+     
       <Container>
         <section className="topo-do-site">
           <div className="interface topoo" >
@@ -227,50 +224,9 @@ export function Main() {
             </form>
           </div>
         </SessaoFormulario>
+
       </Container>
 
-      <Footer>
-        <div className="line-footer">
-          <div className="flex">
-
-            <div className="btn-social">
-             <a href="https://www.instagram.com/lauanderson.rael?igsh=MWMxNDZjN3VhdjA3Nw==" target="blank">
-                <button>
-                  <FaInstagram />
-                </button>
-              </a>
-              <a href="https://www.youtube.com/@lau_dicas" target="blank">
-                <button>
-                  <FaYoutube />
-                </button>
-              </a>
-              <a href="https://www.linkedin.com/in/lauanderson-rael-a68b2b16a/" target="blank">
-                <button>
-                  <FaLinkedin />
-                </button>
-              </a>
-              <a href="https://github.com/lauanderson-rael" target="blank">
-                <button>
-                  <FaGithub />
-                </button>
-              </a>
-
-              <a  href="mailto:lauanderson38@gmail.com" target="blank">
-                <button>
-                  <IoIosMail />
-                </button>
-              </a>
-            </div>
-
-            <div className="logo-footer">
-               <div style={{color: '#00ff08', fontSize: '40px'}}>  <PiCodeFill/> </div>
-            </div>
-          </div>
-        </div>
-        <div className="line-footer borda">
-          <span>© 2024 Lauanderson Rael. Todos os direitos reservados</span>
-        </div>
-      </Footer>
     </>
   );
 }

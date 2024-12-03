@@ -12,6 +12,11 @@ export default defineConfig({
         changeOrigin: true,
         secure: false,
       },
+      '/api2': {
+        target: 'https://backend-instabytes-776727787744.southamerica-east1.run.app/', // URL do back-end
+        changeOrigin: true,
+        secure: false,
+      },
     },
   },
 });
