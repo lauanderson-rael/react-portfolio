@@ -12,6 +12,7 @@ type Post = {
 
  export default function Blog(){
     const [nutri, setNutri] = useState<Post[]>([])
+    const [loading, setLoading] = useState(true)
 
   // ao renderizar a pagina sera chamada a funcao (obs: --> vazio [])
   useEffect(() => {
@@ -26,7 +27,18 @@ type Post = {
 
     }
     loadApi()
+    setLoading(false)
   }, [])
+
+
+  if (loading){
+    return(
+       <Container>
+            <h1 style={{color: "white", height: '60vh', display: 'grid', placeItems: 'center'}}>Carregando ...</h1>
+       </Container>
+    )
+  }
+
 
   
   return (

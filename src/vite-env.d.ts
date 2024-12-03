@@ -8,12 +8,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://backend-instabytes-776727787744.southamerica-east1.run.app/posts', // URL do back-end
-        changeOrigin: true,
-        secure: false,
-      },
-      '/api2': {
-        target: 'https://backend-instabytes-776727787744.southamerica-east1.run.app/', // URL do back-end
+        target: import.meta.env.VITE_API_URL, // URL do back-end
         changeOrigin: true,
         secure: false,
       },
