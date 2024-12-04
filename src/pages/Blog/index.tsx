@@ -23,11 +23,11 @@ type Post = {
       .then((json) => {
         console.log("dados da API:",json)
         setNutri(json)
+        setLoading(false)
       })
 
     }
     loadApi()
-    setLoading(false)
   }, [])
 
 
