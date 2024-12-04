@@ -20,6 +20,12 @@ export const Container = styled.header`
     display: ${() => (VerificarRota() ? "none" : "block")};
   }
 
+  .li-blog{
+    a{
+      font-weight: 800;
+    }
+  }
+
 
   .barra-lateral {
     display: none;

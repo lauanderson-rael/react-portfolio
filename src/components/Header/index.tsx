@@ -46,7 +46,7 @@ export function Header() {
             <li className="header-blog">
               <a href="#projetos">Projetos</a>
             </li>
-            <li>
+            <li className="li-blog">
               <Link to={'/blog'}>Blog</Link>
             </li>
           </ul>

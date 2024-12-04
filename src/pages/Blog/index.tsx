@@ -17,7 +17,7 @@ type Post = {
   // ao renderizar a pagina sera chamada a funcao (obs: --> vazio [])
   useEffect(() => {
     function loadApi(){
-      const api = '/api'
+      const api = import.meta.env.VITE_API_URL
       fetch(api)
       .then((res) => res.json())
       .then((json) => {
@@ -40,7 +40,7 @@ type Post = {
   }
 
 
-  
+
   return (
     <>
     <Container>
@@ -57,7 +57,7 @@ type Post = {
               <h2>{item.titulo}</h2>
               <img src={`https://backend-instabytes-776727787744.southamerica-east1.run.app/${item._id}.png`} alt={item.titulo} />
               <p>{item.descricao}</p>
-             
+
               <a href={item.link}  target="_blank" rel="noopener noreferrer">
                 <button> Ler mais</button>
               </a>
