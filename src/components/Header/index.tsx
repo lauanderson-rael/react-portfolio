@@ -34,8 +34,12 @@ export function Header() {
 
         <nav className="menu-desktop">
           <ul>
-            <li>
-            <Link to={'/'}>Início</Link>
+            <li className="header-blog">
+              <a href="/#inicio">Início</a>
+            </li>
+
+            <li className="header-home">
+                <Link to={'/'}>Voltar</Link>
             </li>
             <li className="header-blog">
               <a href="#especialidades">Especialidades</a>
@@ -75,8 +79,13 @@ export function Header() {
 
             <nav>
               <ul>
-                <li>
-                   <Link to={'/'}>Início</Link>
+                
+                <li className="header-blog">
+                   <a href="/#inicio">Início</a>
+                </li>
+
+                <li className="header-home">
+                   <Link to={'/'}>Voltar</Link>
                 </li>
                 <li className="header-blog">
                   <a href="#especialidades">Especialidades</a>

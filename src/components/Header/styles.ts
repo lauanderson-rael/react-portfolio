@@ -19,6 +19,9 @@ export const Container = styled.header`
   .header-blog{
     display: ${() => (VerificarRota() ? "none" : "block")};
   }
+  .header-home{
+    display: ${() => (VerificarRota() ? "block" : "none")};
+  }
 
   .li-blog{
     a{
