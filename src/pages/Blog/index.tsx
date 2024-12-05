@@ -55,7 +55,7 @@ type Post = {
           return (
             <article key={item._id}>
               <h2>{item.titulo}</h2>
-              <img src={`https://backend-instabytes-776727787744.southamerica-east1.run.app/${item._id}.png`} alt={item.titulo} />
+              <img src={item.imgUrl} alt={item.titulo} />
               <p>{item.descricao}</p>
 
               <a href={item.link}  target="_blank" rel="noopener noreferrer">
