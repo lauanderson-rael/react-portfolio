@@ -67,6 +67,9 @@ type Post = {
 
         </main>
       </div>
+        <p style={{ fontSize: '12px', color: 'gray', textAlign: 'center' }}>
+            As imagens e descrições exibidas neste blog são de terceiros e pertencem aos respectivos autores. Ao clicar nos links, você será redirecionado para o site original, onde pode encontrar o conteúdo completo. Todos os direitos reservados aos autores.
+        </p>
       </Container>
 
     </>
