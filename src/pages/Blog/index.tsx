@@ -26,7 +26,7 @@ type Post = {
       fetch(api)
       .then((res) => res.json())
       .then((json) => {
-        console.log("dados da API:",json)
+        //console.log("dados da API:",json)
         setNutri(json)
         setLoading(false)
       })
