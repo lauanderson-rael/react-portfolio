@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
 
   server: {
+    historyApiFallback: true, // Garante que o roteamento de páginas seja tratado pelo React Router
     proxy: {
       '/api': {
         target: 'https://backend-instabytes-776727787744.southamerica-east1.run.app/posts',
