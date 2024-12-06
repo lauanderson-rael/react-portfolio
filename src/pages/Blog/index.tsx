@@ -14,6 +14,11 @@ type Post = {
     const [nutri, setNutri] = useState<Post[]>([])
     const [loading, setLoading] = useState(true)
 
+   // Função para recarregar a página
+  function reloadPage() {
+    window.location.reload();
+  }
+
   // ao renderizar a pagina sera chamada a funcao (obs: --> vazio [])
   useEffect(() => {
     function loadApi(){
@@ -28,6 +33,18 @@ type Post = {
 
     }
     loadApi()
+      
+     // Verifica se a página foi recarregada ou não
+    const isRefreshed = sessionStorage.getItem("refreshed");
+    if (isRefreshed) {
+      // Se já foi recarregada, apenas recarregamos a página (com reload)
+      reloadPage();
+    } else {
+      // Marca que a página foi recarregada uma vez
+      sessionStorage.setItem("refreshed", "true");
+      loadApi();
+    }
+      
   }, [])
 
 
