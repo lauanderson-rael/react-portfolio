@@ -51,8 +51,7 @@ export const Container = styled.header`
   }
 
   a {
-    //color: #7c7c7c;
-    color: #c4c4c4;
+    color: var(--text-color);
     text-decoration: none;
     display: inline-block; // para dar zoon no hover
     transition: all.2s;

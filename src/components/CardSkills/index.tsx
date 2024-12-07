@@ -9,7 +9,7 @@ export const ContainerSkills = () =>{
     <>
         <div className="especialidades-box">
             <strong>Front-end</strong>
-              <div className="flex-skills" style={{color: '#b5b5b5'}}>
+              <div className="flex-skills">
                 <div className="center">
                   <div className="icone"> <SiJavascript/></div>
                   <p>JavaScript</p>
@@ -31,7 +31,7 @@ export const ContainerSkills = () =>{
 
           <div className="especialidades-box">
             <strong>Back-end</strong>
-              <div className="flex-skills" style={{color: '#b5b5b5'}}>
+              <div className="flex-skills" >
                 <div className="center">
                   <div className="icone"> <FaNodeJs/></div>
                   <p>Node.js</p>
@@ -51,7 +51,7 @@ export const ContainerSkills = () =>{
 
         <div className="especialidades-box">
             <strong>Ferramentas e Controle de Versão</strong>
-              <div className="flex-skills" style={{color: '#b5b5b5'}}>
+              <div className="flex-skills">
                 <div className="center">
                   <div className="icone"> <VscVscode/></div>
                   <p>VS Code</p>

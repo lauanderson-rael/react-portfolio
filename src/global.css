@@ -47,6 +47,7 @@ body {
   background-color: rgb(255, 255, 255);
   color: rgb(45, 45, 45);
   margin-bottom: 25px;
+  border: 1px solid var(--text-color);
 
 }
 .curriculo button:hover, .github button:hover {
@@ -133,14 +134,15 @@ h2 span {
   background: #555; /* cor do polegar ao passar o mouse */
 }
 
-/* temas */
-
+/* tema escuro*/
 :root {
-  --background-color: #fffffff8;
-  --text-color: #000000;
+  --background-color: #000;
+  --text-color: #c4c4c4;
 }
 
-[data-theme="dark"] {
-  --background-color: black;
-  --text-color: #ffffff;
+/* tema claro*/
+[data-theme="light"] {
+  --background-color: #fff;
+  --text-color: #000;
+
 }

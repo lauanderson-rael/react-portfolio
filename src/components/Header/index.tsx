@@ -8,7 +8,9 @@ import { useRef } from "react";
 import { useTheme } from "../../contexts/ThemeContext";
 
 export function Header() {
-  // Iniciando const com o tipo HTMLDivElement | null
+
+  const { theme, toggleTheme } = useTheme();
+
   const referencia1 = useRef<HTMLDivElement | null>(null);
   const AbrirMenu = () => {
     if (referencia1.current) {
@@ -22,8 +24,6 @@ export function Header() {
       referencia1.current.classList.remove("abrir-menu");
     }
   };
-
-  const { theme, toggleTheme } = useTheme();
 
 
   return (

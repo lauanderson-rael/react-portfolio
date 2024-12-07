@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
 export const ContainerCards = styled.div`
+h2{
+  color: var(--text-color);
+}
+
 .project-card {
-    border: 1px solid #ddd;
+    border: 1px solid var(--text-color);;
     border-radius: 8px;
     overflow: hidden;
     display: flex;
@@ -14,7 +18,7 @@ export const ContainerCards = styled.div`
 
   .project-card:hover {
     transform: scale(1.03);
-    box-shadow: 0px 0px 15px #ffffff;
+    box-shadow: 0px 0px 15px var(--text-color);;
   }
 
   .project-image {
@@ -29,7 +33,7 @@ export const ContainerCards = styled.div`
   .project-title {
     font-size: 1.5rem;
     margin: 0;
-    color: #ddd;
+
   }
 
   .project-description {

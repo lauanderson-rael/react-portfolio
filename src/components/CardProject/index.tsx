@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoOpen } from "react-icons/io5";
 import { FaCodeBranch } from "react-icons/fa";
-import { ContainerCards } from './stylesProjectCard';
+import { ContainerCards } from './styles';
 
 
 interface ProjectCardProps {
@@ -13,7 +13,7 @@ interface ProjectCardProps {
   technologies: string[];
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({
+export const CardProject: React.FC<ProjectCardProps> = ({
   image,
   title,
   description,
@@ -51,5 +51,3 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     </ContainerCards>
   );
 };
-
-export default ProjectCard;

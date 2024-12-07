@@ -1,8 +1,8 @@
 import { Container, SessaoFormulario } from "./styles";
 import { FaCloudDownloadAlt, FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { MdDoubleArrow} from "react-icons/md";
-import { ContainerSkills } from "./containerSkills";
-import ProjectCard from "./projectCard";
+import { ContainerSkills } from "../../components/CardSkills/index"
+import { CardProject } from "../../components/CardProject";
 import Foto from "../../assets/lau-circle1.png";
 import Foto2 from "../../assets/foto2.jpg";
 import p1 from "../../assets/p1.png"
@@ -60,7 +60,7 @@ export function Main() {
             </div>
 
               <div className="arrow-desktop">
-                    < MdDoubleArrow fill="#fff" size={50} />
+                    < MdDoubleArrow size={50} />
               </div>
 
           </div>
@@ -148,7 +148,7 @@ export function Main() {
               Meus <span>Projetos</span>
             </h2>
             <div className="grid">
-            <ProjectCard
+            <CardProject
               image={p1}
               title="Site de Zebras de Futebol"
               description="Nesse projeto criei o Front end de um site de apostas esportivas. Pude colocar em prática muitos de meus conhecimentos em Desiner Responsivo"
@@ -156,7 +156,7 @@ export function Main() {
               repoLink="https://github.com/lauanderson-rael/templates-zebras"
               technologies={['html', 'CSS', 'JavaScript']}
             />
-            <ProjectCard
+            <CardProject
               image={p2}
               title="Lista de Heróis"
               description="Nesse projeto fiz o consumo de uma Api Rest, realizei requisições GET com Axios e também adicionei algumas funcionalidades como as opções de listagem e filtragem. "
@@ -164,7 +164,7 @@ export function Main() {
               repoLink="https://github.com/lauanderson-rael/react-list-heroes"
               technologies={['React', 'CSS', 'JavaScript']}
             />
-            <ProjectCard
+            <CardProject
               image={p5}
               title="Blog de Emagrecimento"
               description="Nesse projeto criei um blog básico com consumo de uma Api e requisições GET com Fetch"
@@ -172,7 +172,7 @@ export function Main() {
               repoLink="https://github.com/lauanderson-rael/react-blog"
               technologies={['React', 'CSS', 'JavaScript']}
             />
-            <ProjectCard
+            <CardProject
               image={p3}
               title="Todo List"
               description="Nesse projeto desenvolvi um Todo List básico utilizando a biblioteca React. Pude abordar o uso de alguns Hooks do react, como useState"
@@ -181,7 +181,7 @@ export function Main() {
               technologies={['React', 'CSS', 'JavaScript']}
             />
 
-            <ProjectCard
+            <CardProject
               image={p4}
               title="ADS - IFMA CN"
               description="Site estático desenvolvido com html e CSS. Esse projeto foi uma atividade proposta pelo professor da disciplina de Programação Web, do meu curso de Analise e desenvolvimento de sistemas."
