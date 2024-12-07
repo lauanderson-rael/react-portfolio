@@ -28,7 +28,7 @@ type Post = {
 
     }
     loadApi()
-      
+
   }, [])
 
 
@@ -44,7 +44,7 @@ type Post = {
 
   return (
     <>
-    <Container>
+    <Container  style={{ backgroundColor: "var(--background-color)", color: "var(--text-color)"}}>
       <div className="container">
         <header>
           <h2>Posts</h2>

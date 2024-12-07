@@ -133,3 +133,14 @@ h2 span {
   background: #555; /* cor do polegar ao passar o mouse */
 }
 
+/* temas */
+
+:root {
+  --background-color: #fffffff8;
+  --text-color: #000000;
+}
+
+[data-theme="dark"] {
+  --background-color: black;
+  --text-color: #ffffff;
+}

@@ -5,6 +5,7 @@ import { BsList } from "react-icons/bs";
 import { PiCodeFill } from "react-icons/pi";
 import "../../pages/Main/index"
 import { useRef } from "react";
+import { useTheme } from "../../contexts/ThemeContext";
 
 export function Header() {
   // Iniciando const com o tipo HTMLDivElement | null
@@ -22,9 +23,11 @@ export function Header() {
     }
   };
 
+  const { theme, toggleTheme } = useTheme();
+
 
   return (
-    <Container>
+    <Container  style={{ backgroundColor: "var(--background-color)", color: "var(--text-color)"}}>
       <div className="interface">
         <div className="logo">
           <a href="#">
@@ -33,6 +36,11 @@ export function Header() {
         </div>
 
         <nav className="menu-desktop">
+
+        <button onClick={toggleTheme}>
+          Alternar para {theme === "light" ? "Escuro" : "Claro"}
+        </button>
+
           <ul>
             <li className="header-blog">
               <a href="/#inicio">Início</a>
@@ -79,7 +87,7 @@ export function Header() {
 
             <nav>
               <ul>
-                
+
                 <li className="header-blog">
                    <a href="/#inicio">Início</a>
                 </li>

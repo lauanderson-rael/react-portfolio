@@ -7,7 +7,7 @@ import { PiCodeFill } from "react-icons/pi";
 
 export function Footer(){
     return(
-        <Container>
+        <Container  style={{ backgroundColor: "var(--background-color)", color: "var(--text-color)"}}>
         <div className="line-footer">
           <div className="flex">
 

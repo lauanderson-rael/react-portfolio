@@ -12,10 +12,13 @@ import p4 from "../../assets/p4.png"
 import p5 from '../../assets/p5.png'
 
 export function Main() {
+
   return (
     <>
-     
-      <Container>
+      <Container
+      style={{ backgroundColor: "var(--background-color)", color: "var(--text-color)"}}
+
+      >
         <section className="topo-do-site" id="inicio">
           <div className="interface topoo" >
             <div className="flex">
