@@ -8,13 +8,21 @@ const VerificarRota = () => {
 }
 
 export const Container = styled.header`
-  box-shadow: 0 0 40px 10px #ffffff1d;
-  background: black;
+  background-color: var(--background-color-gray);
+  color: var(--text-color);
+  box-shadow: 0 -15px 40px 10px var(--text-color);
   padding: 10px;
   padding-bottom: 0px;
   position: sticky;
   top: 0;
   z-index: 3000;
+
+  .logo{
+    display: flex;
+    align-items: center;
+    width: 10%;
+    justify-content: space-between;
+  }
 
   .header-blog{
     display: ${() => (VerificarRota() ? "none" : "block")};
@@ -25,7 +33,7 @@ export const Container = styled.header`
 
   .li-blog{
     a{
-      font-weight: 800;
+      text-decoration: underline;
     }
   }
 
@@ -58,7 +66,8 @@ export const Container = styled.header`
   }
 
   nav.menu-desktop a:hover {
-    color: #fff;
+    transform: scale(1.05);
+    font-weight: 600;
   }
 
   nav ul {
@@ -74,7 +83,6 @@ export const Container = styled.header`
     // barra header fixo aqui
     padding: 10px;
     padding-bottom: 0px;
-    background: black;
     position: sticky;
     top: 0;
     z-index: 3000;
@@ -82,6 +90,10 @@ export const Container = styled.header`
     img {
     width: 70px;
     height: auto;
+  }
+
+  .logo{
+    width: 25%;
   }
 
     .menu-desktop,
@@ -99,7 +111,7 @@ export const Container = styled.header`
     }
 
     .menu-mobile {
-      background-color: #000;
+      background-color: var(--background-color);
       height: 100vh;
       position: fixed;
       top: 0;
@@ -132,7 +144,7 @@ export const Container = styled.header`
       text-align: right;
 
       li a {
-        color: #fff;
+        color: var(--text-color);
         font-size: 20px;
         font-weight: 400;
         padding: 20px 8%;

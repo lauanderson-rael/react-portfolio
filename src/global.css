@@ -137,12 +137,18 @@ h2 span {
 /* tema escuro*/
 :root {
   --background-color: #000;
+  --background-color2: #ffffffe1;
+  --background-color-gray: #000;
   --text-color: #c4c4c4;
+  --text-color2: #1b1b1b;
 }
 
 /* tema claro*/
 [data-theme="light"] {
   --background-color: #fff;
+  --background-color2: #000000c0;
+  --background-color-gray: #e8e8e8;
   --text-color: #000;
+  --text-color2: #ffffff;
 
 }

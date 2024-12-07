@@ -6,6 +6,7 @@ import { PiCodeFill } from "react-icons/pi";
 import "../../pages/Main/index"
 import { useRef } from "react";
 import { useTheme } from "../../contexts/ThemeContext";
+import { MdLightMode, MdNightlight  } from "react-icons/md";
 
 export function Header() {
 
@@ -27,19 +28,27 @@ export function Header() {
 
 
   return (
-    <Container  style={{ backgroundColor: "var(--background-color)", color: "var(--text-color)"}}>
+    <Container>
       <div className="interface">
+
         <div className="logo">
           <a href="#">
-          <div style={{color: '#00ff08', fontSize: '40px'}}>  <PiCodeFill/> </div>
+            <div style={{color: '#00ff08', fontSize: '40px'}}>  <PiCodeFill/> </div>
           </a>
+
+          <div>
+              {theme === "dark" ?  <MdLightMode  onClick={toggleTheme}/> :  <MdNightlight onClick={toggleTheme}/>}
+          </div>
+
         </div>
 
-        <nav className="menu-desktop">
 
-        <button onClick={toggleTheme}>
-          Alternar para {theme === "light" ? "Escuro" : "Claro"}
-        </button>
+
+
+
+
+        {/* inicio menu-desktop */}
+        <nav className="menu-desktop">
 
           <ul>
             <li className="header-blog">
@@ -63,6 +72,7 @@ export function Header() {
             </li>
           </ul>
         </nav>
+        {/* fim menu-desktop */}
 
         <div  className="btn-contato header-blog">
           <a href="#formulario">
@@ -77,43 +87,46 @@ export function Header() {
             </i>
           </div>
 
+        {/* inicio menu-mobile */}
+        <div className="menu-mobile" ref={referencia1} onClick={FecharMenu}>
 
-          <div className="menu-mobile" ref={referencia1} onClick={FecharMenu}>
-            <div className="btn-fechar">
-              <i>
-                <IoMdClose />
-              </i>
-            </div>
+              <div className="btn-fechar">
+                <i>
+                  <IoMdClose />
+                </i>
+              </div>
 
-            <nav>
-              <ul>
+              <nav>
+                <ul>
 
-                <li className="header-blog">
-                   <a href="/#inicio">Início</a>
-                </li>
+                  <li className="header-blog">
+                    <a href="/#inicio">Início</a>
+                  </li>
 
-                <li className="header-home">
-                   <Link to={'/'}>Voltar</Link>
-                </li>
-                <li className="header-blog">
-                  <a href="#especialidades">Especialidades</a>
-                </li>
-                <li className="header-blog">
-                  <a href="#sobre">Sobre</a>
-                </li>
-                <li className="header-blog">
-                  <a href="#projetos">Projetos</a>
-                </li>
-                <li className="header-blog">
-                  <a href="#formulario">Contato</a>
-                </li>
+                  <li className="header-home">
+                    <Link to={'/'}>Voltar</Link>
+                  </li>
+                  <li className="header-blog">
+                    <a href="#especialidades">Especialidades</a>
+                  </li>
+                  <li className="header-blog">
+                    <a href="#sobre">Sobre</a>
+                  </li>
+                  <li className="header-blog">
+                    <a href="#projetos">Projetos</a>
+                  </li>
+                  <li className="header-blog">
+                    <a href="#formulario">Contato</a>
+                  </li>
 
-                <li>
-                  <Link to={'/blog'}>Blog</Link>
-               </li>
-              </ul>
-            </nav>
-          </div>
+                  <li>
+                    <Link to={'/blog'}>Blog</Link>
+                </li>
+                </ul>
+              </nav>
+        </div>
+        {/* fim menu-mobile */}
+
           <div className="overlay-menu" onClick={FecharMenu}></div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.footer`
-  background-color: var(--background-color);
+  background-color: var(--background-color-gray);
   padding: 40px 4%;
   box-shadow: 0 20px 40px 10px  var(--text-color);
 
@@ -26,7 +26,7 @@ export const Container = styled.footer`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color:  var(--text-color);
+    color:  gray;
 
   }
 

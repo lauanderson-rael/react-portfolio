@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  background-color: var(--background-color);
 
 body{
   padding: 0;
@@ -16,6 +17,7 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+
 }
 
 .center{
@@ -37,9 +39,9 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 0 12%; */
   margin-bottom: 20px;
-  background-color: #d2d2d2;
+  background-color: var(--background-color2);
+  color: var(--text-color2);
   width: 100%;
 }
 
@@ -51,10 +53,10 @@ article{
   border-radius: 7px;
   margin-bottom: 30px;
   padding: 20px;
-  box-shadow: 0px 0px 7px #d3d3d3;
+  box-shadow: 0px 0px 7px var(--background-color2);
 
   h2{
-    color: #fff;
+    color: var(--text-color);
   }
 }
 article img{
@@ -65,7 +67,7 @@ article img{
 }
 
 article p, article span{
-  color: #d2d2d2;
+  color: var(--text-color);
 }
 
 article button{

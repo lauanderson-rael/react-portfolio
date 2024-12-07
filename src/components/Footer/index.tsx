@@ -45,7 +45,7 @@ export function Footer(){
             </div>
           </div>
         </div>
-        <div className="line-footer borda">
+        <div className="line-footer">
           <span>© 2024 Lauanderson Rael. Todos os direitos reservados</span>
         </div>
       </Container>

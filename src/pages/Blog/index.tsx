@@ -44,7 +44,7 @@ type Post = {
 
   return (
     <>
-    <Container  style={{ backgroundColor: "var(--background-color)", color: "var(--text-color)"}}>
+    <Container>
       <div className="container">
         <header>
           <h2>Posts</h2>
@@ -68,9 +68,11 @@ type Post = {
 
         </main>
       </div>
-        <p style={{ fontSize: '12px', color: 'gray', textAlign: 'center', margin: '2% 4%' }}>
+        <p style={{ fontSize: '12px', color: 'gray', textAlign: 'center' }}>
             As imagens e descrições exibidas neste blog são de terceiros e pertencem aos respectivos autores. Ao clicar nos links, você será redirecionado para o site original, onde pode encontrar o conteúdo completo. Todos os direitos reservados aos autores.
         </p>
+
+        <br />
       </Container>
 
     </>
