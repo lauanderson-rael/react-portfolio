@@ -35,7 +35,7 @@ type Post = {
   if (loading){
     return(
        <Container>
-            <h1 style={{color: "white", height: '60vh', display: 'grid', placeItems: 'center'}}>Carregando ...</h1>
+            <h1 style={{color: "white", height: '60vh', display: 'grid', placeItems: 'center', color: ' var(--text-color)'}}>Carregando ...</h1>
        </Container>
     )
   }
