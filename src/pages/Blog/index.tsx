@@ -17,7 +17,7 @@ type Post = {
   // ao renderizar a pagina sera chamada a funcao (obs: --> vazio [])
   useEffect(() => {
     function loadApi(){
-      const api = import.meta.env.VITE_API_URL
+      const api = import.meta.env.VITE_API_URL + '/posts'
       fetch(api)
       .then((res) => res.json())
       .then((json) => {

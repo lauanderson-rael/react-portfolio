@@ -5,6 +5,7 @@ import Blog from "./pages/Blog";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import AppAdm from "./pages/Admin";
 
 
 function Layout() {
@@ -32,8 +33,9 @@ function App() {
           <Route path="/" element={<Layout/>}>
             <Route index element={<Main />} /> {/* Rota inicial */}
             <Route path="/blog" element={<Blog/>} />
-
+            <Route path="/admin" element={<AppAdm/>} />
           </Route>
+          
         </Routes>
       </BrowserRouter>
 
