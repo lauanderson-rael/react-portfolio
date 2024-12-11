@@ -19,7 +19,7 @@ const ImageUpload: React.FC = () => {
     }
 
     const formData = new FormData();
-    formData.append('image', selectedFile); // 'image' deve ser a mesma chave que você usa no back-end
+    formData.append('imagem', selectedFile); // 'image' deve ser a mesma chave que você usa no back-end
 
     try {
     const api = import.meta.env.VITE_API_URL + '/upload'
@@ -29,15 +29,17 @@ const ImageUpload: React.FC = () => {
         },
       });
       console.log('Imagem enviada com sucesso:', response.data);
+      alert("imagem enviada!")
     } catch (error) {
       console.error('Erro ao enviar a imagem:', error);
+      alert("Erro ao enviar imagem!")
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <input type="file" onChange={handleFileChange} />
-      <button type="submit">Enviar Imagem</button>
+      <button style={{background: 'green', padding: '2px 3px', color: '#fff', marginLeft: '5px'}} type="submit">Enviar Imagem</button>
     </form>
   );
 };

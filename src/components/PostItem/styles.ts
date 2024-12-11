@@ -17,9 +17,9 @@ export const ContainerPost = styled.div`
     }
     button{
         background-color: red;
-        margin-left: 10px;
         padding: 2px 3px;
         color: #fff;
+        width: 100%;
         border: 1px solid var(--text-color);    
     }
 

@@ -22,8 +22,10 @@ const PostItem: React.FC<PostItemProps> = ({ post, fetchPosts }) => {
       const api = import.meta.env.VITE_API_URL + '/delete'
       await axios.delete(`${api}/${id}`);
       fetchPosts(); // Atualizar a lista após deletar
+      alert('Post deletado com sucesso! :)')
     } catch (error) {
       console.error('Erro ao deletar o post', error);
+      alert('Erro ao deletar o post :(');
     }
   };
 
@@ -31,15 +33,18 @@ const PostItem: React.FC<PostItemProps> = ({ post, fetchPosts }) => {
     <ContainerPost>
       <div>
         <img src={post.imgUrl} alt={post.alt} />
+        <button onClick={() => deletePost(post._id)}>Deletar</button>
       </div>
       <div>
-        <strong>ID: {post._id}</strong> <br />
-        <b>{post.titulo}</b>
-        <p>{post.descricao}</p>
+        <h4><b>ID: </b> {post._id}</h4>
+        <p><b>Titulo: </b> {post.titulo}</p>
+        <p><b>Descricao: </b>{post.descricao}</p>
+        <p><b>Alt: </b>{post.alt}</p>
+        <p>
+          <b>Link: </b>  
+          <a href={post.link} target="_blank" rel="noopener noreferrer">{post.link}</a>
+        </p>
       
-        <a href={post.link} target="_blank" rel="noopener noreferrer">Leia mais</a>
-        
-        <button onClick={() => deletePost(post._id)}>Deletar</button>
       </div>
     </ContainerPost>
   );

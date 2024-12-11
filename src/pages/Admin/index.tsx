@@ -47,14 +47,17 @@ const AppAdm: React.FC = () => {
     }
   
     try {
-      const response = await axios.put(`http://sua-api-endpoint/update/${updateData._id}`, updateData, {
+      const api = import.meta.env.VITE_API_URL + '/upload'
+      const response = await axios.put(`${api}/${updateData._id}`, updateData, {
         headers: {
           'Content-Type': 'application/json',
         },
       });
       console.log('Dados atualizados com sucesso:', response.data);
+      alert('Dados atualizados com sucesso! :)')
     } catch (error) {
       console.error('Erro ao atualizar os dados:', error);
+      alert('Erro ao atualizar os dados :(');
     }
   };
 
@@ -137,7 +140,7 @@ const AppAdm: React.FC = () => {
             required
           />
           <br />
-          <button type="submit">Atualizar</button>
+          <button style={{background: 'green', padding: '2px 3px', color: '#fff', marginTop: '5px'}}  type="submit">Atualizar</button>
           </form>
         </div>
         </article>
