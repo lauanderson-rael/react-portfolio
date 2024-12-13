@@ -20,7 +20,12 @@ const PostItem: React.FC<PostItemProps> = ({ post, fetchPosts }) => {
   const deletePost = async (id: string) => {
     try {
       const api = import.meta.env.VITE_API_URL + '/delete'
-      await axios.delete(`${api}/${id}`);
+      const token = localStorage.getItem('token');
+      await axios.delete(`${api}/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`, // Adiciona o token no cabeçalho
+        },
+      });
       fetchPosts(); // Atualizar a lista após deletar
       alert('Post deletado com sucesso! :)')
     } catch (error) {
@@ -41,10 +46,10 @@ const PostItem: React.FC<PostItemProps> = ({ post, fetchPosts }) => {
         <p><b>Descricao: </b>{post.descricao}</p>
         <p><b>Alt: </b>{post.alt}</p>
         <p>
-          <b>Link: </b>  
+          <b>Link: </b>
           <a href={post.link} target="_blank" rel="noopener noreferrer">{post.link}</a>
         </p>
-      
+
       </div>
     </ContainerPost>
   );

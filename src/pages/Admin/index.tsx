@@ -24,7 +24,6 @@ interface UpdateData {
 
 const AppAdm: React.FC = () => {
 
-  // inicio new
   const [updateData, setUpdateData] = useState<UpdateData>({
     _id: '',
     titulo: '',
@@ -43,7 +42,7 @@ const AppAdm: React.FC = () => {
       console.error('ID do recurso ausente');
       return;
     }
-  
+
     try {
       const api = import.meta.env.VITE_API_URL + '/upload'
       const response = await axios.put(`${api}/${updateData._id}`, updateData, {
@@ -80,7 +79,7 @@ const AppAdm: React.FC = () => {
   }, []);
 
   return (
-  
+
     <Container>
       <header>Gerenciamento dos Posts</header>
 
