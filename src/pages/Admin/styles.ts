@@ -15,6 +15,14 @@ export const Container = styled.div`
     justify-content: center; 
   }
 
+  @media (max-width: 1020px){
+    header{
+      top: 70px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
 `;
 
 export const Main = styled.main`
@@ -25,5 +33,19 @@ export const Main = styled.main`
     width: 80%;
     padding: 5px;
     border: 1px solid  var(--background-color2);
+  }
+
+  @media (max-width: 1020px){
+    padding: 0 3%;
+
+    article{
+      font-size: small;
+      width: 98%;
+    }
+
+    h2{
+      display: flex;
+      justify-content: center;
+    }
   }
 `;
