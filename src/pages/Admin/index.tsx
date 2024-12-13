@@ -60,7 +60,6 @@ const AppAdm: React.FC = () => {
 
   //fim
 
-
   const [posts, setPosts] = useState<Post[]>([]);
 
   // Função para buscar os posts no banco
