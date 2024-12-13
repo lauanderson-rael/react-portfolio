@@ -1,5 +1,6 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import axios from 'axios';
+import { Container } from './styles';
 
 const ImageUpload: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -37,10 +38,12 @@ const ImageUpload: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="file" onChange={handleFileChange} />
-      <button style={{background: 'green', padding: '2px 3px', color: '#fff', marginLeft: '5px'}} type="submit">Enviar Imagem</button>
-    </form>
+    <Container>
+      <form onSubmit={handleSubmit}>
+        <input type="file" onChange={handleFileChange} />
+        <button type="submit">Enviar Imagem</button>
+      </form>
+    </Container>
   );
 };
 
