@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { ContainerPost } from './styles';
 
+
 interface Post {
   _id: string;
   titulo: string;
