@@ -1,8 +1,6 @@
 import React, { useState, useEffect,  ChangeEvent, FormEvent } from 'react';
 import axios from 'axios';
 import PostList from '../../components/PostList/index';
-//import PostForm from '../../components/PostForm/index';
-//import ImageUpload from '../../components/AdminUploadImage';
 import { Container, Main} from './styles';
 import ImageUpload from '../../components/UploadImage/index';
 
