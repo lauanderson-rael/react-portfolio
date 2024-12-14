@@ -8,19 +8,22 @@
         gap: 20px;
 
         img{
-            width: 120px;
+            width: 170px;
             height: 80px;
         }
-        
+
         p{
             font-size: small;
+        }
+        .caixa{
+            max-width: 170px;
         }
         button{
             background-color: red;
             padding: 2px 3px;
             color: #fff;
             width: 100%;
-            border: 1px solid var(--text-color);    
+            border: 1px solid var(--text-color);
         }
 
         strong{

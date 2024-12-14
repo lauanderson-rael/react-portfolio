@@ -80,65 +80,69 @@ const AppAdm: React.FC = () => {
   return (
 
     <Container>
-      <header>Gerenciamento dos Posts</header>
-
       <Main>
         <h2>Adicionar Novo Post</h2>
         <article>
-        <strong>1 - Primeiro adicione a foto e clique em "enviar imagem"</strong>
-        <ImageUpload/>
-        <br />
+            <h3>1 - Primeiro adicione a foto e clique em "enviar imagem"</h3>
 
-        <strong>2 - adicione o "id" do post,preencha os dados e clique em "atualizar"</strong>
-        <div>
-          <form onSubmit={handleSubmit} style={{display: 'block'}}>
-          <input
-            type="text"
-            name="_id"
-            placeholder="ID do recurso"
-            value={updateData._id}
-            onChange={handleChange}
-            required
-          />
-          <br />
-          <input
-            type="text"
-            name="titulo"
-            placeholder="Título"
-            value={updateData.titulo}
-            onChange={handleChange}
-            required
-          /> <br />
-          <textarea
-            name="descricao"
-            placeholder="Descrição"
-            value={updateData.descricao}
-            onChange={handleChange}
-            required
-          />
-          <br />
-          <input
-            type="text"
-            name="alt"
-            placeholder="Texto alternativo"
-            value={updateData.alt}
-            onChange={handleChange}
-            required
-          />
-          <br />
+              <ImageUpload/>
 
-          <input
-            type="text"
-            name="link"
-            placeholder="Link"
-            value={updateData.link}
-            onChange={handleChange}
-            required
-          />
-          <br />
-          <button style={{background: 'green', padding: '2px 3px', color: '#fff', marginTop: '5px'}}  type="submit">Atualizar</button>
+            <h3>2 - adicione o "id" do post,preencha os dados e clique em "atualizar"</h3>
+
+
+          <form className='form-new' onSubmit={handleSubmit}>
+
+            <label htmlFor="">ID </label>
+            <input
+              type="text"
+              name="_id"
+              placeholder="ID do recurso"
+              value={updateData._id}
+              onChange={handleChange}
+              required
+            />
+
+            <label htmlFor="">Titulo</label>
+            <input
+              type="text"
+              name="titulo"
+              placeholder="Título"
+              value={updateData.titulo}
+              onChange={handleChange}
+              required
+            />
+            <label htmlFor="">Descrição</label>
+            <textarea
+              name="descricao"
+              placeholder="Descrição"
+              value={updateData.descricao}
+              onChange={handleChange}
+              required
+            />
+
+            <label htmlFor="">texto alt para imagem</label>
+            <input
+              type="text"
+              name="alt"
+              placeholder="Texto alternativo"
+              value={updateData.alt}
+              onChange={handleChange}
+              required
+            />
+
+            <label htmlFor="">Url do post</label>
+            <input
+              type="text"
+              name="link"
+              placeholder="Link"
+              value={updateData.link}
+              onChange={handleChange}
+              required
+            />
+
+            <button style={{height: '35px', marginTop: '10px'}} className='submit' type="submit">Atualizar</button>
           </form>
-        </div>
+
         </article>
 
         <PostList posts={posts} fetchPosts={fetchPosts} />

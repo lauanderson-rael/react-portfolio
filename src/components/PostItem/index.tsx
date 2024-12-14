@@ -37,9 +37,9 @@ const PostItem: React.FC<PostItemProps> = ({ post, fetchPosts }) => {
 
   return (
     <ContainerPost>
-      <div>
+      <div className='caixa'>
         <img src={post.imgUrl} alt={post.alt} />
-        <button onClick={() => deletePost(post._id)}>Deletar</button>
+        <button style={{background: 'red'}} onClick={() => deletePost(post._id)}>Deletar</button>
       </div>
       <div>
         <h4><b>ID: </b> {post._id}</h4>

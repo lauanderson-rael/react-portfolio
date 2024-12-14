@@ -10,7 +10,7 @@ const Login: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     try {
       const response = await fetch('http://localhost:3000/login', {
         method: 'POST',
@@ -37,14 +37,16 @@ const Login: React.FC = () => {
   return (
     <Container>
     <form onSubmit={handleSubmit}>
-      <label>username:</label>
+      <h1>Bem vindo de volta</h1>
+      <span>acesse com seu usuario e senha para ter acesso ao sistema</span>
+      <label>usuario:</label>
       <input
         type="text"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
         required
       />
-      <br />
+
       <label>Senha:</label>
       <input
         type="password"
@@ -52,7 +54,7 @@ const Login: React.FC = () => {
         onChange={(e) => setPassword(e.target.value)}
         required
       />
-      <br />
+
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <button type="submit">Entrar</button>
     </form>
