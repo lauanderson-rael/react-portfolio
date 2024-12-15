@@ -80,19 +80,20 @@ article p, article span{
 
 article button{
   margin-top: 10px;
-  border: 2px solid #d3d3d3;
   background-color: #d3d3d3;
+  background-color: #00ff08;
   padding: 10px 0;
   border-radius: 7px;
   font-weight: 700;
   color: black;
   transition: all 0.3s;
+  transform: scale(1.02);
   width: 100%;
+  border: 2px solid #00ff08;
 }
 article button:hover{
-  color: white;
-  background-color: #00ff08;
-  border: 2px solid #00ff08;
+  background-color:rgb(5, 194, 11);
+  border: 2px solid rgb(5, 194, 11);
 }
 
 article a{
