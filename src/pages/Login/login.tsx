@@ -12,7 +12,8 @@ const Login: React.FC = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3000/auth/login', {
+      const api = import.meta.env.VITE_API_URL + '/auth/login'
+      const response = await fetch(api, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
