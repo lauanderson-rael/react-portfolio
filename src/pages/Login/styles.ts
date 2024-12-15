@@ -21,7 +21,7 @@ export const Container = styled.div`
             border: none;
             background-color: #00ff08;
             transition: all.2s;
-            padding: 3px 10px;
+            padding: 6px 10px;
             border-radius: 4px;
         }
 
