@@ -273,7 +273,8 @@ export const Container = styled.main`
       margin-top: 40px;
       display: grid;
       place-items:center;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-template-columns: 1fr 1fr;
+      /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
     }
   }
 

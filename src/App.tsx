@@ -8,7 +8,6 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Login from "./pages/Login/login";
 import ProtectedPage from "./pages/ProtectedPage";
 import Page404 from "./pages/page404";
-import AppAdm from "./pages/Admin";
 
 
 function Layout() {
@@ -36,7 +35,6 @@ function App() {
           <Route path="/" element={<Layout/>}>
             <Route index element={<Main />} /> {/* Rota inicial */}
             <Route path="/blog" element={<Blog/>} />
-            <Route path="/admin" element={<AppAdm/>} />
 
             <Route path="/login" element={<Login />} />
             <Route path="/protected" element={<ProtectedPage />} />

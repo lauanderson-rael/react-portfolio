@@ -1,6 +1,7 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import axios from 'axios';
 import { Container } from './styles';
+import { IoMdSend } from "react-icons/io";
 
 const ImageUpload: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -41,7 +42,7 @@ const ImageUpload: React.FC = () => {
     <Container>
       <form onSubmit={handleSubmit}>
         <input type="file" onChange={handleFileChange} />
-        <button type="submit">Enviar Imagem</button>
+        <button type="submit"> Enviar Imagem <IoMdSend/></button>
       </form>
     </Container>
   );

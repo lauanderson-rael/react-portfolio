@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import { ContainerPost } from './styles';
-
+import Modal from '../Modal';
+import { useState } from 'react';
 
 interface Post {
   _id: string;
@@ -18,6 +19,9 @@ interface PostItemProps {
 }
 
 const PostItem: React.FC<PostItemProps> = ({ post, fetchPosts }) => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const deletePost = async (id: string) => {
     try {
       const api = import.meta.env.VITE_API_URL + '/delete'
@@ -37,21 +41,33 @@ const PostItem: React.FC<PostItemProps> = ({ post, fetchPosts }) => {
 
   return (
     <ContainerPost>
-      <div className='caixa'>
-        <img src={post.imgUrl} alt={post.alt} />
-        <button style={{background: 'red'}} onClick={() => deletePost(post._id)}>Deletar</button>
-      </div>
-      <div>
-        <h4><b>ID: </b> {post._id}</h4>
-        <p><b>Titulo: </b> {post.titulo}</p>
-        <p><b>Descricao: </b>{post.descricao}</p>
-        <p><b>Alt: </b>{post.alt}</p>
-        <p>
-          <b>Link: </b>
-          <a href={post.link} target="_blank" rel="noopener noreferrer">{post.link}</a>
-        </p>
+      <details>
+        <summary> <b>ID: {post._id}</b> - <span style={{fontSize: 'small'}}>{post.titulo}</span></summary>
+        <section>
+              <div className='caixa'>
+                <img src={post.imgUrl} alt={post.alt} />
+              </div>
 
-      </div>
+              <div>
+                <p><b>Titulo: </b> {post.titulo}</p>
+                <p><b>Descricao: </b>{post.descricao}</p>
+                <p><b>Alt: </b>{post.alt}</p>
+                <p>
+                  <b>Link: </b>
+                  <a href={post.link} target="_blank" rel="noopener noreferrer">{post.link}</a>
+                </p>
+              </div>
+          </section>
+
+          <button style={{background: 'red'}} onClick={() => setIsModalOpen(true)} >Deletar post</button>
+
+          <Modal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            onConfirm={() => deletePost(post._id)}
+            message={`Tem certeza que deseja deletar esse post"?`}
+          />
+    </details>
     </ContainerPost>
   );
 };

@@ -8,11 +8,15 @@ form{
 }
 
 button{
-    border-radius: 5%;
     border: none;
     background-color: #00ff08;
     transition: all.2s;
     padding: 3px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
 }
 
 @media (max-width: 1020px){

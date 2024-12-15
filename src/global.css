@@ -138,6 +138,7 @@ h2 span {
 :root {
   --background-color: #000;
   --background-color2: #ffffffe1;
+  --background-color3: #101010e1;
   --background-color-gray: #000;
   --text-color: #c4c4c4;
   --text-color2: #1b1b1b;
@@ -147,6 +148,7 @@ h2 span {
 [data-theme="light"] {
   --background-color: #fff;
   --background-color2: #000000c0;
+  --background-color3: #dfdfdfc0;
   --background-color-gray: #e8e8e8;
   --text-color: #000;
   --text-color2: #ffffff;

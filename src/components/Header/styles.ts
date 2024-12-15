@@ -10,7 +10,7 @@ const VerificarRota = () => {
 export const Container = styled.header`
   background-color: var(--background-color-gray);
   color: var(--text-color);
-  box-shadow: 0 -15px 40px 10px var(--text-color);
+  box-shadow: 0 -15px 25px 10px var(--text-color);
   padding: 10px;
   padding-bottom: 0px;
   position: sticky;

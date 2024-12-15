@@ -32,9 +32,9 @@ export function Header() {
       <div className="interface">
 
         <div className="logo">
-          <a href="#">
+          <Link to={'/'}>
             <div style={{color: '#00ff08', fontSize: '40px'}}>  <PiCodeFill/> </div>
-          </a>
+          </Link>
 
           <div>
               {theme === "dark" ?  <MdLightMode  onClick={toggleTheme}/> :  <MdNightlight onClick={toggleTheme}/>}
@@ -48,7 +48,7 @@ export function Header() {
 
           <ul>
             <li className="header-blog">
-              <a href="/#inicio">Início</a>
+              <Link to="/#inicio">Início</Link>
             </li>
 
             <li className="header-home">
@@ -104,6 +104,10 @@ export function Header() {
 
                   <li className="header-home">
                     <Link to={'/'}>Voltar</Link>
+                  </li>
+
+                  <li className="header-home">
+                     <Link to={'/login'}>Admin</Link>
                   </li>
                   <li className="header-blog">
                     <a href="#especialidades">Especialidades</a>

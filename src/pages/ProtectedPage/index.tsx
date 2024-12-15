@@ -4,7 +4,6 @@ import AppAdm from '../Admin';
 import Logout from '../../components/Logout';
 import { Container } from './styles';
 
-
 const ProtectedPage: React.FC = () => {
   const token = localStorage.getItem('token');
 
@@ -18,6 +17,8 @@ const ProtectedPage: React.FC = () => {
           <h3>Bem vindo ao sistema!</h3>
           <Logout/>
         </header>
+
+
 
         <AppAdm/>
     </Container>

@@ -19,8 +19,8 @@ interface PostListProps {
 const PostList: React.FC<PostListProps> = ({ posts, fetchPosts }) => {
   return (
     <div>
-      <h2 style={{marginTop: '50px'}}>Lista de Posts</h2>
       <GridLayout>
+        <h2 style={{marginTop: '50px'}}>Lista de Posts - quantidade atual: {posts.length}</h2>
         {posts.map((post) => (
           <PostItem key={post._id} post={post} fetchPosts={fetchPosts} />
         ))}

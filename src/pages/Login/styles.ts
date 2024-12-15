@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     color: var(--text-color);
+    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,11 +18,16 @@ export const Container = styled.div`
 
         button{
             margin-top: 15px;
-            border-radius: 5%;
             border: none;
             background-color: #00ff08;
             transition: all.2s;
             padding: 3px 10px;
+            border-radius: 4px;
+        }
+
+        input{
+            padding: 3px;
+            border-radius: 4px;
         }
     }
 

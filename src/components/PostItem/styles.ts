@@ -1,22 +1,33 @@
     import styled from 'styled-components'
 
     export const ContainerPost = styled.div`
-        border: 1px solid var(--background-color2);
         display: flex;
         padding: 10px;
         margin: 10px 0;
         gap: 20px;
+        border: 1px solid var(--text-color);
+        border-radius: 8px;
 
-        img{
-            width: 170px;
-            height: 80px;
+        section{
+        display: flex;
+        padding: 5px;
+        margin: 10px 0;
+        gap: 20px;
+
+
         }
+
 
         p{
             font-size: small;
         }
         .caixa{
             max-width: 170px;
+            border: none;
+            img{
+                width: 150px;
+                height: 80px;
+            }
         }
         button{
             background-color: red;
@@ -24,6 +35,7 @@
             color: #fff;
             width: 100%;
             border: 1px solid var(--text-color);
+            border-radius: 4px;
         }
 
         strong{
@@ -31,8 +43,16 @@
         }
 
         @media (max-width: 1020px){
-            display: flex;
-            flex-direction: column-reverse;
+            section{
+                display: block;
+            }
 
-        }
+            .caixa{
+            max-width: 400px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            }
+    }
     `;

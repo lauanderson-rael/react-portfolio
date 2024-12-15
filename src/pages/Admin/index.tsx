@@ -81,67 +81,71 @@ const AppAdm: React.FC = () => {
 
     <Container>
       <Main>
-        <h2>Adicionar Novo Post</h2>
         <article>
-            <h3>1 - Primeiro adicione a foto e clique em "enviar imagem"</h3>
+            <h2>Adicionar Novo Post</h2>
 
+          <div className="caixa">
+            <h3>Envie a imagem do novo post</h3>
               <ImageUpload/>
+          </div>
 
-            <h3>2 - adicione o "id" do post,preencha os dados e clique em "atualizar"</h3>
+          <br />
 
+          <div className='caixa'>
+            <h3>Adicione o ID do novo post e preencha os dados, ou atualize um post já exixtente</h3>
+            <form className='form-new' onSubmit={handleSubmit}>
 
-          <form className='form-new' onSubmit={handleSubmit}>
+              <label htmlFor="">ID </label>
+              <input
+                type="text"
+                name="_id"
+                placeholder="ID do recurso"
+                value={updateData._id}
+                onChange={handleChange}
+                required
+              />
 
-            <label htmlFor="">ID </label>
-            <input
-              type="text"
-              name="_id"
-              placeholder="ID do recurso"
-              value={updateData._id}
-              onChange={handleChange}
-              required
-            />
+              <label htmlFor="">Titulo</label>
+              <input
+                type="text"
+                name="titulo"
+                placeholder="Título"
+                value={updateData.titulo}
+                onChange={handleChange}
+                required
+              />
+              <label htmlFor="">Descrição</label>
+              <textarea
+                name="descricao"
+                placeholder="Descrição"
+                value={updateData.descricao}
+                onChange={handleChange}
+                required
+              />
 
-            <label htmlFor="">Titulo</label>
-            <input
-              type="text"
-              name="titulo"
-              placeholder="Título"
-              value={updateData.titulo}
-              onChange={handleChange}
-              required
-            />
-            <label htmlFor="">Descrição</label>
-            <textarea
-              name="descricao"
-              placeholder="Descrição"
-              value={updateData.descricao}
-              onChange={handleChange}
-              required
-            />
+              <label htmlFor="">Texto alternativo para imagem</label>
+              <input
+                type="text"
+                name="alt"
+                placeholder="Texto alternativo"
+                value={updateData.alt}
+                onChange={handleChange}
+                required
+              />
 
-            <label htmlFor="">texto alt para imagem</label>
-            <input
-              type="text"
-              name="alt"
-              placeholder="Texto alternativo"
-              value={updateData.alt}
-              onChange={handleChange}
-              required
-            />
+              <label htmlFor="">Url do post</label>
+              <input
+                type="text"
+                name="link"
+                placeholder="Link"
+                value={updateData.link}
+                onChange={handleChange}
+                required
+              />
 
-            <label htmlFor="">Url do post</label>
-            <input
-              type="text"
-              name="link"
-              placeholder="Link"
-              value={updateData.link}
-              onChange={handleChange}
-              required
-            />
-
-            <button style={{height: '35px', marginTop: '10px'}} className='submit' type="submit">Atualizar</button>
-          </form>
+              <button style={{height: '35px', marginTop: '10px'}} className='submit' type="submit">Atualizar</button>
+            </form>
+          </div>
 
         </article>
 

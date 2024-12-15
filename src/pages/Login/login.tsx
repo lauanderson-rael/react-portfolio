@@ -38,7 +38,7 @@ const Login: React.FC = () => {
     <Container>
     <form onSubmit={handleSubmit}>
       <h1>Bem vindo de volta</h1>
-      <span>acesse com seu usuario e senha para ter acesso ao sistema</span>
+      <span>acesse com seu usuario e senha para ter acesso ao <b>sistema administrador</b> do blog</span>
       <label>usuario:</label>
       <input
         type="text"

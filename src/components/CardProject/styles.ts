@@ -11,8 +11,8 @@ h2{
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    max-width: 420px;
-    margin: 16px;
+    //max-width: 420px;
+    margin: 20px;
     transition: transform 0.2s ease-in-out;
   }
 
@@ -85,6 +85,7 @@ h2{
 @media (max-width: 1020px) {
     .project-card {
     max-width: none;
+    margin: 12px;
 
   }
 
