@@ -45,9 +45,11 @@ const AppAdm: React.FC = () => {
 
     try {
       const api = import.meta.env.VITE_API_URL + '/upload'
+      const token = localStorage.getItem('token');
       const response = await axios.put(`${api}/${updateData._id}`, updateData, {
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
         },
       });
       console.log('Dados atualizados com sucesso:', response.data);
