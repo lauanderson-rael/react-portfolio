@@ -5,6 +5,7 @@ export const Container = styled.footer`
   padding: 40px 4%;
   box-shadow: 0 20px 40px 10px  var(--text-color);
 
+
   img {
     width: 75px;
     height: auto;

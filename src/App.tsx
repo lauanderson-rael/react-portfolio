@@ -8,20 +8,19 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Login from "./pages/Login/login";
 import ProtectedPage from "./pages/ProtectedPage";
 import Page404 from "./pages/page404";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 function Layout() {
   return (
     <>
     <ThemeProvider >
-
-        <Header ></Header>
+        <Header/>
         <main>
           <Outlet /> {/* Renderiza as rotas filhas */}
         </main>
 
         <Footer/>
-
     </ThemeProvider>
     </>
   );
@@ -31,6 +30,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Layout/>}>
             <Route index element={<Main />} /> {/* Rota inicial */}
@@ -40,8 +40,6 @@ function App() {
             <Route path="/protected" element={<ProtectedPage />} />
             <Route path="*" element={<Page404/>} />
           </Route>
-
-
 
         </Routes>
       </BrowserRouter>

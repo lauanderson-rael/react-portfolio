@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 
 const VerificarRota = () => {
   const location = useLocation();
-  const isBlogPage = location.pathname === "/blog";
+  const isBlogPage = location.pathname === "/blog" ||  location.pathname === "/login" ||  location.pathname === "/protected";
   return isBlogPage;
 }
 

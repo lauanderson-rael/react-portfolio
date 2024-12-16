@@ -48,7 +48,7 @@ export function Header() {
 
           <ul>
             <li className="header-blog">
-              <Link to="/#inicio">Início</Link>
+              <Link to={'/'}>Início</Link>
             </li>
 
             <li className="header-home">
@@ -88,7 +88,6 @@ export function Header() {
 
         {/* inicio menu-mobile */}
         <div className="menu-mobile" ref={referencia1} onClick={FecharMenu}>
-
               <div className="btn-fechar">
                 <i>
                   <IoMdClose />
@@ -124,7 +123,8 @@ export function Header() {
 
                   <li>
                     <Link to={'/blog'}>Blog</Link>
-                </li>
+                 </li>
+
                 </ul>
               </nav>
         </div>

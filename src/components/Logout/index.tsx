@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { ImExit } from "react-icons/im";
+import { useState } from 'react';
+import Modal from '../Modal';
 
 const Container = styled.div`
   button{
@@ -23,6 +25,7 @@ const Container = styled.div`
 `;
 
 const Logout: React.FC = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const navigate = useNavigate();
     const deslogar = ()=>{
         //const token = localStorage.getItem('token');
@@ -32,7 +35,14 @@ const Logout: React.FC = () => {
 
   return (
     <Container>
-        <button type="button" onClick={deslogar}> <ImExit/> Sair</button>
+          <button type="button" onClick={()=> setIsModalOpen(true)}> <ImExit/> Sair</button>
+
+          <Modal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            onConfirm={() => deslogar()}
+            message={"Tem certeza que deseja sair?"}
+          />
     </Container>
   );
 };
