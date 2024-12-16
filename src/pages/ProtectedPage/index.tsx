@@ -8,7 +8,6 @@ const ProtectedPage: React.FC = () => {
   if (!token) {
     return <Navigate to="/login" replace/>;
   }
-
   return (
     <AppAdm/>
   );

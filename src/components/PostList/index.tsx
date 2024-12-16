@@ -20,7 +20,7 @@ const PostList: React.FC<PostListProps> = ({ posts, fetchPosts }) => {
   return (
     <div>
       <GridLayout>
-        <h2>Lista de Posts - quantidade atual: {posts.length}</h2>
+        <h3>Lista de Posts - quantidade atual: {posts.length}</h3>
         {posts.map((post) => (
           <PostItem key={post._id} post={post} fetchPosts={fetchPosts} />
         ))}

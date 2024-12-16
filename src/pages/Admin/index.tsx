@@ -1,7 +1,7 @@
 import React, { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 import axios from 'axios';
 import PostList from '../../components/PostList/index';
-import { Container, Main, Sidebar, Header, Content } from './styles';
+import { Container, Main, Sidebar, Content } from './styles';
 import ImageUpload from '../../components/UploadImage/index';
 import Logout from '../../components/Logout';
 
@@ -110,10 +110,6 @@ const AppAdm: React.FC = () => {
       </Sidebar>
 
       <Main>
-        <Header>
-          <h2>{selectedContent === 'form' ? 'Adicionar Novo Post' : 'Postagens'}</h2>
-        </Header>
-
         <Content>
           {selectedContent === 'form' ? (
             <article>
@@ -125,50 +121,42 @@ const AppAdm: React.FC = () => {
               <h3>Preencha os dados do novo post ou atualize um existente</h3>
               <div className="caixa">
                 <form className="form-new" onSubmit={handleSubmit}>
-                  <label>ID</label>
                   <input
                     type="text"
                     name="_id"
-                    placeholder="ID do recurso"
+                    placeholder="ID do post"
                     value={updateData._id}
                     onChange={handleChange}
                     required
                   />
-
-                  <label>Título</label>
                   <input
                     type="text"
                     name="titulo"
-                    placeholder="Título"
+                    placeholder="Título para o post"
                     value={updateData.titulo}
                     onChange={handleChange}
 
                   />
-
-                  <label>Descrição</label>
                   <textarea
                     name="descricao"
-                    placeholder="Descrição"
+                    placeholder="Descrição para o post"
                     value={updateData.descricao}
                     onChange={handleChange}
 
                   />
 
-                  <label>Texto alternativo para imagem</label>
                   <input
                     type="text"
                     name="alt"
-                    placeholder="Texto alternativo"
+                    placeholder="Texto alternativo para a imagem"
                     value={updateData.alt}
                     onChange={handleChange}
 
                   />
-
-                  <label>URL do post</label>
                   <input
                     type="text"
                     name="link"
-                    placeholder="Link"
+                    placeholder="Link para o post completo"
                     value={updateData.link}
                     onChange={handleChange}
 

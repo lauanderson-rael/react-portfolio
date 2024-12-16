@@ -1,11 +1,11 @@
-import { useNavigate } from 'react-router-dom';
-import styled from 'styled-components';
+import { useNavigate } from "react-router-dom";
+import styled from "styled-components";
 import { ImExit } from "react-icons/im";
-import { useState } from 'react';
-import Modal from '../Modal';
+import { useState } from "react";
+import Modal from "../Modal";
 
 const Container = styled.div`
-  button{
+  button {
     border-radius: 10px;
     border: none;
     background-color: #f80d0d;
@@ -16,32 +16,34 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
 
-    &:hover{
+    &:hover {
       box-shadow: 0px 0px 8px #f80d0d;
       transform: scale(1.03);
     }
-    }
-
+  }
 `;
 
 const Logout: React.FC = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const navigate = useNavigate();
-    const deslogar = ()=>{
-        //const token = localStorage.getItem('token');
-        localStorage.removeItem('token')
-        navigate('/login');
-    }
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
+  const deslogar = () => {
+    //const token = localStorage.getItem('token');
+    localStorage.removeItem("token");
+    navigate("/login");
+  };
 
   return (
     <Container>
-          <button type="button" onClick={()=> setIsModalOpen(true)}> <ImExit/> Sair</button>
-          <Modal
-            isOpen={isModalOpen}
-            onClose={() => setIsModalOpen(false)}
-            onConfirm={() => deslogar()}
-            message={"Tem certeza que deseja sair?"}
-          />
+      <button type="button" onClick={() => setIsModalOpen(true)}>
+        {" "}
+        <ImExit /> Sair
+      </button>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onConfirm={() => deslogar()}
+        message={"Tem certeza que deseja sair?"}
+      />
     </Container>
   );
 };

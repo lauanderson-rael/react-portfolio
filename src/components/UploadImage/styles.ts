@@ -21,6 +21,10 @@ button{
     justify-content: center;
     gap: 10px;
 
+    &:hover{
+        transform: none;
+        background-color: rgb(5, 185, 11);
+    }
 }
 
 @media (max-width: 1020px){

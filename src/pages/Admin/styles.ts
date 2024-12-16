@@ -74,7 +74,7 @@ export const Main = styled.main`
   .lista {
     border: 1px solid var(--background-color2);
     border-radius: 10px;
-    height: 600px;
+    height: 80vh;
     overflow-y: scroll;
     padding: 20px;
 
@@ -84,23 +84,11 @@ export const Main = styled.main`
   }
 `;
 
-export const Header = styled.header`
-  text-align: center;
-
-  h2 {
-    font-size: 1.8rem;
-    color: var(--text-color);
-
-    @media (max-width: 768px) {
-      font-size: 1.5rem; /* Ajusta o tamanho da fonte do título */
-    }
-  }
-`;
-
 export const Content = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+  max-width: 770px;
 
   .caixa {
     background-color: var(--background-color3);
@@ -127,28 +115,24 @@ export const Content = styled.div`
   .form-new {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-
-    label {
-      font-weight: 600;
-      color: var(--text-color);
-      font-size: small;
-
-      @media (max-width: 768px) {
-        font-size: x-small; /* Ajusta o tamanho da fonte do label */
-      }
-    }
+    gap: 15px;
 
     input, textarea {
+      
       padding: 5px;
       border-radius: 6px;
       border: 1px solid var(--background-color2);
       font-size: 1rem;
       transition: border 0.3s ease;
 
+      &::placeholder{
+        font-size:small; 
+      }
+
       @media (max-width: 768px) {
         font-size: 0.9rem; /* Diminui o tamanho da fonte nos inputs e textarea */
       }
+ 
     }
 
     textarea {
@@ -167,6 +151,7 @@ export const Content = styled.div`
       transition: background-color 0.3s ease;
 
       &:hover {
+        transform: none;
         background-color: rgb(5, 185, 11);
       }
 
