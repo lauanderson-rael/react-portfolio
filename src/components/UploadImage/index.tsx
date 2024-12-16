@@ -32,6 +32,9 @@ const ImageUpload: React.FC = () => {
       });
       console.log('Imagem enviada com sucesso:', response.data);
       alert("imagem enviada!")
+
+      window.location.reload()
+
     } catch (error) {
       console.error('Erro ao enviar a imagem:', error);
       alert("Erro ao enviar imagem!")
