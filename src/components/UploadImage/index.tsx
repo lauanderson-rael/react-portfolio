@@ -31,8 +31,8 @@ const ImageUpload: React.FC = () => {
         },
       });
       console.log('Imagem enviada com sucesso:', response.data);
-      alert("imagem enviada!")
 
+      alert("imagem enviada!")
       window.location.reload()
 
     } catch (error) {

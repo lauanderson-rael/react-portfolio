@@ -32,7 +32,7 @@ const PostItem: React.FC<PostItemProps> = ({ post, fetchPosts }) => {
         },
       });
       fetchPosts(); // Atualizar a lista após deletar
-      alert('Post deletado com sucesso! :)')
+      //alert('Post deletado com sucesso! :)')
     } catch (error) {
       console.error('Erro ao deletar o post', error);
       alert('Erro ao deletar o post :(');
