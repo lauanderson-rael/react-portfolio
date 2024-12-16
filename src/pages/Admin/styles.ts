@@ -25,17 +25,17 @@ export const Main = styled.main`
     border: 1px solid  var(--background-color2);
     border-radius: 8px;
     padding: 10px;
+    background-color: var(--background-color);
   }
 
   button{
-  border: none;
+  border-radius: 6px;
   background-color: #00ff08;
   transition: all.2s;
   transform: none;
   padding: 3px 10px;
 
   }
-
 
 
   article{

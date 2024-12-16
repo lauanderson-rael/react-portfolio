@@ -54,6 +54,7 @@ const AppAdm: React.FC = () => {
       });
       console.log('Dados atualizados com sucesso:', response.data);
       alert('Dados atualizados com sucesso! :)')
+      await fetchPosts(); // atualizar na tela
     } catch (error) {
       console.error('Erro ao atualizar os dados:', error);
       alert('Erro ao atualizar os dados :(');
@@ -145,7 +146,7 @@ const AppAdm: React.FC = () => {
                 required
               />
 
-              <button style={{height: '35px', marginTop: '10px'}} className='submit' type="submit">Atualizar</button>
+              <button style={{height: '35px', marginTop: '10px', border: 'none'}} className='submit' type="submit">Atualizar</button>
             </form>
           </div>
 

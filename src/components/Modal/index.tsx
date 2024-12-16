@@ -38,6 +38,7 @@ const ModalMessage = styled.p`
 
 const ButtonGroup = styled.div`
   display: flex;
+  gap: 10px;
   justify-content: space-between;
 `;
 

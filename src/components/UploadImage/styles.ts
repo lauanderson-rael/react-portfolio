@@ -7,6 +7,10 @@ form{
     grid-template-columns: 1fr 1fr;
 }
 
+input{
+
+}
+
 button{
     border: none;
     background-color: #00ff08;
