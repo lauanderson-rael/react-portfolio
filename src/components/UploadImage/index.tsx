@@ -45,6 +45,7 @@ const ImageUpload: React.FC = () => {
     <Container>
       <form onSubmit={handleSubmit}>
         <input type="file" onChange={handleFileChange} />
+
         <button type="submit"> Enviar Imagem <IoMdSend/></button>
       </form>
     </Container>

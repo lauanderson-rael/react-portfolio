@@ -7,6 +7,7 @@
         gap: 20px;
         border: 1px solid var(--text-color);
         border-radius: 8px;
+        max-width: 700px;
 
         section{
         display: flex;

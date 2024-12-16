@@ -3,19 +3,19 @@ import styled from 'styled-components'
 export const Container = styled.div`
 
 form{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-input{
-
-}
 
 button{
     border: none;
+    border-radius: 6px;
     background-color: #00ff08;
     transition: all.2s;
     padding: 3px 10px;
+    max-width: 170px;
     display: flex;
     align-items: center;
     justify-content: center;

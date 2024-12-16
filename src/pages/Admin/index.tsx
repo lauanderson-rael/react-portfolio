@@ -1,8 +1,9 @@
-import React, { useState, useEffect,  ChangeEvent, FormEvent } from 'react';
+import React, { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 import axios from 'axios';
 import PostList from '../../components/PostList/index';
-import { Container, Main} from './styles';
+import { Container, Main, Sidebar, Header, Content } from './styles';
 import ImageUpload from '../../components/UploadImage/index';
+import Logout from '../../components/Logout';
 
 interface Post {
   _id: string;
@@ -12,7 +13,7 @@ interface Post {
   alt: string;
   link: string;
 }
-// new
+
 interface UpdateData {
   _id: string;
   titulo: string;
@@ -20,10 +21,8 @@ interface UpdateData {
   alt: string;
   link: string;
 }
-// end
 
 const AppAdm: React.FC = () => {
-
   const [updateData, setUpdateData] = useState<UpdateData>({
     _id: '',
     titulo: '',
@@ -31,6 +30,7 @@ const AppAdm: React.FC = () => {
     alt: '',
     link: '',
   });
+
   const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setUpdateData({ ...updateData, [event.target.name]: event.target.value });
   };
@@ -53,7 +53,7 @@ const AppAdm: React.FC = () => {
         },
       });
       console.log('Dados atualizados com sucesso:', response.data);
-      alert('Dados atualizados com sucesso! :)')
+      alert('Dados atualizados com sucesso! :)');
       await fetchPosts(); // atualizar na tela
     } catch (error) {
       console.error('Erro ao atualizar os dados:', error);
@@ -61,14 +61,12 @@ const AppAdm: React.FC = () => {
     }
   };
 
-  //fim
-
   const [posts, setPosts] = useState<Post[]>([]);
 
   // Função para buscar os posts no banco
   const fetchPosts = async () => {
     try {
-      const api = import.meta.env.VITE_API_URL + '/posts'
+      const api = import.meta.env.VITE_API_URL + '/posts';
       const response = await axios.get<Post[]>(api); // URL da sua API
       setPosts(response.data);
     } catch (error) {
@@ -80,79 +78,113 @@ const AppAdm: React.FC = () => {
     fetchPosts();
   }, []);
 
+  // Estado para controlar qual conteúdo será exibido
+  const [selectedContent, setSelectedContent] = useState<'form' | 'posts'>('form');
+
+  // Função para alterar o conteúdo exibido
+  const handleNavigation = (content: 'form' | 'posts') => {
+    setSelectedContent(content);
+  };
+
   return (
-
     <Container>
+      <Sidebar>
+        <nav>
+          <h3 style={{color: 'var(--text-color2)'}}>Painel Blog</h3>
+          <ul>
+            <li>
+              <a href="#" onClick={() => handleNavigation('form')}
+                className={selectedContent === 'form' ? 'active' : ''}>
+                Adicionar Post
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={() => handleNavigation('posts')}
+                 className={selectedContent === 'posts' ? 'active' : ''}>
+                Postagens
+              </a>
+            </li>
+            <li><Logout/></li>
+          </ul>
+        </nav>
+      </Sidebar>
+
       <Main>
-        <article>
-            <h2>Adicionar Novo Post</h2>
+        <Header>
+          <h2>{selectedContent === 'form' ? 'Adicionar Novo Post' : 'Postagens'}</h2>
+        </Header>
 
-          <div className="caixa">
-            <h3>Envie a imagem do novo post</h3>
-              <ImageUpload/>
-          </div>
+        <Content>
+          {selectedContent === 'form' ? (
+            <article>
+              <h3>Envie a imagem do novo post</h3>
+              <div className="caixa">
+                <ImageUpload />
+              </div>
 
-          <br />
+              <h3>Preencha os dados do novo post ou atualize um existente</h3>
+              <div className="caixa">
+                <form className="form-new" onSubmit={handleSubmit}>
+                  <label>ID</label>
+                  <input
+                    type="text"
+                    name="_id"
+                    placeholder="ID do recurso"
+                    value={updateData._id}
+                    onChange={handleChange}
+                    required
+                  />
 
-          <div className='caixa'>
-            <h3>Adicione o ID do novo post e preencha os dados, ou atualize um post já exixtente</h3>
-            <form className='form-new' onSubmit={handleSubmit}>
+                  <label>Título</label>
+                  <input
+                    type="text"
+                    name="titulo"
+                    placeholder="Título"
+                    value={updateData.titulo}
+                    onChange={handleChange}
 
-              <label htmlFor="">ID </label>
-              <input
-                type="text"
-                name="_id"
-                placeholder="ID do recurso"
-                value={updateData._id}
-                onChange={handleChange}
-                required
-              />
+                  />
 
-              <label htmlFor="">Titulo</label>
-              <input
-                type="text"
-                name="titulo"
-                placeholder="Título"
-                value={updateData.titulo}
-                onChange={handleChange}
-                required
-              />
-              <label htmlFor="">Descrição</label>
-              <textarea
-                name="descricao"
-                placeholder="Descrição"
-                value={updateData.descricao}
-                onChange={handleChange}
-                required
-              />
+                  <label>Descrição</label>
+                  <textarea
+                    name="descricao"
+                    placeholder="Descrição"
+                    value={updateData.descricao}
+                    onChange={handleChange}
 
-              <label htmlFor="">Texto alternativo para imagem</label>
-              <input
-                type="text"
-                name="alt"
-                placeholder="Texto alternativo"
-                value={updateData.alt}
-                onChange={handleChange}
-                required
-              />
+                  />
 
-              <label htmlFor="">Url do post</label>
-              <input
-                type="text"
-                name="link"
-                placeholder="Link"
-                value={updateData.link}
-                onChange={handleChange}
-                required
-              />
+                  <label>Texto alternativo para imagem</label>
+                  <input
+                    type="text"
+                    name="alt"
+                    placeholder="Texto alternativo"
+                    value={updateData.alt}
+                    onChange={handleChange}
 
-              <button style={{height: '35px', marginTop: '10px', border: 'none'}} className='submit' type="submit">Atualizar</button>
-            </form>
-          </div>
+                  />
 
-        </article>
+                  <label>URL do post</label>
+                  <input
+                    type="text"
+                    name="link"
+                    placeholder="Link"
+                    value={updateData.link}
+                    onChange={handleChange}
 
-        <PostList posts={posts} fetchPosts={fetchPosts} />
+                  />
+
+                  <button type="submit" className="submit">Atualizar</button>
+                </form>
+              </div>
+            </article>
+          ) : (
+            <div className="lista">
+              <PostList posts={posts} fetchPosts={fetchPosts} />
+
+            </div>
+          )}
+        </Content>
       </Main>
     </Container>
   );

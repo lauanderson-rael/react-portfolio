@@ -36,7 +36,6 @@ const Logout: React.FC = () => {
   return (
     <Container>
           <button type="button" onClick={()=> setIsModalOpen(true)}> <ImExit/> Sair</button>
-
           <Modal
             isOpen={isModalOpen}
             onClose={() => setIsModalOpen(false)}
