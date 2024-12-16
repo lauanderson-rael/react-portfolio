@@ -121,6 +121,7 @@ const AppAdm: React.FC = () => {
               <h3>Preencha os dados do novo post ou atualize um existente</h3>
               <div className="caixa">
                 <form className="form-new" onSubmit={handleSubmit}>
+
                   <input
                     type="text"
                     name="_id"
@@ -145,22 +146,25 @@ const AppAdm: React.FC = () => {
 
                   />
 
-                  <input
-                    type="text"
-                    name="alt"
-                    placeholder="Texto alternativo para a imagem"
-                    value={updateData.alt}
-                    onChange={handleChange}
+                  <div className='flex-items'>
+                    <input
+                      type="text"
+                      name="alt"
+                      placeholder="Texto alternativo para a imagem"
+                      value={updateData.alt}
+                      onChange={handleChange}
 
-                  />
-                  <input
-                    type="text"
-                    name="link"
-                    placeholder="Link para o post completo"
-                    value={updateData.link}
-                    onChange={handleChange}
+                    />
+                    <input
+                      type="text"
+                      name="link"
+                      placeholder="Link para o post completo"
+                      value={updateData.link}
+                      onChange={handleChange}
 
-                  />
+                    />
+                  </div>
+
 
                   <button type="submit" className="submit">Atualizar</button>
                 </form>

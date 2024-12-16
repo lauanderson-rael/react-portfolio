@@ -117,6 +117,12 @@ export const Content = styled.div`
     flex-direction: column;
     gap: 15px;
 
+    .flex-items{
+      display:  grid;
+      grid-template-columns:1fr 1fr;
+      gap: 15px;
+    }
+
     input, textarea {
       
       padding: 5px;

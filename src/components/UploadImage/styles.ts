@@ -13,8 +13,9 @@ button{
     border: none;
     border-radius: 6px;
     background-color: #00ff08;
+    padding: 10px 10px;
     transition: all.2s;
-    padding: 3px 10px;
+
     max-width: 170px;
     display: flex;
     align-items: center;

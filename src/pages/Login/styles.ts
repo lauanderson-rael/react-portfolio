@@ -21,12 +21,12 @@ export const Container = styled.div`
             border: none;
             background-color: #00ff08;
             transition: all.2s;
-            padding: 6px 10px;
+            padding: 8px 10px;
             border-radius: 4px;
         }
 
         input{
-            padding: 6px;
+            padding: 8px;
             border-radius: 4px;
             margin: 5px 0px;
         }
