@@ -167,7 +167,7 @@ export function Main() {
             <CardProject
               image={p5}
               title="Blog de Emagrecimento"
-              description="Nesse projeto criei um blog básico com consumo de uma Api e requisições GET com Fetch"
+              description="Nesse projeto criei um blog básico utilizando react e consumindo dados de uma api com fetch. Os estilos do projeto foram com css puro."
               projectLink="https://react-blog-puce-nine.vercel.app/"
               repoLink="https://github.com/lauanderson-rael/react-blog"
               technologies={['react', 'Styled-Components']}
