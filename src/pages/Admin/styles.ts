@@ -17,11 +17,7 @@ export const Sidebar = styled.div`
   height: 100vh;
 
   @media (max-width: 768px) {
-    width: 200px; /* Diminui a largura da sidebar em telas menores */
-    padding: 10px; /* Reduz o padding para otimizar o espaço */
-    nav ul li a {
-      font-size: 0.9rem; /* Reduz o tamanho da fonte */
-    }
+    display: none;
   }
 
   /* SELECIONADO*/
@@ -33,7 +29,7 @@ export const Sidebar = styled.div`
   }
 
   nav ul li a.active {
-    background-color: #007bff; /* Cor de fundo para o item selecionado */
+    background-color:rgb(123, 123, 123); /* Cor de fundo para o item selecionado */
     color: white; /* Cor do texto */
     border-radius: 4px;
   }
@@ -60,7 +56,7 @@ export const Sidebar = styled.div`
         transition: background-color 0.3s ease;
 
         &:hover {
-          background-color: #34495e;
+          background-color:rgb(175, 175, 175);
         }
       }
     }
@@ -70,17 +66,20 @@ export const Sidebar = styled.div`
 export const Main = styled.main`
   flex-grow: 1;
   padding: 5px 20px;
+  @media (max-width: 768px){
+    padding: 5px 10px;
+  }
+
 
   .lista {
     border: 1px solid var(--background-color2);
     border-radius: 10px;
-    height: 80vh;
+    height: 70vh;
     overflow-y: scroll;
     padding: 20px;
 
-    @media (max-width: 768px) {
-      height: 400px; /* Reduz a altura da lista em telas menores */
-    }
+    @media (max-width: 768px){
+      display: none}
   }
 `;
 
@@ -90,17 +89,37 @@ export const Content = styled.div`
   gap: 20px;
   max-width: 770px;
 
+  .lista-mobile{
+    display: none;
+    @media (max-width: 768px){
+      display: block;
+      height: 600px;
+      overflow-y: scroll;
+      border: 1px solid var(--background-color2);
+      border-radius: 10px;
+      padding: 10px;
+    }
+  }
+
+  /* @media (max-width: 768px) {
+      // mostrar so no mobile
+      .lista-mobile{
+        display: block;
+      }
+
+      width: 90vw;
+      padding: 10px; /* Diminui o padding nas caixas */
+
+
   .caixa {
     background-color: var(--background-color3);
     border-radius: 8px;
     padding: 15px;
     border: 1px solid var(--background-color2);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-    @media (max-width: 768px) {
-      padding: 10px; /* Diminui o padding nas caixas */
-    }
   }
+
+
 
   h3 {
     font-size: 1.25rem;
@@ -121,10 +140,16 @@ export const Content = styled.div`
       display:  grid;
       grid-template-columns:1fr 1fr;
       gap: 15px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+
+      }
+
     }
 
     input, textarea {
-      
+
       padding: 5px;
       border-radius: 6px;
       border: 1px solid var(--background-color2);
@@ -132,13 +157,13 @@ export const Content = styled.div`
       transition: border 0.3s ease;
 
       &::placeholder{
-        font-size:small; 
+        font-size:small;
       }
 
       @media (max-width: 768px) {
         font-size: 0.9rem; /* Diminui o tamanho da fonte nos inputs e textarea */
       }
- 
+
     }
 
     textarea {
@@ -167,4 +192,6 @@ export const Content = styled.div`
       }
     }
   }
+
+
 `;

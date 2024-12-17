@@ -176,6 +176,10 @@ const AppAdm: React.FC = () => {
 
             </div>
           )}
+
+          <div className="lista-mobile">
+              <PostList posts={posts} fetchPosts={fetchPosts} />
+          </div>
         </Content>
       </Main>
     </Container>

@@ -6,6 +6,12 @@ form{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    @media (max-width: 768px) {
+        display: block;
+        button{
+            padding: 5px;
+        }
+    }
 }
 
 
@@ -15,7 +21,6 @@ button{
     background-color: #00ff08;
     padding: 10px 10px;
     transition: all.2s;
-
     max-width: 170px;
     display: flex;
     align-items: center;
@@ -26,6 +31,7 @@ button{
         transform: none;
         background-color: rgb(5, 185, 11);
     }
+
 }
 
 @media (max-width: 1020px){
