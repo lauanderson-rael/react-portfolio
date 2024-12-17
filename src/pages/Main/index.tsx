@@ -162,7 +162,7 @@ export function Main() {
               description="Nesse projeto fiz o consumo de uma Api Rest, realizei requisições GET com Axios e também adicionei algumas funcionalidades como as opções de listagem e filtragem. "
               projectLink="https://react-list-heroes-chi.vercel.app/"
               repoLink="https://github.com/lauanderson-rael/react-list-heroes"
-              technologies={['React', 'CSS', 'JavaScript']}
+              technologies={['React', 'CSS']}
             />
             <CardProject
               image={p5}
@@ -170,7 +170,7 @@ export function Main() {
               description="Nesse projeto criei um blog básico com consumo de uma Api e requisições GET com Fetch"
               projectLink="https://react-blog-puce-nine.vercel.app/"
               repoLink="https://github.com/lauanderson-rael/react-blog"
-              technologies={['React', 'CSS', 'JavaScript']}
+              technologies={['react', 'Styled-Components']}
             />
             <CardProject
               image={p3}
@@ -178,16 +178,16 @@ export function Main() {
               description="Nesse projeto desenvolvi um Todo List básico utilizando a biblioteca React. Pude abordar o uso de alguns Hooks do react, como useState"
               projectLink="https://react-todo-list-three-beta.vercel.app/"
               repoLink="https://github.com/lauanderson-rael/react-todo-list"
-              technologies={['React', 'CSS', 'JavaScript']}
+              technologies={['React', 'CSS']}
             />
 
             <CardProject
               image={p4}
-              title="ADS - IFMA CN"
-              description="Site estático desenvolvido com html e CSS. Esse projeto foi uma atividade proposta pelo professor da disciplina de Programação Web, do meu curso de Analise e desenvolvimento de sistemas."
+              title="Repositorios Favoritos"
+              description="Nesse projeto desenvolvi um sistema para salvar os meu repositorios favoritos do github, podendo tambem visualizar algumas informações coma as issues. Para acessar os dados fiz um consumo da api do github com axios."
               projectLink="https://atividade-dev-web.vercel.app/"
               repoLink="https://github.com/lauanderson-rael/html-atividade1"
-              technologies={['Html', 'CSS']}
+              technologies={['react', 'Styled-Components']}
             />
 
             </div>

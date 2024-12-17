@@ -1,5 +1,5 @@
 
-import { SiExpress, SiJavascript, SiPostgresql, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiExpress, SiJavascript, SiPostgresql, SiTailwindcss, SiTypescript, SiStyledcomponents, SiMongodb , SiWordpress} from "react-icons/si";
 import { FaGitAlt, FaGithub, FaNodeJs, FaReact, FaDocker } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
 
@@ -18,6 +18,7 @@ export const ContainerSkills = () =>{
                   <div className="icone"> <SiTailwindcss/></div>
                   <p>TailwindCSS</p>
                 </div>
+                
                 <div className="center">
                   <div className="icone"> <SiTypescript/></div>
                   <p>TypeScript</p>
@@ -25,6 +26,11 @@ export const ContainerSkills = () =>{
                 <div className="center">
                   <div className="icone"> <FaReact/></div>
                   <p>React</p>
+                </div>
+
+                <div className="center">
+                  <div className="icone"> <SiStyledcomponents /></div>
+                  <p>Styled Components</p>
                 </div>
               </div>
           </div>
@@ -45,6 +51,11 @@ export const ContainerSkills = () =>{
                 <div className="center">
                   <div className="icone"> <SiPostgresql/></div>
                   <p>Postgresql</p>
+                </div>
+
+                <div className="center">
+                  <div className="icone"> <SiMongodb/></div>
+                  <p>Mongo DB</p>
                 </div>
               </div>
         </div>
@@ -70,6 +81,11 @@ export const ContainerSkills = () =>{
                 <div className="center">
                   <div className="icone"> <FaDocker/></div>
                   <p>Docker</p>
+                </div>
+
+                <div className="center">
+                  <div className="icone"> <SiWordpress/></div>
+                  <p>Wordpress</p>
                 </div>
 
               </div>
