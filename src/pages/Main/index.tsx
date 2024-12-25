@@ -81,11 +81,9 @@ export function Main() {
                   <img src={Foto2} alt="foto sessão sobre" />
                 </div>
                 <p>
-                  Apaixonado por desafios e tecnologia, sou um desenvolvedor front-end com experiência em HTML, CSS, JavaScript, ReactJS ,
-                  TypeScript e Node.js. Atualmente, estou me aprofundando no back-end para me tornar um desenvolvedor full stack. Estou
-                  cursando o 3º semestre de Análise e Desenvolvimento de Sistemas. Adoro explorar novas tecnologias, desafiar minhas
-                  habilidades com os códigos e utilizá-las para criar soluções inovadoras e de alta qualidade.
+                  Olá, sou Lauanderson, um apaixonado por tecnologia e desenvolvimento web. Tenho 21 anos e estou no 3º período do curso de Análise e Desenvolvimento de Sistemas no IFMA. Ao longo da minha jornada, adquiri experiência sólida em front-end, com foco em React e Next.js, e continuo em constante aprendizado sobre as novas tendências e ferramentas do desenvolvimento web.
 
+Minha principal motivação é criar soluções inovadoras e eficientes. Além disso tenho habilidades em backend, utilizando Node.js e Express, e sou adepto de boas práticas com Git e GitHub para controle de versão.
                 </p>
                 <p>
                   Atualmente Desenvolvo projetos pessoais para praticar minhas habilidades e construir meu portfólio, incluindo sites
