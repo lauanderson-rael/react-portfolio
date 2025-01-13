@@ -53,14 +53,13 @@ header{
 }
 
 article{
-  /*border: 1px solid #d3d3d3;*/
+
   width: 100%;
   display: flex;
   flex-direction: column;
   border-radius: 7px;
   margin-bottom: 30px;
   padding: 20px;
-  /*box-shadow: 0px 0px 7px var(--background-color2);*/
 
   h2{
     color: var(--text-color);
