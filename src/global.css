@@ -30,7 +30,7 @@ body {
   padding: 10px 40px;
   font-size: 18px;
   font-weight: 600;
-  background-color: #00ff08;
+  background-color: var(--text-color-blue-green);
   border: 0;
   border-radius: 30px;
   transition: all.2s;
@@ -72,8 +72,8 @@ body {
 }
 
 button:hover {
-  box-shadow: 0px 0px 8px #00ff08;
-  
+  box-shadow: 0px 0px 8px var(--text-color-blue-green);
+
 }
 
 .titulo {
@@ -83,7 +83,7 @@ button:hover {
 }
 
 h2 span {
-  color: #00ff08;
+  color: var(--text-color-blue-green);
 }
 
 .btn-social button {
@@ -91,7 +91,7 @@ h2 span {
   height: 50px;
   border-radius: 50%;
   border: none;
-  background-color: #00ff08;
+  background-color: var(--text-color-blue-green);
   font-size: 25px;
   cursor: pointer;
   padding-top: 8px;
@@ -143,6 +143,8 @@ h2 span {
   --background-color-gray: #000;
   --text-color: #c4c4c4;
   --text-color2: #1b1b1b;
+  --text-color-blue-green: #00ff08;
+
 }
 
 /* tema claro*/
@@ -151,10 +153,22 @@ h2 span {
   --background-color2: #000000c0;
   --background-color3: #dfdfdfc0;
   --background-color-gray: #e8e8e8;
+  --background-blue: #007bff;
+  --text-color: #000;
+  --text-color2: #ffffff;
+  --text-color-blue-green: #007bff;
+
+}
+/* tema claro
+[data-theme="light"] {
+  --background-color: #fff;
+  --background-color2: #000000c0;
+  --background-color3: #dfdfdfc0;
+  --background-color-gray: #e8e8e8;
   --text-color: #000;
   --text-color2: #ffffff;
 
-}
+} */
 
 
 .grid{

@@ -173,7 +173,7 @@ export const Content = styled.div`
 
     button {
       padding: 12px 20px;
-      background-color: #00ff08;
+      background-color: var(--text-color-blue-green);
       color: #000;
       border: none;
       border-radius: 6px;
@@ -183,7 +183,7 @@ export const Content = styled.div`
 
       &:hover {
         transform: none;
-        background-color: rgb(5, 185, 11);
+        opacity: 0.7;
       }
 
       @media (max-width: 768px) {

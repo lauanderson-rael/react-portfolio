@@ -5,51 +5,51 @@ import { IoIosMail } from "react-icons/io";
 import { PiCodeFill } from "react-icons/pi";
 
 
-export function Footer(){
-    return(
-        <Container>
-        <div className="line-footer">
-          <div className="flex">
+export function Footer() {
+  return (
+    <Container>
+      <div className="line-footer">
+        <div className="flex">
 
-            <div className="btn-social">
-             <a href="https://www.instagram.com/lauanderson.rael?igsh=MWMxNDZjN3VhdjA3Nw==" target="blank">
-                <button>
-                  <FaInstagram />
-                </button>
-              </a>
-              <a href="https://www.youtube.com/@lau_dicas" target="blank">
-                <button>
-                  <FaYoutube />
-                </button>
-              </a>
-              <a href="https://www.linkedin.com/in/lauanderson-rael-a68b2b16a/" target="blank">
-                <button>
-                  <FaLinkedin />
-                </button>
-              </a>
-              <a href="https://github.com/lauanderson-rael" target="blank">
-                <button>
-                  <FaGithub />
-                </button>
-              </a>
+          <div className="btn-social">
+            <a href="https://www.instagram.com/lauanderson.rael?igsh=MWMxNDZjN3VhdjA3Nw==" target="blank">
+              <button>
+                <FaInstagram />
+              </button>
+            </a>
+            <a href="https://www.youtube.com/@lau_dicas" target="blank">
+              <button>
+                <FaYoutube />
+              </button>
+            </a>
+            <a href="https://www.linkedin.com/in/lauanderson-rael-a68b2b16a/" target="blank">
+              <button>
+                <FaLinkedin />
+              </button>
+            </a>
+            <a href="https://github.com/lauanderson-rael" target="blank">
+              <button>
+                <FaGithub />
+              </button>
+            </a>
 
-              <a  href="mailto:lauanderson38@gmail.com" target="blank">
-                <button>
-                  <IoIosMail />
-                </button>
-              </a>
-            </div>
+            <a href="mailto:lauanderson38@gmail.com" target="blank">
+              <button>
+                <IoIosMail />
+              </button>
+            </a>
+          </div>
 
-            <div className="logo-footer">
-               <div style={{color: '#00ff08', fontSize: '40px'}}>  <PiCodeFill/> </div>
-            </div>
+          <div className="logo-footer">
+            <div style={{ color: 'var(--text-color-blue-green)', fontSize: '40px' }}>  <PiCodeFill /> </div>
           </div>
         </div>
-        <div className="line-footer">
-          <span>© 2024 Lauanderson Rael. Todos os direitos reservados</span>
-        </div>
-      </Container>
-    )
+      </div>
+      <div className="line-footer">
+        <span>© 2024 Lauanderson Rael. Todos os direitos reservados</span>
+      </div>
+    </Container>
+  )
 }
 
 

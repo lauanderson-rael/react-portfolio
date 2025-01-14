@@ -1,9 +1,9 @@
 import { Container, SessaoFormulario } from "./styles";
 import { FaCloudDownloadAlt, FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
-import { MdDoubleArrow} from "react-icons/md";
+import { MdDoubleArrow } from "react-icons/md";
 import { ContainerSkills } from "../../components/CardSkills/index"
 import { CardProject } from "../../components/CardProject";
-import Foto from "../../assets/lau-circle1.png";
+import Foto from "../../assets/transp.png";
 import Foto2 from "../../assets/foto2.jpg";
 import p1 from "../../assets/p1.png"
 import p2 from "../../assets/p2.png"
@@ -16,7 +16,7 @@ export function Main() {
   return (
     <>
       <Container
-      style={{ backgroundColor: "var(--background-color)", color: "var(--text-color)"}}
+        style={{ backgroundColor: "var(--background-color)", color: "var(--text-color)" }}
 
       >
         <section className="topo-do-site" id="inicio">
@@ -27,7 +27,7 @@ export function Main() {
                 <div className="informacoes">
                   <p>Olá, eu sou</p>
 
-                  <strong>Lauanderson Rael</strong>
+                  <strong >Lauanderson Rael</strong>
 
                   <p>Desenvolvedor Front-end</p>
                 </div>
@@ -59,9 +59,9 @@ export function Main() {
 
             </div>
 
-              <div className="arrow-desktop">
-                    < MdDoubleArrow size={50} />
-              </div>
+            <div className="arrow-desktop">
+              < MdDoubleArrow size={50} />
+            </div>
 
           </div>
         </section>
@@ -75,7 +75,7 @@ export function Main() {
 
               <div className="txt-sobre">
                 <h2>
-                  Sobre <b style={{ color: "#00ff08" }}>mim</b>
+                  Sobre <b style={{ color: "var(--text-color-blue-green)" }}>mim</b>
                 </h2>
                 <div className="img-sobre img-sobre-mobile">
                   <img src={Foto2} alt="foto sessão sobre" />
@@ -83,7 +83,7 @@ export function Main() {
                 <p>
                   Olá, sou Lauanderson, um apaixonado por tecnologia e desenvolvimento web. Tenho 21 anos e estou no 3º período do curso de Análise e Desenvolvimento de Sistemas no IFMA. Ao longo da minha jornada, adquiri experiência sólida em front-end, com foco em React e Next.js, e continuo em constante aprendizado sobre as novas tendências e ferramentas do desenvolvimento web.
 
-Minha principal motivação é criar soluções inovadoras e eficientes. Além disso tenho habilidades em backend, utilizando Node.js e Express, e sou adepto de boas práticas com Git e GitHub para controle de versão.
+                  Minha principal motivação é criar soluções inovadoras e eficientes. Além disso tenho habilidades em backend, utilizando Node.js e Express, e sou adepto de boas práticas com Git e GitHub para controle de versão.
                 </p>
                 <p>
                   Atualmente Desenvolvo projetos pessoais para praticar minhas habilidades e construir meu portfólio, incluindo sites
@@ -146,47 +146,47 @@ Minha principal motivação é criar soluções inovadoras e eficientes. Além d
               Meus <span>Projetos</span>
             </h2>
             <div className="grid">
-            <CardProject
-              image={p1}
-              title="Site de Zebras de Futebol"
-              description="Nesse projeto criei o Front end de um site de apostas esportivas. Pude colocar em prática muitos de meus conhecimentos em Desiner Responsivo"
-              projectLink="https://templates-zebras.vercel.app/home/index.html"
-              repoLink="https://github.com/lauanderson-rael/templates-zebras"
-              technologies={['html', 'CSS', 'JavaScript']}
-            />
-            <CardProject
-              image={p2}
-              title="Lista de Heróis"
-              description="Nesse projeto fiz o consumo de uma Api Rest, realizei requisições GET com Axios e também adicionei algumas funcionalidades como as opções de listagem e filtragem. "
-              projectLink="https://react-list-heroes-chi.vercel.app/"
-              repoLink="https://github.com/lauanderson-rael/react-list-heroes"
-              technologies={['React', 'CSS']}
-            />
-            <CardProject
-              image={p5}
-              title="Blog de Emagrecimento"
-              description="Nesse projeto criei um blog básico utilizando react e consumindo dados de uma api com fetch. Os estilos do projeto foram com css puro."
-              projectLink="https://react-blog-puce-nine.vercel.app/"
-              repoLink="https://github.com/lauanderson-rael/react-blog"
-              technologies={['react', 'Styled-Components']}
-            />
-            <CardProject
-              image={p3}
-              title="Todo List"
-              description="Nesse projeto desenvolvi um Todo List básico utilizando a biblioteca React. Pude abordar o uso de alguns Hooks do react, como useState"
-              projectLink="https://react-todo-list-three-beta.vercel.app/"
-              repoLink="https://github.com/lauanderson-rael/react-todo-list"
-              technologies={['React', 'CSS']}
-            />
+              <CardProject
+                image={p1}
+                title="Site de Zebras de Futebol"
+                description="Nesse projeto criei o Front end de um site de apostas esportivas. Pude colocar em prática muitos de meus conhecimentos em Desiner Responsivo"
+                projectLink="https://templates-zebras.vercel.app/home/index.html"
+                repoLink="https://github.com/lauanderson-rael/templates-zebras"
+                technologies={['html', 'CSS', 'JavaScript']}
+              />
+              <CardProject
+                image={p2}
+                title="Lista de Heróis"
+                description="Nesse projeto fiz o consumo de uma Api Rest, realizei requisições GET com Axios e também adicionei algumas funcionalidades como as opções de listagem e filtragem. "
+                projectLink="https://react-list-heroes-chi.vercel.app/"
+                repoLink="https://github.com/lauanderson-rael/react-list-heroes"
+                technologies={['React', 'CSS']}
+              />
+              <CardProject
+                image={p5}
+                title="Blog de Emagrecimento"
+                description="Nesse projeto criei um blog básico utilizando react e consumindo dados de uma api com fetch. Os estilos do projeto foram com css puro."
+                projectLink="https://react-blog-puce-nine.vercel.app/"
+                repoLink="https://github.com/lauanderson-rael/react-blog"
+                technologies={['react', 'Styled-Components']}
+              />
+              <CardProject
+                image={p3}
+                title="Todo List"
+                description="Nesse projeto desenvolvi um Todo List básico utilizando a biblioteca React. Pude abordar o uso de alguns Hooks do react, como useState"
+                projectLink="https://react-todo-list-three-beta.vercel.app/"
+                repoLink="https://github.com/lauanderson-rael/react-todo-list"
+                technologies={['React', 'CSS']}
+              />
 
-            <CardProject
-              image={p4}
-              title="Repositorios Favoritos"
-              description="Nesse projeto desenvolvi um sistema para salvar os meu repositorios favoritos do github, podendo tambem visualizar algumas informações coma as issues. Para acessar os dados fiz um consumo da api do github com axios."
-              projectLink="https://atividade-dev-web.vercel.app/"
-              repoLink="https://github.com/lauanderson-rael/html-atividade1"
-              technologies={['react', 'Styled-Components']}
-            />
+              <CardProject
+                image={p4}
+                title="Repositorios Favoritos"
+                description="Nesse projeto desenvolvi um sistema para salvar os meu repositorios favoritos do github, podendo tambem visualizar algumas informações coma as issues. Para acessar os dados fiz um consumo da api do github com axios."
+                projectLink="https://atividade-dev-web.vercel.app/"
+                repoLink="https://github.com/lauanderson-rael/html-atividade1"
+                technologies={['react', 'Styled-Components']}
+              />
 
             </div>
           </div>
@@ -218,7 +218,7 @@ Minha principal motivação é criar soluções inovadoras e eficientes. Além d
               <input type="text" name="" id="" placeholder="Seu celular" />
               <textarea name="" id="" placeholder="Sua mensagem"></textarea>
 
-              <div className="btn-enviar" style={{display: 'flex', gap: '10px'}}>
+              <div className="btn-enviar" style={{ display: 'flex', gap: '10px' }}>
                 <input type="submit" value="ENVIAR" />
                 <input type="reset" value="LIMPAR" />
               </div>

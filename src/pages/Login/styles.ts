@@ -19,7 +19,7 @@ export const Container = styled.div`
         button{
             margin-top: 15px;
             border: none;
-            background-color: #00ff08;
+            background-color: var(--text-color-blue-green);
             transition: all.2s;
             padding: 8px 10px;
             border-radius: 4px;

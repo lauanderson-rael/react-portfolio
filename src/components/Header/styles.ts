@@ -106,7 +106,7 @@ export const Container = styled.header`
     }
 
     .btn-abrir-menu i {
-      color: #00ff08;
+      color: var(--text-color-blue-green);
       font-size: 38px;
     }
 
@@ -126,7 +126,7 @@ export const Container = styled.header`
       }
 
       .btn-fechar i {
-        color: #00ff08;
+        color: var(--text-color-blue-green);
         font-size: 30px;
       }
     }
@@ -152,7 +152,7 @@ export const Container = styled.header`
       }
 
       li a:hover {
-        background-color: #00ff08;
+        background-color: var(--text-color-blue-green);
         color: #000;
       }
     }

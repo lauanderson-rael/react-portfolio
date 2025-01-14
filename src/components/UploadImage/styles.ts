@@ -18,7 +18,7 @@ form{
 button{
     border: none;
     border-radius: 6px;
-    background-color: #00ff08;
+    background-color: var(--text-color-blue-green);
     padding: 10px 10px;
     transition: all.2s;
     max-width: 170px;
@@ -29,8 +29,7 @@ button{
 
     &:hover{
         transform: none;
-        background-color: rgb(5, 185, 11);
-    }
+        opacity: 0.7;
 
 }
 
@@ -44,5 +43,5 @@ button{
         margin-bottom: 10px;
     }
   }
-
+}
 `;

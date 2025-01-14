@@ -33,7 +33,8 @@ export const Container = styled.main`
 
     .txt-topo-site strong {
       font-size: 55px;
-      color: #00ff08;
+
+      color: var(--text-color-blue-green);
     }
 
     .informacoes{
@@ -47,16 +48,19 @@ export const Container = styled.main`
       padding: 0;
     }
 
+    .img-topo-site{
 
+    }
     .img-topo-site img {
       width: 300px;
       height: 300px;
-      border: 8px solid #00ff08;
+      border: 8px solid var(--text-color-blue-green);
+      background: var(--text-color-blue-green);
       border-radius: 50%;
       position: relative; // para funcionar animacao
       //animation: flutuar 2s ease-in-out infinite alternate;
-      filter: drop-shadow(0 0 0.8rem #00ff08);
-      box-shadow: 1px 1px 0.5rem #00ff08;
+      filter: drop-shadow(0 0 0.8rem var(--text-color-blue-green));
+      box-shadow: 1px 1px 0.5rem var(--text-color-blue-green);
     }
 
     .scroll{
@@ -146,7 +150,7 @@ export const Container = styled.main`
         line-height: 40px;
         margin-bottom: 30px;
         span {
-          color: #00ff08;
+          color: var(--text-color-blue-green);
           display: block;
         }
       }
@@ -162,7 +166,7 @@ export const Container = styled.main`
         height: 50px;
         border-radius: 50%;
         border: none;
-        background-color: #00ff08;
+        background-color: var(--text-color-blue-green);
         font-size: 25px;
         cursor: pointer;
         padding-top: 5px;
@@ -202,7 +206,7 @@ export const Container = styled.main`
   padding: 80px 12%;
 
   h2 span {
-    color: #00ff08;
+    color: var(--text-color-blue-green);
   }
   .flex {
     gap: 60px;
@@ -227,7 +231,7 @@ export const Container = styled.main`
 
     .icone {
       font-size: 45px;
-      color: #00ff08;
+      color: var(--text-color-blue-green);
     }
     strong{
       margin-bottom: 30px;
@@ -349,14 +353,14 @@ export const SessaoFormulario = styled.section`
     input[type="submit"] {
       color: #000;
       font-weight: 700;
-      background-color: #00fe08;
+      background-color: var(--text-color-blue-green);
       cursor: pointer;
       transition: all.2s;
 
     }
 
     input:hover {
-      box-shadow: 0px 0px 8px #00ff08;
+      box-shadow: 0px 0px 8px var(--text-color-blue-green);
       transform: scale(1.03);
     }
   }
@@ -371,7 +375,7 @@ export const SessaoFormulario = styled.section`
       border: 1px solid var(--text-color);
     }
     input[type="reset"]:hover {
-      box-shadow: 0px 0px 8px #00ff08;
+      box-shadow: 0px 0px 8px var(--text-color-blue-green);
       transform: scale(1.03);
     }
   // limpar

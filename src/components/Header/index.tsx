@@ -30,7 +30,7 @@ export function Header() {
       <div className="interface">
         <div className="logo">
           <Link to={"/"}>
-            <div style={{ color: "#00ff08", fontSize: "40px" }}>
+            <div style={{ color: "var(--text-color-blue-green)", fontSize: "40px" }}>
               {" "}
               <PiCodeFill />{" "}
             </div>

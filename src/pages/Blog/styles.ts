@@ -80,7 +80,7 @@ article p, article span{
 article button{
   margin-top: 10px;
   background-color: #d3d3d3;
-  background-color: #00ff08;
+  background-color: var(--text-color-blue-green);
   padding: 10px 0;
   border-radius: 7px;
   font-weight: 700;
@@ -88,11 +88,11 @@ article button{
   transition: all 0.3s;
   transform: scale(1.02);
   width: 100%;
-  border: 2px solid #00ff08;
+  border: 2px solid var(--text-color-blue-green);
 }
 article button:hover{
-  background-color:rgb(5, 194, 11);
-  border: 2px solid rgb(5, 194, 11);
+  opacity: 0.8;
+  border: 2px solid var(--text-color-blue-green);
 }
 
 article a{

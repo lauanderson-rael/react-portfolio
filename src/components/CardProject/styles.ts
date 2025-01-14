@@ -49,8 +49,7 @@ h2{
   .project-link {
     display: inline-block;
     margin-right: 8px;
-    color: #007bff;
-    color: #00ff08;
+    color: var(--text-color-blue-green);
     text-decoration: none;
   }
   .project-link:hover{
