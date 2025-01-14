@@ -115,7 +115,7 @@ footer {
 @media (max-width: 1020px) {
   article{
   //border: 1px solid #d3d3d3;
-  width: 40%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   border-radius: 7px;
@@ -141,10 +141,6 @@ footer {
   }
   h2{
     font-size: large;
-  }
-
-  article{
-    width: 95%;
   }
    main, header, footer{
     width: 100%;
