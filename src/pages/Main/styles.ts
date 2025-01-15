@@ -351,7 +351,7 @@ export const SessaoFormulario = styled.section`
     text-align: center;
 
     input[type="submit"] {
-      color: #000;
+      color: var(--background-color);
       font-weight: 700;
       background-color: var(--text-color-blue-green);
       cursor: pointer;

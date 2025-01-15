@@ -72,13 +72,13 @@ export function Header() {
             </li>
           </ul>
         </nav>
-        {/* fim menu-desktop */}
-
         <div className="btn-contato header-blog">
           <a href="#formulario">
-            <button>Contato</button>
+            <button style={{ color: "var(--background-color)" }}>Contato</button>
           </a>
         </div>
+        {/* fim menu-desktop */}
+
 
         <div className="barra-lateral">
           <div className="btn-abrir-menu" onClick={AbrirMenu} ref={referencia2}>

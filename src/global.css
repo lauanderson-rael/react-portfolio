@@ -92,6 +92,7 @@ h2 span {
   border-radius: 50%;
   border: none;
   background-color: var(--text-color-blue-green);
+  color: var(--background-color);
   font-size: 25px;
   cursor: pointer;
   padding-top: 8px;
