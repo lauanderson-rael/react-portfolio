@@ -183,8 +183,8 @@ export function Main() {
                 image={p4}
                 title="Repositorios Favoritos"
                 description="Nesse projeto desenvolvi um sistema para salvar os meu repositorios favoritos do github, podendo tambem visualizar algumas informações coma as issues. Para acessar os dados fiz um consumo da api do github com axios."
-                projectLink="https://atividade-dev-web.vercel.app/"
-                repoLink="https://github.com/lauanderson-rael/html-atividade1"
+                projectLink="https://react-repositorios-fav.vercel.app/"
+                repoLink="https://github.com/lauanderson-rael/react-repositorios-Fav"
                 technologies={['react', 'Styled-Components']}
               />
 
