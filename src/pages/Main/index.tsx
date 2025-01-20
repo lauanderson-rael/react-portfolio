@@ -1,5 +1,5 @@
 import { Container, SessaoFormulario } from "./styles";
-import { FaCloudDownloadAlt, FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaCloudDownloadAlt, FaGithub, FaInstagram, FaLinkedin, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import { MdDoubleArrow } from "react-icons/md";
 import { ContainerSkills } from "../../components/CardSkills/index"
 import { CardProject } from "../../components/CardProject";
@@ -119,6 +119,12 @@ export function Main() {
                   <a href="https://github.com/lauanderson-rael" target="blank">
                     <button>
                       <FaGithub />
+                    </button>
+                  </a>
+                  
+                  <a href="https://api.whatsapp.com/send?phone=98985571212&text=Ol%C3%A1,%20vim%20falar%20com%20voc%C3%AA" target="blank">
+                    <button>
+                      <FaWhatsapp />
                     </button>
                   </a>
                 </div>
