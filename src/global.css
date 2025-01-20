@@ -146,6 +146,8 @@ h2 span {
   --text-color2: #1b1b1b;
   --text-color-blue-green: #00ff08;
 
+  --transition: transition: all 1s;
+
 }
 
 /* tema claro*/
@@ -159,18 +161,8 @@ h2 span {
   --text-color2: #ffffff;
   --text-color-blue-green: #007bff;
 
+  --transition: transition: all 1s;
 }
-/* tema claro
-[data-theme="light"] {
-  --background-color: #fff;
-  --background-color2: #000000c0;
-  --background-color3: #dfdfdfc0;
-  --background-color-gray: #e8e8e8;
-  --text-color: #000;
-  --text-color2: #ffffff;
-
-} */
-
 
 .grid{
   display: grid;
