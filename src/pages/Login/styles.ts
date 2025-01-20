@@ -24,6 +24,7 @@ export const Container = styled.div`
             transition: all.2s;
             padding: 8px 10px;
             border-radius: 4px;
+            color: var(--text-color2);
         }
 
         input{
