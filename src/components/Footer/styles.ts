@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.footer`
+  transition: all 1s ease-out;
   background-color: var(--background-color-gray);
   padding: 40px 4%;
   box-shadow: 0 20px 40px 10px  var(--text-color);
