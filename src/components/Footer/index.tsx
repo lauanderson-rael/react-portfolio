@@ -1,6 +1,6 @@
 import { Container } from "./styles";
 
-import { FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin, FaYoutube, FaWhatsapp  } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { PiCodeFill } from "react-icons/pi";
 
@@ -38,6 +38,13 @@ export function Footer() {
                 <IoIosMail />
               </button>
             </a>
+
+            <a href="https://api.whatsapp.com/send?phone=98985571212&text=Ol%C3%A1,%20vim%20falar%20com%20voc%C3%AA" target="blank">
+              <button>
+                <FaWhatsapp />
+              </button>
+            </a>
+
           </div>
 
           <div className="logo-footer">
