@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.main`
-  transition: all 1s;
+  transition: var(--transition);
 
   // temas
   h2, p{
