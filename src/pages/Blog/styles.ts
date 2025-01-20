@@ -38,6 +38,7 @@ main{
 }
 
 header{
+  transition: var(--transition);
   display: flex;
   justify-content: center;
   gap: 10px;
