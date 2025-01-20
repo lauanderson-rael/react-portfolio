@@ -49,7 +49,7 @@ type Post = {
 
       <div className="container">
         <header>
-          <h3>Postagens</h3>
+          <h3>Últimas Postagens</h3>
           <MdOutlineImageSearch/>
         </header>
 
