@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: var(--background-color);
+  transition: var(--transition);
 
 body{
   padding: 0;
