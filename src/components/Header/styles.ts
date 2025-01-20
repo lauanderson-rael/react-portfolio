@@ -8,6 +8,7 @@ const VerificarRota = () => {
 }
 
 export const Container = styled.header`
+  transition: all 1s ease-out;
   background-color: var(--background-color-gray);
   color: var(--text-color);
   box-shadow: 0 -15px 25px 10px var(--text-color);
