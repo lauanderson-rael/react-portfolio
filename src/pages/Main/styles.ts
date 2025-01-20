@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.main`
-  transition: all 0.5s ease-out;
+  transition: all 1s ease-out;
 
   // temas
   h2, p{
