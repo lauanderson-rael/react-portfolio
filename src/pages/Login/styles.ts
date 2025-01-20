@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+    transition: var(--transition);
     color: var(--text-color);
     background-color: var(--background-color);
     display: flex;
