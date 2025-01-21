@@ -165,18 +165,22 @@ export const Container = styled.main`
       .btn-social button {
         width: 50px;
         height: 50px;
-        border-radius: 50%;
-        border: none;
-        background-color: var(--text-color-blue-green);
+        border-radius: 20%;
+        border:none;
+        background-color: transparent;
+        color: var(--text-color-blue-green);
         font-size: 25px;
         cursor: pointer;
-        padding-top: 5px;
-        margin: 0 5px; // cima baixo / laterais
+        
+        margin: 0 0px; // cima baixo / laterais
         transition: all.2s;
       }
     }
     // responsivo - sobre
     @media (max-width: 1020px) {
+      .btn-social button {
+      font-size: 20px
+    }
       padding: 30px 4%;
       .flex {
         flex-direction: column;
@@ -194,7 +198,7 @@ export const Container = styled.main`
         display: none;
       }
       .img-sobre-mobile img{
-        width: 100%;
+        width: 80%;
         display: block;
         margin: 0 auto;
       }
@@ -232,6 +236,7 @@ export const Container = styled.main`
 
     .icone {
       font-size: 45px;
+      font-size: 30px;
       color: var(--text-color-blue-green);
     }
     strong{
@@ -332,12 +337,12 @@ export const SessaoFormulario = styled.section`
     input,
     textarea {
       width: 100%;
-      background-color: #b5b5b5;
+      background-color:rgb(231, 231, 231);
       border: 0;
       outline: none;
       padding: 20px 15px; // cima baixo - laterais
       border-radius: 15px;
-      font-size: 18px;
+      /* font-size: 18px; */
 
     }
 

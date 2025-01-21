@@ -37,8 +37,24 @@ export const Container = styled.footer`
     font-size: 22px;
   }
 
+  .btn-social button {
+        width: 50px;
+        height: 50px;
+        border-radius: 20%;
+        border:none;
+        background-color: transparent;
+        color: var(--text-color-blue-green);
+        font-size: 25px;
+        cursor: pointer;
+        margin: 0 0px; // cima baixo / laterais
+        transition: all.2s;
+      }
+
 
   @media (max-width: 1020px) {
+    .btn-social button {
+      font-size: 20px
+    }
     font-size: small;
     .flex {
       gap: 30px;

@@ -4,7 +4,7 @@ import { MdDoubleArrow } from "react-icons/md";
 import { ContainerSkills } from "../../components/CardSkills/index"
 import { CardProject } from "../../components/CardProject";
 import Foto from "../../assets/transp.png";
-import Foto2 from "../../assets/foto2.jpg";
+import Foto2 from "../../assets/foto3.jpg";
 import p1 from "../../assets/p1.png"
 import p2 from "../../assets/p2.png"
 import p3 from "../../assets/p3.png"
@@ -84,11 +84,6 @@ export function Main() {
                   Olá, sou Lauanderson, um apaixonado por tecnologia e desenvolvimento web. Tenho 21 anos e estou no 3º período do curso de Análise e Desenvolvimento de Sistemas no IFMA. Ao longo da minha jornada, adquiri experiência sólida em front-end, com foco em React e Next.js, e continuo em constante aprendizado sobre as novas tendências e ferramentas do desenvolvimento web.
 
                   Minha principal motivação é criar soluções inovadoras e eficientes. Além disso tenho habilidades em backend, utilizando Node.js e Express, e sou adepto de boas práticas com Git e GitHub para controle de versão.
-                </p>
-                <p>
-                  Atualmente Desenvolvo projetos pessoais para praticar minhas habilidades e construir meu portfólio, incluindo sites
-                  simples, aplicativos da web e até mesmo contribuições para projetos de código aberto.
-
                 </p>
 
                 <div className="btn-contato curriculo">
