@@ -10,7 +10,7 @@ export const Container = styled.main`
 
   // TELA 1
   section.topo-do-site {
-    padding: 100px 12%;
+    padding: 100px 8%;
     height: 80dvh;
 
     .flex {
@@ -129,7 +129,7 @@ export const Container = styled.main`
   // SESSAO SOBRE - TELA 2
   .sobre {
     margin-top: 40px;
-    padding: 80px 12%;
+    padding: 80px 8%;
 
     .flex {
       align-items: center;
@@ -208,7 +208,7 @@ export const Container = styled.main`
 // ESPECIALIDADES - TELA 3
 .especialidades {
 
-  padding: 80px 12%;
+  padding: 80px 8%;
 
   h2 span {
     color: var(--text-color-blue-green);
@@ -277,14 +277,15 @@ export const Container = styled.main`
 
   .portfolio {
     margin-top: 30px;
-    padding: 80px 12%;
+    padding: 80px 8%;
+    display: grid;
+    place-items: center;
 
     .grid {
       margin-top: 40px;
       display: grid;
-      place-items:center;
-      grid-template-columns: 1fr 1fr;
-      /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+      grid-template-columns: repeat(3, max-content);
+      
     }
   }
 
@@ -299,7 +300,16 @@ export const Container = styled.main`
   }
 
   // responsivo - portfolio
-  @media (max-width: 1020px) {
+  @media (min-width: 769px) and (max-width: 1020px){
+    .portfolio .grid{
+      display: grid;
+      grid-template-columns: repeat(2, 360px);
+    }
+
+  }
+
+
+  @media (max-width: 768px) {
     .img-port {
       width: 100%;
       max-width: 360px;

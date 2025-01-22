@@ -11,7 +11,7 @@ h2{
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    //max-width: 420px;
+    max-width: 340px;
     margin: 20px;
     transition: transform 0.2s ease-in-out;
   }
@@ -40,6 +40,7 @@ h2{
     font-size: 1rem;
     color: #555;
     margin: 8px 0;
+    height: 150px;
   }
 
   .project-links {
@@ -85,9 +86,20 @@ h2{
     .project-card {
     max-width: none;
     margin: 12px;
-
   }
+}
 
+@media(min-width: 769px){
+  .project-card{
+    height: 500px;
+  }
+  .project-image{
+    width: 338px;
+    height: 170px;
+  }
+  .project-description {
+    height: 120px;
+  }
 }
 
 
