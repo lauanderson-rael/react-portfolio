@@ -12,8 +12,10 @@ type Post = {
 
 
  export default function Blog(){
-    const [nutri, setNutri] = useState<Post[]>([])
+    const [post, setPost] = useState<Post[]>([])
     const [loading, setLoading] = useState(true)
+
+    const postsRev = post.slice().reverse();
 
   // ao renderizar a pagina sera chamada a funcao (obs: --> vazio [])
   useEffect(() => {
@@ -23,7 +25,7 @@ type Post = {
       .then((res) => res.json())
       .then((json) => {
         //console.log("dados da API:",json)
-        setNutri(json)
+        setPost(json)
         setLoading(false)
       })
 
@@ -46,7 +48,6 @@ type Post = {
   return (
     <>
     <Container>
-
       <div className="container">
         <header>
           <h3>Últimas Postagens</h3>
@@ -55,7 +56,7 @@ type Post = {
 
         <main style={{flex: 1}}>
 
-        {nutri.map((item) => {
+        {postsRev.map((item) => {
           return (
             <article key={item._id}>
               <div>
