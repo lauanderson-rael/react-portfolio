@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { IoOpen } from "react-icons/io5";
 import { FaCodeBranch } from "react-icons/fa";
 import { ContainerCards } from './styles';
@@ -13,14 +13,13 @@ interface ProjectCardProps {
   technologies: string[];
 }
 
-export const CardProject: React.FC<ProjectCardProps> = ({
-  image,
-  title,
+export function CardProject({
+  image,title,
   description,
   projectLink,
   repoLink,
   technologies,
-}) => {
+}: ProjectCardProps){
   return (
    <ContainerCards>
     <div className="project-card">
