@@ -29,7 +29,7 @@ export function Main() {
 
                   <strong >Lauanderson Rael</strong>
 
-                  <p>Desenvolvedor Front-end</p>
+                  <p>Desenvolvedor Full Stack</p>
                 </div>
 
                 <div style={{ display: "flex", gap: "30px" }}>
@@ -88,7 +88,7 @@ export function Main() {
 
                 <div className="btn-contato curriculo">
                   <a
-                    href="https://drive.google.com/file/d/13ZmWZDWJdG8-xzIqT_NeVmCnrkT0p21Q/view?usp=drivesdk"
+                    href="https://drive.google.com/file/d/1-yKLQ7v1EUl_tZCrrlG0T0qTB61d0C7B/view?usp=drive_link"
                     target="blank"
                     download={"curriculo.pdf"}>
                     <button> <FaCloudDownloadAlt style={{ width: "30px" }} /> Download CV</button>
@@ -116,7 +116,7 @@ export function Main() {
                       <FaGithub />
                     </button>
                   </a>
-                  
+
                   <a href="https://api.whatsapp.com/send?phone=98985571212&text=Ol%C3%A1,%20vim%20falar%20com%20voc%C3%AA" target="blank">
                     <button>
                       <FaWhatsapp />
