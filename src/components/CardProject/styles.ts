@@ -91,11 +91,11 @@ h2{
 
 @media(min-width: 769px){
   .project-card{
-    height: 500px;
+    //height: 500px;
   }
   .project-image{
     width: 338px;
-    height: 170px;
+    //height: 170px;
   }
   .project-description {
     height: 120px;

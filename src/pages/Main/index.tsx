@@ -173,11 +173,11 @@ export function Main() {
               />
               <CardProject
                 image={p3}
-                title="Todo List"
-                description="Nesse projeto desenvolvi um Todo List básico utilizando a biblioteca React. Pude abordar o uso de alguns Hooks do react, como useState"
-                projectLink="https://react-todo-list-three-beta.vercel.app/"
-                repoLink="https://github.com/lauanderson-rael/react-todo-list"
-                technologies={['React', 'CSS']}
+                title="Sistema de estoque"
+                description="Nesse projeto desenvolvi um Sistema de Estoque, aplicacao full Stack com padrão MVC"
+                projectLink="https://mvcestoque-production.up.railway.app/"
+                repoLink="https://github.com/lauanderson-rael/mvc-estoque"
+                technologies={['Handlebars', 'Express', 'BootsTrap']}
               />
 
               <CardProject

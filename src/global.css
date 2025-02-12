@@ -86,20 +86,6 @@ h2 span {
   color: var(--text-color-blue-green);
 }
 
-/* .btn-social button {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: none;
-  background-color: var(--text-color-blue-green);
-  color: var(--background-color);
-  font-size: 25px;
-  cursor: pointer;
-  padding-top: 8px;
-  margin: 0 5px;
-  transition: all.2s;
-} */
-
 /* gerais */
 @media (max-width: 1020px) {
   .flex {
@@ -138,29 +124,27 @@ h2 span {
 
 /* tema escuro*/
 :root {
-  --background-color: #000;
   --background-color2: #ffffffe1;
   --background-color3: #101010e1;
+  --background-color: #000;
   --background-color-gray: #000;
   --text-color: #c4c4c4;
   --text-color2: #1b1b1b;
   --text-color-blue-green: #00ff08;
-
   --transition: all 1s;
 
 }
 
 /* tema claro*/
 [data-theme="light"] {
-  --background-color: #fff;
   --background-color2: #000000c0;
-  --background-color3: #dfdfdfc0;
-  --background-color-gray: #e8e8e8;
   --background-blue: #007bff;
+  --background-color3: #dfdfdfc0;
+  --background-color: #fff;
+  --background-color-gray: #e8e8e8;
   --text-color: #000;
   --text-color2: #ffffff;
   --text-color-blue-green: #007bff;
-
   --transition: all 1s;
 }
 
