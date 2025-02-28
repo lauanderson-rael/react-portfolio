@@ -62,11 +62,6 @@ export const ContainerSkills = () => {
           </div>
 
           <div className="center">
-            <div className="icone"> <RiNextjsFill /></div>
-            <p>NextJS</p>
-          </div>
-
-          <div className="center">
             <div className="icone"> <SiSequelize /></div>
             <p>Sequelize</p>
           </div>
