@@ -1,12 +1,13 @@
 
 import {
   SiExpress, SiJavascript, SiPostgresql,
-  SiTailwindcss, SiTypescript, SiStyledcomponents,
+  SiTailwindcss, SiTypescript, SiBootstrap,
   SiMongodb, SiWordpress, SiVercel, SiSequelize
 } from "react-icons/si";
 
 import { FaGitAlt, FaGithub, FaNodeJs, FaReact, FaDocker } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
+import { RiNextjsFill } from "react-icons/ri";
 
 export const ContainerSkills = () => {
 
@@ -19,23 +20,30 @@ export const ContainerSkills = () => {
             <div className="icone"> <SiJavascript /></div>
             <p>JavaScript</p>
           </div>
+
+          <div className="center">
+            <div className="icone"> <SiTypescript /></div>
+            <p>TypeScript</p>
+          </div>
+
+          <div className="center">
+            <div className="icone"> <FaReact /></div>
+            <p>React</p>
+          </div>
+          
+          <div className="center">
+            <div className="icone"> <RiNextjsFill /></div>
+            <p>NextJS</p>
+          </div>
+
           <div className="center">
             <div className="icone"> <SiTailwindcss /></div>
             <p>TailwindCSS</p>
           </div>
 
           <div className="center">
-            <div className="icone"> <SiTypescript /></div>
-            <p>TypeScript</p>
-          </div>
-          <div className="center">
-            <div className="icone"> <FaReact /></div>
-            <p>React</p>
-          </div>
-
-          <div className="center">
-            <div className="icone"> <SiStyledcomponents /></div>
-            <p>Styled Components</p>
+            <div className="icone"> <SiBootstrap /></div>
+            <p>Bootstrap</p>
           </div>
         </div>
       </div>
@@ -51,6 +59,11 @@ export const ContainerSkills = () => {
           <div className="center">
             <div className="icone"> <SiExpress /></div>
             <p>Express.js</p>
+          </div>
+
+          <div className="center">
+            <div className="icone"> <RiNextjsFill /></div>
+            <p>NextJS</p>
           </div>
 
           <div className="center">
