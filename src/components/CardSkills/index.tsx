@@ -7,6 +7,7 @@ import {
 
 import { FaGitAlt, FaGithub, FaNodeJs, FaReact, FaDocker } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
+import { RiNextjsFill } from "react-icons/ri";
 
 export const ContainerSkills = () => {
 
@@ -31,6 +32,11 @@ export const ContainerSkills = () => {
           <div className="center">
             <div className="icone"> <FaReact /></div>
             <p>React</p>
+          </div>
+          
+          <div className="center">
+            <div className="icone"> <RiNextjsFill /></div>
+            <p>NextJS</p>
           </div>
 
           <div className="center">
