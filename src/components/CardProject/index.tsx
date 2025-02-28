@@ -3,7 +3,6 @@ import { IoOpen } from "react-icons/io5";
 import { FaCodeBranch } from "react-icons/fa";
 import { ContainerCards } from './styles';
 
-
 interface ProjectCardProps {
   image: string;
   title: string;
@@ -47,8 +46,8 @@ export function CardProject({
             ))}
           </div>
         </div>
-        
+
       </div>
     </ContainerCards>
   );
-};
+}

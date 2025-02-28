@@ -34,7 +34,7 @@ main{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  padding: 0 15%;
+  padding: 0 12%;
 }
 
 header{
@@ -46,25 +46,24 @@ header{
   background-color: var(--background-color2);
   color: var(--text-color2);
   padding: 0 5px;
-
   position: fixed;
   top:80px;
   width: 100vw;
-
   z-index: 100;
 }
 
 article{
-
   width: 100%;
   display: flex;
   flex-direction: column;
   border-radius: 7px;
   margin-bottom: 30px;
   padding: 20px;
+  box-shadow: var(--background-color2) 1px 1px 3px;
 
   h2{
     color: var(--text-color);
+    font-size: 1.3rem;
   }
 }
 article img{
@@ -79,6 +78,14 @@ article p, article span{
   font-size: medium;
 }
 
+article p{
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
 article button{
   margin-top: 10px;
   background-color: #d3d3d3;
@@ -86,7 +93,7 @@ article button{
   padding: 10px 0;
   border-radius: 7px;
   font-weight: 700;
-  color: black;
+  color: var(--background-color);
   transition: all 0.3s;
   transform: scale(1.02);
   width: 100%;

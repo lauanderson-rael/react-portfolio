@@ -8,7 +8,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 70vh;
+    height: calc(100vh - 325.6px);
 
     form{
         padding: 10px;
@@ -35,6 +35,7 @@ export const Container = styled.div`
     }
 
     @media(max-width:1080px){
+        height: calc(100vh - 300.8px);
         form{
             font-size: small;
         }

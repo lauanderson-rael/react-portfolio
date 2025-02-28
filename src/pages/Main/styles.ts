@@ -171,7 +171,7 @@ export const Container = styled.main`
         color: var(--text-color-blue-green);
         font-size: 25px;
         cursor: pointer;
-        
+
         margin: 0 0px; // cima baixo / laterais
         transition: all.2s;
       }
@@ -219,7 +219,6 @@ export const Container = styled.main`
 
 
 // COMPONENTES- SKILLS
-
   .especialidades-box {
     color: var(--text-color);
     padding: 20px;
@@ -267,7 +266,7 @@ export const Container = styled.main`
       gap: 15px;
     }
     .especialidades-box .center p{
-      font-size: x-small;
+      font-size: xx-small;
     }
   }
 }
@@ -285,7 +284,7 @@ export const Container = styled.main`
       margin-top: 40px;
       display: grid;
       grid-template-columns: repeat(3, max-content);
-      
+
     }
   }
 

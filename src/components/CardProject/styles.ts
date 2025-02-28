@@ -23,7 +23,7 @@ h2{
 
   .project-image {
     width: 100%;
-    height: auto;
+    height: 188px;
   }
 
   .project-content {
@@ -31,16 +31,21 @@ h2{
   }
 
   .project-title {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 0;
 
   }
 
   .project-description {
-    font-size: 1rem;
-    color: #555;
+    font-size: 0.8rem;
+    color: gray;
     margin: 8px 0;
-    height: 150px;
+    height: 100px;
+    display: -webkit-box;
+  -webkit-line-clamp: 4; /* Define o número máximo de linhas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
   }
 
   .project-links {
@@ -98,8 +103,7 @@ h2{
     //height: 170px;
   }
   .project-description {
-    //height: 120px;
-    height: 150px;
+
   }
 }
 
