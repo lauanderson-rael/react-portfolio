@@ -193,7 +193,7 @@ export function Main() {
               <CardProject
                 image={p6}
                 title="Dev Motors"
-                description="Nesse projeto desenvolvi um site para a Dev Motors, uma empresa fictícia de manutenção de carros. Para a API backend, utilizei o Cosmic como headless CMS, permitindo o gerenciamento dinâmico e eficiente dos conteúdos."
+                description="Site para a Dev Motors, uma empresa fictícia de manutenção de carros. Para a API backend, utilizei o Cosmic como headless CMS, permitindo o gerenciamento dinâmico e eficiente dos conteúdos."
                 projectLink="https://next-dev-motors.vercel.app/"
                 repoLink="https://github.com/lauanderson-rael/next-devMotors"
                 technologies={['NextJS', 'Sass', 'CosmicJS']}
