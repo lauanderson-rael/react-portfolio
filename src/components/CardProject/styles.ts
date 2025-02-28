@@ -98,7 +98,8 @@ h2{
     //height: 170px;
   }
   .project-description {
-    height: 120px;
+    //height: 120px;
+    height: 150px;
   }
 }
 
