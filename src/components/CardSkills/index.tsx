@@ -1,8 +1,8 @@
 
 import {
   SiExpress, SiJavascript, SiPostgresql,
-  SiTailwindcss, SiTypescript, SiStyledcomponents,
-  SiMongodb, SiWordpress, SiVercel, SiSequelize
+  SiTailwindcss, SiTypescript, SiBootstrap,
+  SiMongodb, SiWordpress, SiVercel, SiSequelize,  SiBootstrap
 } from "react-icons/si";
 
 import { FaGitAlt, FaGithub, FaNodeJs, FaReact, FaDocker } from "react-icons/fa";
@@ -20,15 +20,12 @@ export const ContainerSkills = () => {
             <div className="icone"> <SiJavascript /></div>
             <p>JavaScript</p>
           </div>
-          <div className="center">
-            <div className="icone"> <SiTailwindcss /></div>
-            <p>TailwindCSS</p>
-          </div>
 
           <div className="center">
             <div className="icone"> <SiTypescript /></div>
             <p>TypeScript</p>
           </div>
+
           <div className="center">
             <div className="icone"> <FaReact /></div>
             <p>React</p>
@@ -40,8 +37,13 @@ export const ContainerSkills = () => {
           </div>
 
           <div className="center">
-            <div className="icone"> <SiStyledcomponents /></div>
-            <p>Styled Components</p>
+            <div className="icone"> <SiTailwindcss /></div>
+            <p>TailwindCSS</p>
+          </div>
+
+          <div className="center">
+            <div className="icone"> <SiBootstrap /></div>
+            <p>Bootstrap</p>
           </div>
         </div>
       </div>
@@ -57,6 +59,11 @@ export const ContainerSkills = () => {
           <div className="center">
             <div className="icone"> <SiExpress /></div>
             <p>Express.js</p>
+          </div>
+
+          <div className="center">
+            <div className="icone"> <RiNextjsFill /></div>
+            <p>NextJS</p>
           </div>
 
           <div className="center">
