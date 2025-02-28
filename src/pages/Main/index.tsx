@@ -10,6 +10,7 @@ import p2 from "../../assets/p2.png"
 import p3 from "../../assets/p3.png"
 import p4 from "../../assets/p4.png"
 import p5 from '../../assets/p5.png'
+import p6 from '../../assets/p6.png'
 
 export function Main() {
 
@@ -174,7 +175,7 @@ export function Main() {
               <CardProject
                 image={p3}
                 title="Sistema de estoque"
-                description="Nesse projeto desenvolvi um Sistema de Estoque, aplicacao full Stack com padrão MVC"
+                description="Nesse projeto desenvolvi um Sistema de Estoque, aplicacao full Stack com padrão MVC."
                 projectLink="https://mvcestoque-production.up.railway.app/"
                 repoLink="https://github.com/lauanderson-rael/mvc-estoque"
                 technologies={['Handlebars', 'Express', 'BootsTrap']}
@@ -187,6 +188,15 @@ export function Main() {
                 projectLink="https://react-repositorios-fav.vercel.app/"
                 repoLink="https://github.com/lauanderson-rael/react-repositorios-Fav"
                 technologies={['react', 'Styled-Components']}
+              />
+              
+              <CardProject
+                image={p6}
+                title="Dev Motors"
+                description="Nesse projeto desenvolvi um site para a Dev Motors, uma empresa fictícia de manutenção de carros. Para a API backend, utilizei o Cosmic como headless CMS, permitindo o gerenciamento dinâmico e eficiente dos conteúdos."
+                projectLink="https://next-dev-motors.vercel.app/"
+                repoLink="https://github.com/lauanderson-rael/next-devMotors"
+                technologies={['NextJS', 'Sass', 'CosmicJS']}
               />
 
             </div>
