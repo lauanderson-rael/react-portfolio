@@ -11,6 +11,7 @@ import p3 from "../../assets/p3.png"
 import p4 from "../../assets/p4.png"
 import p5 from '../../assets/p5.png'
 
+
 export function Main() {
 
   return (
@@ -223,6 +224,7 @@ export function Main() {
                 <input type="submit" value="ENVIAR" />
                 <input type="reset" value="LIMPAR" />
               </div>
+
             </form>
           </div>
         </SessaoFormulario>
