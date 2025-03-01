@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container } from "./styles";
+import { Container, SessaoFormulario } from "./styles";
 import { MdOutlineImageSearch } from "react-icons/md";
 type Post = {
   _id: string;
@@ -67,7 +67,7 @@ export default function Blog() {
                   </div>
 
                   <div style={{ marginTop: '5px' }}>
-                    <strong>Categoria: </strong> Tecnologia
+                    <strong>Categoria: </strong> <span>Tecnologia</span>
                   </div>
 
                   <a href={item.link} target="_blank" rel="noopener noreferrer">
@@ -79,12 +79,46 @@ export default function Blog() {
 
           </main>
         </div>
-        <p style={{ fontSize: '12px', color: 'gray', textAlign: 'justify', padding: '10px' }}>
+        <p style={{ fontSize: '12px', color: 'gray', textAlign: 'justify', padding: '10px', width: '90%', margin: '0 auto' }}>
           As imagens e descrições exibidas neste blog são de terceiros e pertencem aos respectivos autores. Ao clicar nos links, você será redirecionado para o site original, onde pode encontrar o conteúdo completo. Todos os direitos reservados aos autores.
         </p>
 
         <br />
       </Container>
+
+      <SessaoFormulario>
+        <div>
+          <h2 className="titulo">
+            Faça sua <span> Pergunta</span>
+          </h2>
+
+          <form action="mailto:lauanderson38@gmail.com" method="POST" encType="text/plain">
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="Seu nome completo"
+              required
+            />
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="Seu e-mail"
+              required
+            />
+
+            <input type="text" name="" id="" placeholder="Seu celular" />
+            <textarea name="" id="" placeholder="Sua mensagem"></textarea>
+
+            <div className="btn-enviar" style={{ display: 'flex', gap: '10px' }}>
+              <input type="submit" value="ENVIAR" />
+              <input type="reset" value="LIMPAR" />
+            </div>
+
+          </form>
+        </div>
+      </SessaoFormulario>
 
     </>
   )

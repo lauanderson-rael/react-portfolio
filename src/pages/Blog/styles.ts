@@ -29,7 +29,7 @@ body{
 }
 
 main{
-  margin-bottom: 100px;
+  margin-bottom: 20px;
   margin-top: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -64,6 +64,7 @@ article{
   h2{
     color: var(--text-color);
     font-size: 1.3rem;
+    height: 62.4px;
   }
 }
 article img{
@@ -73,7 +74,7 @@ article img{
 
 }
 
-article p, article span{
+article p, article span, article strong{
   color: var(--text-color);
   font-size: medium;
 }
@@ -157,3 +158,78 @@ footer {
 }
 
 `
+
+
+// SESSÃO FORMULARIO - TELA 5
+export const SessaoFormulario = styled.section`
+  padding: 20px 4% 100px 4%;
+
+
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+
+    input,
+    textarea {
+      width: 100%;
+      background-color:rgb(231, 231, 231);
+      border: 0;
+      outline: none;
+      padding: 20px 15px; // cima baixo - laterais
+      border-radius: 15px;
+      /* font-size: 18px; */
+
+    }
+
+    textarea {
+      resize: none;
+      max-height: 180px;
+    }
+  }
+
+  .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+
+    input[type="submit"] {
+      color: var(--background-color);
+      font-weight: 700;
+      background-color: var(--text-color-blue-green);
+      cursor: pointer;
+      transition: all.2s;
+
+    }
+
+    input:hover {
+      box-shadow: 0px 0px 8px var(--text-color-blue-green);
+      transform: scale(1.03);
+    }
+  }
+
+  // botao limpar
+  input[type="reset"] {
+      color: #000;
+      font-weight: 700;
+      background-color: #fff;
+      cursor: pointer;
+      transition: all.2s;
+      border: 1px solid var(--text-color);
+    }
+    input[type="reset"]:hover {
+      box-shadow: 0px 0px 8px var(--text-color-blue-green);
+      transform: scale(1.03);
+    }
+  // limpar
+
+  @media (max-width: 1020px){
+    form input, form textarea{
+      font-size: small;
+
+    }
+    }
+`;

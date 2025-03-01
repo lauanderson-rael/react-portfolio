@@ -327,8 +327,6 @@ export const Container = styled.main`
 `;
 
 
-
-
 // SESSÃO FORMULARIO - TELA 5
 export const SessaoFormulario = styled.section`
   padding: 80px 4%;
