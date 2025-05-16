@@ -11,7 +11,7 @@ export const Container = styled.main`
   // TELA 1
   section.topo-do-site {
     padding: 100px 8%;
-    height: 80dvh;
+    min-height: 80vh;
 
     .flex {
       justify-content: space-around;
