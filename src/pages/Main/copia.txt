@@ -79,8 +79,7 @@ export const Container = styled.main`
     @media (max-width: 1020px) {
       .img-topo-site img{
         animation: flutuar 2s ease-in-out infinite alternate;
-        will-change: transform;
-
+        //animation: none !important;
       }
       padding: 10px 8%;
 
@@ -103,9 +102,7 @@ export const Container = styled.main`
       }
       .flex {
         flex-direction: column-reverse;
-         height: auto;
-         min-height: 90vh; /* usa vh como base mínima */
-         padding-bottom: 20px;
+        height: 90dvh;
 
       }
 
@@ -122,13 +119,13 @@ export const Container = styled.main`
 
   // ANIMAÇÃO
   @keyframes flutuar {
-  0% {
-    transform: translateY(0px);
+    0% {
+      top: 0;
+    }
+    100% {
+      top: 30px;
+    }
   }
-  100% {
-    transform: translateY(30px);
-  }
-}
 
   // SESSAO SOBRE - TELA 2
   .sobre {
