@@ -1,0 +1,404 @@
+import styled from "styled-components";
+
+export const Container = styled.main`
+  transition: var(--transition);
+
+  // temas
+  h2, p{
+    color: var(--text-color);
+  }
+
+  // TELA 1
+  section.topo-do-site {
+    padding: 100px 8%;
+    height: 80dvh;
+
+    .flex {
+      justify-content: space-around;
+      align-items: center;
+    }
+    .arrow-desktop{
+      color: var(--text-color);
+      rotate: 90deg;
+      margin-top: 30px;
+      display: grid;
+      place-items: center;
+      position: relative;
+      animation: flutuar 2s ease-in-out infinite alternate;
+    }
+
+    .arrow-mobile{
+      display: grid;
+      place-items: center;
+    }
+
+    .txt-topo-site strong {
+      font-size: 55px;
+
+      color: var(--text-color-blue-green);
+    }
+
+    .informacoes{
+      background-color: none;
+      padding: 0;
+      margin-bottom: 50px;
+    }
+    .txt-topo-site p {
+      font-size: large;
+      margin: 10px 0;
+      padding: 0;
+    }
+
+    .img-topo-site{
+
+    }
+    .img-topo-site img {
+      width: 300px;
+      height: 300px;
+      border: 8px solid var(--text-color-blue-green);
+      background: var(--text-color-blue-green);
+      border-radius: 50%;
+      position: relative; // para funcionar animacao
+      //animation: flutuar 2s ease-in-out infinite alternate;
+      filter: drop-shadow(0 0 0.8rem var(--text-color-blue-green));
+      box-shadow: 1px 1px 0.5rem var(--text-color-blue-green);
+    }
+
+    .scroll{
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+      bottom: 0;
+      gap: 5px;
+    }
+
+    //responsivo
+    @media (max-width: 1020px) {
+      .img-topo-site img{
+        animation: flutuar 2s ease-in-out infinite alternate;
+      }
+      padding: 10px 8%;
+
+      .arrow-desktop{
+        display: none;
+      }
+
+      .btn-contato button{
+        font-size: small;
+      }
+      .txt-topo-site strong {
+        font-size: 32px;
+      }
+      .txt-topo-site p{
+        font-size: medium;
+        margin: 0;
+      }
+      .informacoes{
+        margin-top: 30px;
+      }
+      .flex {
+        flex-direction: column-reverse;
+        height: 90dvh;
+
+      }
+
+      .img-topo-site img {
+        width: 250px;
+        height: 250px;
+      }
+      .btn-contato {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  // ANIMAÇÃO
+  @keyframes flutuar {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: 30px;
+    }
+  }
+
+  // SESSAO SOBRE - TELA 2
+  .sobre {
+    margin-top: 40px;
+    padding: 80px 8%;
+
+    .flex {
+      align-items: center;
+      gap: 60px;
+    }
+
+    .img-sobre img {
+      width: 344px;
+      border-radius: 25px;
+    }
+    .img-sobre-mobile img{
+      display: none;
+    }
+    .txt-sobre {
+      color: #fff;
+
+      h2 {
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 30px;
+        span {
+          color: var(--text-color-blue-green);
+          display: block;
+        }
+      }
+
+      p {
+        margin: 20px 0; // cima baixo / laterais
+        text-align: justify;
+        color: var(--text-color);
+      }
+
+      .btn-social button {
+        width: 50px;
+        height: 50px;
+        border-radius: 20%;
+        border:none;
+        background-color: transparent;
+        color: var(--text-color-blue-green);
+        font-size: 25px;
+        cursor: pointer;
+
+        margin: 0 0px; // cima baixo / laterais
+        transition: all.2s;
+      }
+    }
+    // responsivo - sobre
+    @media (max-width: 1020px) {
+      .btn-social button {
+      font-size: 20px
+    }
+      padding: 30px 4%;
+      .flex {
+        flex-direction: column;
+      }
+      .txt-sobre h2 {
+        font-size: 32px;
+        line-height: 35px;
+        text-align: center;
+      }
+      .btn-social {
+        text-align: center;
+      }
+      .img-sobre img {
+        width: 80%;
+        display: none;
+      }
+      .img-sobre-mobile img{
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+
+// ESPECIALIDADES - TELA 3
+.especialidades {
+
+  padding: 80px 8%;
+
+  h2 span {
+    color: var(--text-color-blue-green);
+  }
+  .flex {
+    gap: 60px;
+  }
+
+
+// COMPONENTES- SKILLS
+  .especialidades-box {
+    color: var(--text-color);
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 45px;
+    border-radius: 20px;
+    border: 1px solid #7c7c7c;
+    max-width: 700px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .icone {
+      font-size: 45px;
+      font-size: 30px;
+      color: var(--text-color-blue-green);
+    }
+    strong{
+      margin-bottom: 30px;
+    }
+
+    .flex-skills{
+      display: flex;
+      gap: 20px;
+
+    }
+    .center{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  // responsivo
+  @media (max-width: 1020px) {
+    padding: 80px 4%;
+    .especialidades-box {
+      padding: 0;
+      padding: 20px;
+    }
+    .especialidades-box .flex-skills{
+      gap: 15px;
+    }
+    .especialidades-box .center p{
+      font-size: xx-small;
+    }
+  }
+}
+
+
+// SESSAO PORTIFOLIO - TELA 4
+
+  .portfolio {
+    margin-top: 30px;
+    padding: 80px 8%;
+    display: grid;
+    place-items: center;
+
+    .grid {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(3, max-content);
+
+    }
+  }
+
+  .img-port {
+    border: 2px solid white;
+    width: 360px;
+    height: 460px;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+
+  }
+
+  // responsivo - portfolio
+  @media (min-width: 769px) and (max-width: 1020px){
+    .portfolio .grid{
+      display: grid;
+      grid-template-columns: repeat(2, 360px);
+    }
+
+  }
+
+
+  @media (max-width: 768px) {
+    .img-port {
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+    .portfolio .grid {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .portfolio{
+      padding: 80px 1%;
+    }
+  }
+`;
+
+
+// SESSÃO FORMULARIO - TELA 5
+export const SessaoFormulario = styled.section`
+  padding: 80px 4%;
+  margin-top: 40px;
+
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+
+    input,
+    textarea {
+      width: 100%;
+      background-color:rgb(231, 231, 231);
+      border: 0;
+      outline: none;
+      padding: 20px 15px; // cima baixo - laterais
+      border-radius: 15px;
+      /* font-size: 18px; */
+
+    }
+
+    textarea {
+      resize: none;
+      max-height: 180px;
+    }
+  }
+
+  .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+
+    input[type="submit"] {
+      color: var(--background-color);
+      font-weight: 700;
+      background-color: var(--text-color-blue-green);
+      cursor: pointer;
+      transition: all.2s;
+
+    }
+
+    input:hover {
+      box-shadow: 0px 0px 8px var(--text-color-blue-green);
+      transform: scale(1.03);
+    }
+  }
+
+  // botao limpar
+  input[type="reset"] {
+      color: #000;
+      font-weight: 700;
+      background-color: #fff;
+      cursor: pointer;
+      transition: all.2s;
+      border: 1px solid var(--text-color);
+    }
+    input[type="reset"]:hover {
+      box-shadow: 0px 0px 8px var(--text-color-blue-green);
+      transform: scale(1.03);
+    }
+  // limpar
+
+  @media (max-width: 1020px){
+    form input, form textarea{
+      font-size: small;
+
+    }
+    }
+`;
+
+
