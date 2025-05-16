@@ -24,9 +24,10 @@ export function Main() {
     backgroundColor: ativo ? "var(--text-color-blue-green)" : "#fff",
     color: ativo ? "var(--text-color2)" : "#313436",
     fontWeight: "bold",
-    fontSize: 'small',
+    fontSize: '12px',
     cursor: "pointer",
     transition: "all 0.3s ease",
+    
   });
 
 

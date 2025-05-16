@@ -44,7 +44,7 @@ export const ContainerSkills = () => {
           </div>
 
           <div className="center">
-            <div className="icone"> <SiBootstrap fill="purple" /></div>
+            <div className="icone"> <SiBootstrap fill="#f003d0" /></div>
             <p>Bootstrap</p>
           </div>
         </div>

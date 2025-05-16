@@ -10,7 +10,7 @@ export const Container = styled.main`
 
   // TELA 1
   section.topo-do-site {
-    padding: 100px 8%;
+    padding: 100px 8% 0px 8%;
     min-height: 80vh;
 
     .flex {
@@ -24,25 +24,28 @@ export const Container = styled.main`
       display: grid;
       place-items: center;
       position: relative;
-       //animation: flutuar 2s ease-in-out infinite alternate;
-      
+      animation: flutuar2 2s ease-in-out infinite alternate;
     }
 
-    /* .arrow-mobile{
-      display: grid;
-      place-items: center;
-    } */
+    // ANIMAÇÃO DA SETA DESKTOP
+  @keyframes flutuar2 {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: 30px;
+    }
+  }
 
     .txt-topo-site strong {
       font-size: 55px;
-
       color: var(--text-color-blue-green);
     }
 
     .informacoes{
       background-color: none;
       padding: 0;
-      //margin-bottom: 50px;
+      margin-bottom: 30px;
     }
     .txt-topo-site p {
       font-size: large;
@@ -120,7 +123,7 @@ export const Container = styled.main`
     }
   }
 
-  // ANIMAÇÃO
+  // ANIMAÇÃO IMAGEM MOBILE
   @keyframes flutuar {
   0% {
     transform: translateY(0px);
@@ -129,6 +132,8 @@ export const Container = styled.main`
     transform: translateY(30px);
   }
 }
+
+
 
   // SESSAO SOBRE - TELA 2
   .sobre {
@@ -198,11 +203,13 @@ export const Container = styled.main`
         text-align: center;
       }
       .img-sobre img {
-        width: 80%;
         display: none;
       }
       .img-sobre-mobile img{
-        width: 80%;
+        width: 100%;
+        background-color: gray;
+        object-fit: contain;
+        height: 270px;
         display: block;
         margin: 0 auto;
       }
@@ -211,16 +218,13 @@ export const Container = styled.main`
 
 // ESPECIALIDADES - TELA 3
 .especialidades {
-
   padding: 80px 8%;
-
   h2 span {
     color: var(--text-color-blue-green);
   }
   .flex {
     gap: 60px;
   }
-
 
 // COMPONENTES- SKILLS
   .especialidades-box {
@@ -268,7 +272,8 @@ export const Container = styled.main`
       padding: 20px;
     }
     .especialidades-box .flex-skills{
-      gap: 15px;
+      /* gap: 15px; */
+      
     }
     .especialidades-box .center p{
       font-size: xx-small;
@@ -278,7 +283,6 @@ export const Container = styled.main`
 
 
 // SESSAO PORTIFOLIO - TELA 4
-
   .portfolio {
     margin-top: 30px;
     padding: 80px 8%;
@@ -311,7 +315,6 @@ export const Container = styled.main`
     }
 
   }
-
 
   @media (max-width: 768px) {
     .img-port {

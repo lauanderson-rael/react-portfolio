@@ -24,7 +24,6 @@ h2{
   .project-image {
     width: 100%;
     height: 188px;
-    object-fit: cover;
   }
 
   .project-content {
