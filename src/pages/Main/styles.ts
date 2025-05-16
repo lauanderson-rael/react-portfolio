@@ -24,13 +24,14 @@ export const Container = styled.main`
       display: grid;
       place-items: center;
       position: relative;
-      animation: flutuar 2s ease-in-out infinite alternate;
+       //animation: flutuar 2s ease-in-out infinite alternate;
+      
     }
 
-    .arrow-mobile{
+    /* .arrow-mobile{
       display: grid;
       place-items: center;
-    }
+    } */
 
     .txt-topo-site strong {
       font-size: 55px;
@@ -41,7 +42,7 @@ export const Container = styled.main`
     .informacoes{
       background-color: none;
       padding: 0;
-      margin-bottom: 50px;
+      //margin-bottom: 50px;
     }
     .txt-topo-site p {
       font-size: large;
@@ -59,7 +60,6 @@ export const Container = styled.main`
       background: var(--text-color-blue-green);
       border-radius: 50%;
       position: relative; // para funcionar animacao
-      //animation: flutuar 2s ease-in-out infinite alternate;
       filter: drop-shadow(0 0 0.8rem var(--text-color-blue-green));
       box-shadow: 1px 1px 0.5rem var(--text-color-blue-green);
     }
@@ -132,7 +132,7 @@ export const Container = styled.main`
 
   // SESSAO SOBRE - TELA 2
   .sobre {
-    margin-top: 40px;
+    //margin-top: 40px;
     padding: 80px 8%;
 
     .flex {
