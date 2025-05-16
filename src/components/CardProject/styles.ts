@@ -24,6 +24,7 @@ h2{
   .project-image {
     width: 100%;
     height: 188px;
+    object-fit: cover;
   }
 
   .project-content {
@@ -92,18 +93,15 @@ h2{
     max-width: none;
     margin: 12px;
   }
+  .project-card:hover{
+    transform: none;
+    box-shadow: none;
+  }
 }
 
 @media(min-width: 769px){
-  .project-card{
-    //height: 500px;
-  }
   .project-image{
     width: 338px;
-    //height: 170px;
-  }
-  .project-description {
-
   }
 }
 

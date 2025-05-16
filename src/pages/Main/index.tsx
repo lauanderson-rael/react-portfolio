@@ -11,7 +11,7 @@ import { contagemPorCategoria } from "./arrayProjects.ts";
 export function Main() {
 
   const [categoriaSelecionada, setCategoriaSelecionada] = useState("todos");
-  const categorias = ["todos", "front", "back", "fullStack", "design"];
+  const categorias = ["todos", "frontend", "backend", "fullStack", "design"];
   const projetosFiltrados =
     categoriaSelecionada === "todos"
       ? projetos

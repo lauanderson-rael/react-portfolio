@@ -19,7 +19,7 @@ export const projetos = [
       projectLink: "https://templates-zebras.vercel.app/home/index.html",
       repoLink: "https://github.com/lauanderson-rael/templates-zebras",
       technologies: ["html", "CSS", "JavaScript"],
-      category: "front",
+      category: "frontend",
     },
     {
       image: p7,
@@ -37,7 +37,7 @@ export const projetos = [
       projectLink: "https://react-list-heroes-chi.vercel.app/",
       repoLink: "https://github.com/lauanderson-rael/react-list-heroes",
       technologies: ["React", "CSS"],
-      category: "front",
+      category: "frontend",
     },
     {
       image: p5,
@@ -46,7 +46,7 @@ export const projetos = [
       projectLink: "https://react-blog-puce-nine.vercel.app/",
       repoLink: "https://github.com/lauanderson-rael/react-blog",
       technologies: ["react", "Styled-Components"],
-      category: "front",
+      category: "frontend",
     },
     {
       image: p3,
@@ -64,7 +64,7 @@ export const projetos = [
       projectLink: "https://react-repositorios-fav.vercel.app/",
       repoLink: "https://github.com/lauanderson-rael/react-repositorios-Fav",
       technologies: ["react", "Styled-Components"],
-      category: "front",
+      category: "frontend",
     },
     {
       image: p6,
@@ -86,12 +86,12 @@ export const projetos = [
     },
     {
       image: p9,
-      title: "autenticação JWT em uma API utilizando Express.JS",
+      title: "Autenticação JWT em uma API utilizando Express.JS",
       description: "Implementação básica de autenticação JWT em uma API utilizando Express.JS",
       projectLink: "https://github.com/lauanderson-rael/node-jwt-auth",
       repoLink: "https://github.com/lauanderson-rael/node-jwt-auth",
       technologies: ["nodeJS", "JsonWebToken", "Express"],
-      category: "back",
+      category: "backend",
     },
     
   ];

@@ -245,6 +245,7 @@ export const Container = styled.main`
     .flex-skills{
       display: flex;
       gap: 20px;
+      flex-wrap: wrap;
 
     }
     .center{
