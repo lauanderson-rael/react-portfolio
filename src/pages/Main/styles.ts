@@ -78,7 +78,8 @@ export const Container = styled.main`
     //responsivo
     @media (max-width: 1020px) {
       .img-topo-site img{
-        animation: flutuar 2s ease-in-out infinite alternate;
+        //animation: flutuar 2s ease-in-out infinite alternate;
+        animation: none !important;
       }
       padding: 10px 8%;
 
