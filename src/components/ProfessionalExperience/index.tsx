@@ -42,7 +42,7 @@ export function ProfessionalExperience() {
             {exp.note && <p className={styles.note}>{exp.note}</p>}
             <ul className={styles.description}>
               {exp.description.map((point, idx) => (
-                <li key={idx} className={styles.point}>● {point}</li>
+                <li key={idx} className={styles.point}>{point}</li>
               ))}
             </ul>
           </li>
