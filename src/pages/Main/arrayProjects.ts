@@ -7,6 +7,7 @@ import p6 from '../../assets/p6.png'
 import p7 from '../../assets/p7.png'
 import p8 from '../../assets/p8.png'
 import p9 from '../../assets/p9.png'
+import p10 from '../../assets/p10.jpg'
 
 
 
@@ -92,6 +93,16 @@ export const projetos = [
       repoLink: "https://github.com/lauanderson-rael/node-jwt-auth",
       technologies: ["nodeJS", "JsonWebToken", "Express"],
       category: "backend",
+    },
+	
+	{
+      image: p10,
+      title: "Tarefas+",
+      description: "Projeto 'Terefas +'. Desenvolvido com nextJS, no curso 'NextJS do zero ao avançado na pratica 2024' da Udemy",
+      projectLink: "https://next-projeto-tarefas.vercel.app/",
+      repoLink: "https://github.com/lauanderson-rael/next-projeto-tarefas",
+      technologies: ["nodeJS", "NextJS", "Firebase"],
+      category: "fullStack",
     },
     
   ];

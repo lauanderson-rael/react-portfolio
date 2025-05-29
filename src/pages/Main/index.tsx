@@ -3,6 +3,8 @@ import { FaCloudDownloadAlt, FaGithub, FaInstagram, FaLinkedin, FaYoutube, FaWha
 import { MdDoubleArrow } from "react-icons/md";
 import { ContainerSkills } from "../../components/CardSkills/index"
 import { CardProject } from "../../components/CardProject";
+import { AcademicHistory } from "../../components/AcademicHistory/index.tsx";
+import { ProfessionalExperience } from "../../components/ProfessionalExperience/index.tsx";
 import { useState } from "react";
 import Foto from "../../assets/transp.png";
 import Foto2 from "../../assets/foto3.jpg";
@@ -27,7 +29,7 @@ export function Main() {
     fontSize: '12px',
     cursor: "pointer",
     transition: "all 0.3s ease",
-    
+
   });
 
 
@@ -147,6 +149,14 @@ export function Main() {
             </div>
           </div>
         </section>
+		
+	       <section style={{display: "", margin: "", alignItems: "center"}}>
+		  
+		         <AcademicHistory/>
+				 <ProfessionalExperience/>
+		   </section>
+		  
+	
 
         <section className="especialidades" id="especialidades">
           <div className="interface">
