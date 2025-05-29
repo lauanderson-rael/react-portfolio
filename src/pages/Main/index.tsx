@@ -150,7 +150,7 @@ export function Main() {
           </div>
         </section>
 		
-	       <section style={{display: "", margin: "", alignItems: "center"}}>
+	       <section style={{ alignItems: "center"}}>
 		  
 		         <AcademicHistory/>
 				 <ProfessionalExperience/>
