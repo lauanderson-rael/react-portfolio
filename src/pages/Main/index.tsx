@@ -4,7 +4,7 @@ import { MdDoubleArrow } from "react-icons/md";
 import { ContainerSkills } from "../../components/CardSkills/index"
 import { CardProject } from "../../components/CardProject";
 import { AcademicHistory } from "../../components/AcademicHistory/index.tsx";
-import { ProfessionalExperience } from "../../components/ProfessionalExperience/index.tsx";
+// import { ProfessionalExperience } from "../../components/ProfessionalExperience/index.tsx";
 import { useState } from "react";
 import Foto from "../../assets/transp.png";
 import Foto2 from "../../assets/foto3.jpg";
@@ -153,8 +153,8 @@ export function Main() {
 	       <section style={{ alignItems: "center"}}>
 		  
 		         <AcademicHistory/>
-				 <ProfessionalExperience/>
-		   </section>
+			{/*  <ProfessionalExperience/> */}
+	       </section>
 		  
 	
 
