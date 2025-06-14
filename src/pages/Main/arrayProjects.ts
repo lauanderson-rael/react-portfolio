@@ -8,8 +8,7 @@ import p7 from '../../assets/p7.png'
 import p8 from '../../assets/p8.png'
 import p9 from '../../assets/p9.png'
 import p10 from '../../assets/p10.jpg'
-
-
+import p11 from '../../assets/p11.png'
 
 
 export const projetos = [
@@ -79,7 +78,7 @@ export const projetos = [
     {
       image: p8,
       title: "Figma - Pré-IFMA",
-      description: "Prótotipo do Pré-IFMA. Uma aplicação que estou desenvolvendo em grupo utilizando metodologias ágeis como Scrum e kanban. Esse projeto faz parte de um trabalho da disciplina 'Engenharia de Software I'. ",
+      description: "Prótotipo mobile do Pré-IFMA. Uma aplicação que estou desenvolvendo em grupo utilizando metodologias ágeis como Scrum e kanban. Esse projeto faz parte de um trabalho da disciplina 'Engenharia de Software I'. ",
       projectLink: "https://www.figma.com/design/MYT7Ix1igipVti23Ch3HUW/Prototipo-Eng.Software?node-id=0-1&p=f",
       repoLink: "https://www.figma.com/design/MYT7Ix1igipVti23Ch3HUW/Prototipo-Eng.Software?node-id=0-1&p=f",
       technologies: ["Figma"],
@@ -94,7 +93,7 @@ export const projetos = [
       technologies: ["nodeJS", "JsonWebToken", "Express"],
       category: "backend",
     },
-	
+
 	{
       image: p10,
       title: "Tarefas+",
@@ -104,7 +103,16 @@ export const projetos = [
       technologies: ["nodeJS", "NextJS", "Firebase"],
       category: "fullStack",
     },
-    
+	{
+      image: p11,
+      title: "Figma - Pré-IFMA (desktop)",
+      description: "Prótotipo desktop do Pré-IFMA. Uma aplicação que estou desenvolvendo em grupo utilizando metodologias ágeis como Scrum e kanban. Esse projeto faz parte de um trabalho da disciplina 'Engenharia de Software I'. ",
+      projectLink: "https://www.figma.com/design/CygWutKwHdxxKIloCNNgog/prototipo-dektop?m=auto&t=PIfjca2r3kJgH5Ex-6",
+      repoLink:  "https://www.figma.com/design/CygWutKwHdxxKIloCNNgog/prototipo-dektop?m=auto&t=PIfjca2r3kJgH5Ex-6",
+      technologies: ["Figma"],
+      category: "design",
+    },
+
   ];
 
 
@@ -112,5 +120,5 @@ export const projetos = [
       acc[projeto.category] = (acc[projeto.category] || 0) + 1;
       return acc;
     }, {} as Record<string, number>);
-  
+
     contagemPorCategoria["todos"] = projetos.length;
