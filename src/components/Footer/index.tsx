@@ -41,8 +41,8 @@ export function Footer() {
             </a>
 
             <a href="mailto:lauanderson38@gmail.com" target="blank">
-              <button style={{ color: 'brown' }}>
-                <IoIosMail />
+              <button style={{ color: 'DimGray' }}>
+                <IoIosMail size={27} />
               </button>
             </a>
 

@@ -29,7 +29,7 @@ body{
 
 main{
   margin-bottom: 20px;
-  margin-top: 50px;
+  margin-top: 60px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
@@ -41,11 +41,11 @@ header{
   display: flex;
   gap: 10px;
   align-items: center;
-  background-color: var(--background-color2);
-  color: var(--text-color2);
-  padding: 0 10px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 10px 25px;
   position: fixed;
-  top:80px;
+  top:65px;
   width: 100vw;
   z-index: 100;
 }

@@ -58,7 +58,7 @@ export default function Blog() {
                {/* HEADER COM BUSCA */}
                <header>
                   <div>
-                     <h3>Lau Blog</h3>
+                     <h3>LauBlog</h3>
                   </div>
 
                   <input
