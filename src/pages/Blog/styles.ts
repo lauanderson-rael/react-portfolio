@@ -40,12 +40,11 @@ main{
 header{
   transition: var(--transition);
   display: flex;
-  justify-content: center;
   gap: 10px;
   align-items: center;
   background-color: var(--background-color2);
   color: var(--text-color2);
-  padding: 0 5px;
+  padding: 0 10px;
   position: fixed;
   top:80px;
   width: 100vw;
@@ -65,13 +64,18 @@ article{
     color: var(--text-color);
     font-size: 1.3rem;
     height: 62.4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
 article img{
   border-radius: 7px;
   margin: 10px 0;
+  height: 260px;
   width: 100%;
-
+  object-fit: cover;
 }
 
 article p, article span, article strong{
@@ -215,6 +219,7 @@ export const SessaoFormulario = styled.section`
   // botao limpar
   input[type="reset"] {
       color: #000;
+      margin: 10px 0;
       font-weight: 700;
       background-color: #fff;
       cursor: pointer;
