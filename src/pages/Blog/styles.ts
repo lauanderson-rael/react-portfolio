@@ -11,7 +11,6 @@ body{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-
 .container{
   display: flex;
   flex-direction: column;
@@ -32,7 +31,7 @@ main{
   margin-bottom: 20px;
   margin-top: 50px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
   padding: 0 12%;
 }
@@ -56,14 +55,13 @@ article{
   display: flex;
   flex-direction: column;
   border-radius: 7px;
-  margin-bottom: 30px;
-  padding: 20px;
+  // margin-bottom: 30px;
+  padding: 10px;
   box-shadow: var(--background-color2) 1px 1px 3px;
 
   h2{
     color: var(--text-color);
-    font-size: 1.3rem;
-    height: 62.4px;
+    font-size: 1rem;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -71,16 +69,16 @@ article{
   }
 }
 article img{
+  // height: 260px;
   border-radius: 7px;
-  margin: 10px 0;
-  height: 260px;
+  height: 150px;
   width: 100%;
   object-fit: cover;
 }
 
 article p, article span, article strong{
   color: var(--text-color);
-  font-size: medium;
+  font-size: small;
 }
 
 article p{
@@ -133,7 +131,7 @@ footer {
   display: flex;
   flex-direction: column;
   border-radius: 7px;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
   padding: 20px;
   // box-shadow: 0px 0px 7px var(--background-color2);
 
@@ -151,6 +149,7 @@ footer {
 
   header{
     top:70px;
+    h3{font-size: 14px}
 
   }
   h2{
@@ -198,8 +197,10 @@ export const SessaoFormulario = styled.section`
   }
 
   .btn-enviar {
-    margin-top: 20px;
+    margin-top: 0px;
     text-align: center;
+    display: flex;
+    gap: 10px;
 
     input[type="submit"] {
       color: var(--background-color);
@@ -219,7 +220,6 @@ export const SessaoFormulario = styled.section`
   // botao limpar
   input[type="reset"] {
       color: #000;
-      margin: 10px 0;
       font-weight: 700;
       background-color: #fff;
       cursor: pointer;

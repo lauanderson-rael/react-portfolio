@@ -19,7 +19,6 @@ function Layout() {
         <main>
           <Outlet /> {/* Renderiza as rotas filhas */}
         </main>
-
         <Footer/>
     </ThemeProvider>
     </>

@@ -43,4 +43,12 @@
   font-size: 0.9rem;
   color: #888;
 }
+.studying {
+  margin-left: 10px;
+  border-radius: 3px;
+  padding: 2.5px 5px;
+  font-size: 0.9rem;
+  color: var(--background-color);
+  background-color: var(--text-color-blue-green);
+}
 

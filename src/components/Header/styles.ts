@@ -12,8 +12,8 @@ export const Container = styled.header`
   background-color: var(--background-color-gray);
   color: var(--text-color);
   box-shadow: 0 -15px 25px 10px var(--text-color);
-  padding: 10px;
-  padding-bottom: 0px;
+  padding: 0px 4%;
+
   position: sticky;
   top: 0;
   z-index: 3000;
@@ -42,7 +42,7 @@ export const Container = styled.header`
   .barra-lateral {
     display: none;
   }
-  padding: 10px 4%;
+
   .interface {
     display: flex;
     align-items: center;

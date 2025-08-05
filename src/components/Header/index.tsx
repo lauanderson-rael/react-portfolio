@@ -30,9 +30,8 @@ export function Header() {
       <div className="interface">
         <div className="logo">
           <Link to={"/"}>
-            <div style={{ color: "var(--text-color-blue-green)", fontSize: "40px" }}>
-              {" "}
-              <PiCodeFill />{" "}
+            <div style={{ color: "var(--text-color-blue-green)", fontSize: "40px", marginTop: '5px' }}>
+              <PiCodeFill />
             </div>
           </Link>
 
@@ -67,16 +66,17 @@ export function Header() {
             <li className="header-blog">
               <a href="#projetos">Projetos</a>
             </li>
+            <li className="header-blog">
+              <a href="#formulario">Contato</a>
+            </li>
             <li className="li-blog">
-              <Link to={"/blog"}>Blog</Link>
+              <Link to={"/blog"} style={{color: 'var(--text-color-blue-green)'}}>
+                Blog
+              </Link>
             </li>
           </ul>
         </nav>
-        <div className="btn-contato header-blog">
-          <a href="#formulario">
-            <button style={{ color: "var(--background-color)" }}>Contato</button>
-          </a>
-        </div>
+        
         {/* fim menu-desktop */}
 
 

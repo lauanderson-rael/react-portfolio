@@ -8,7 +8,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 325.6px);
+    height: calc(100dvh - 100.6px);
 
     form{
         padding: 10px;

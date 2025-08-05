@@ -184,6 +184,7 @@ export const Container = styled.main`
         margin: 0 0px; // cima baixo / laterais
         transition: all.2s;
       }
+        
     }
     // responsivo - sobre
     @media (max-width: 1020px) {

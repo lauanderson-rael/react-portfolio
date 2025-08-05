@@ -101,7 +101,7 @@ export function Main() {
                   <img src={Foto2} alt="foto sessão sobre" />
                 </div>
                 <p>
-                  Olá, sou Lauanderson, um apaixonado por tecnologia e desenvolvimento web. Atualmente, curso o 4° período de Análise e Desenvolvimento de Sistemas no IFMA.
+                  Olá, sou Lauanderson, um apaixonado por tecnologia e desenvolvimento web. Atualmente, curso o 5° período de Análise e Desenvolvimento de Sistemas no IFMA.
                   Possuo experiência em desenvolvimento front-end com React e Next.js, além de conhecimentos
                   em design de interfaces com Figma. No back-end, tenho familiaridade com Node.js, Express,
                   Django, FastAPI e também desenvolvo automações com Python. Além disso tenho conhecimento
@@ -119,28 +119,28 @@ export function Main() {
 
                 <div className="btn-social">
                   <a href="https://www.instagram.com/lauanderson.rael?igsh=MWMxNDZjN3VhdjA3Nw==" target="blank">
-                    <button>
+                    <button style={{color: 'DeepPink'}}>
                       <FaInstagram />
                     </button>
                   </a>
                   <a href="https://www.youtube.com/@lau_dicas" target="blank">
-                    <button>
+                    <button style={{color: 'red'}} >
                       <FaYoutube />
                     </button>
                   </a>
                   <a href="https://www.linkedin.com/in/lauanderson-rael-a68b2b16a/" target="blank">
-                    <button>
+                    <button style={{color: 'RoyalBlue'}}>
                       <FaLinkedin />
                     </button>
                   </a>
                   <a href="https://github.com/lauanderson-rael" target="blank">
-                    <button>
+                    <button style={{color: 'gray'}}>
                       <FaGithub />
                     </button>
                   </a>
 
                   <a href="https://api.whatsapp.com/send?phone=98985571212&text=Ol%C3%A1,%20vim%20falar%20com%20voc%C3%AA" target="blank">
-                    <button>
+                    <button style={{color: 'lime'}}>
                       <FaWhatsapp />
                     </button>
                   </a>
@@ -152,7 +152,7 @@ export function Main() {
 		
 	       <section style={{ alignItems: "center"}}>
 		  
-		         <AcademicHistory/>
+		    <AcademicHistory/>
 			{/*  <ProfessionalExperience/> */}
 	       </section>
 		  

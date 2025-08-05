@@ -9,6 +9,7 @@ import p8 from '../../assets/p8.png'
 import p9 from '../../assets/p9.png'
 import p10 from '../../assets/p10.jpg'
 import p11 from '../../assets/p11.png'
+import p12 from '../../assets/p12.png'
 
 
 export const projetos = [
@@ -100,7 +101,7 @@ export const projetos = [
       description: "Projeto 'Terefas +'. Desenvolvido com nextJS, no curso 'NextJS do zero ao avançado na pratica 2024' da Udemy",
       projectLink: "https://next-projeto-tarefas.vercel.app/",
       repoLink: "https://github.com/lauanderson-rael/next-projeto-tarefas",
-      technologies: ["nodeJS", "NextJS", "Firebase"],
+      technologies: ["NextJS", "Firebase"],
       category: "fullStack",
     },
 	{
@@ -111,6 +112,15 @@ export const projetos = [
       repoLink:  "https://www.figma.com/design/CygWutKwHdxxKIloCNNgog/prototipo-dektop?m=auto&t=PIfjca2r3kJgH5Ex-6",
       technologies: ["Figma"],
       category: "design",
+    },
+	{
+      image: p12,
+      title: "Portfólio Online",
+      description: "Meu portfólio online, onde eu apresento um pouco sobre mim, mostro minhas habilidades e meus projetos desenvolvidos até o momento. Além disso, o projeto contém um blog integrado, onde é possivel ver notícias sobre tecnologia.",
+      projectLink: "https://lauanderson-portfolio.vercel.app/",
+      repoLink:  "https://github.com/lauanderson-rael/react-portfolio",
+      technologies: ["React", "MongoDB", "ExpressJS"],
+      category: "fullStack",
     },
 
   ];

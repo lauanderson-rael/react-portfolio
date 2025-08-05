@@ -1,6 +1,6 @@
 import { Container } from "./styles";
 
-import { FaGithub, FaInstagram, FaLinkedin, FaYoutube, FaWhatsapp  } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { PiCodeFill } from "react-icons/pi";
 
@@ -12,38 +12,41 @@ export function Footer() {
         <div className="flex">
 
           <div className="btn-social">
+
             <a href="https://www.instagram.com/lauanderson.rael?igsh=MWMxNDZjN3VhdjA3Nw==" target="blank">
-              <button>
+              <button style={{ color: 'DeepPink' }}>
                 <FaInstagram />
               </button>
             </a>
             <a href="https://www.youtube.com/@lau_dicas" target="blank">
-              <button>
+              <button style={{ color: 'red' }} >
                 <FaYoutube />
               </button>
             </a>
             <a href="https://www.linkedin.com/in/lauanderson-rael-a68b2b16a/" target="blank">
-              <button>
+              <button style={{ color: 'RoyalBlue' }}>
                 <FaLinkedin />
               </button>
             </a>
             <a href="https://github.com/lauanderson-rael" target="blank">
-              <button>
+              <button style={{ color: 'gray' }}>
                 <FaGithub />
               </button>
             </a>
 
+            <a href="https://api.whatsapp.com/send?phone=98985571212&text=Ol%C3%A1,%20vim%20falar%20com%20voc%C3%AA" target="blank">
+              <button style={{ color: 'lime' }}>
+                <FaWhatsapp />
+              </button>
+            </a>
+
             <a href="mailto:lauanderson38@gmail.com" target="blank">
-              <button>
+              <button style={{ color: 'brown' }}>
                 <IoIosMail />
               </button>
             </a>
 
-            <a href="https://api.whatsapp.com/send?phone=98985571212&text=Ol%C3%A1,%20vim%20falar%20com%20voc%C3%AA" target="blank">
-              <button>
-                <FaWhatsapp />
-              </button>
-            </a>
+
 
           </div>
 

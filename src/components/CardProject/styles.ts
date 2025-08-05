@@ -7,7 +7,7 @@ h2{
 
 .project-card {
     border: 1px solid var(--text-color);;
-    border-radius: 8px;
+    border-radius: 7px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -23,11 +23,12 @@ h2{
 
   .project-image {
     width: 100%;
-    height: 188px;
+    height: 152px;
+    
   }
 
   .project-content {
-    padding: 16px;
+    padding: 10px;
   }
 
   .project-title {
@@ -38,9 +39,9 @@ h2{
 
   .project-description {
     font-size: 0.8rem;
-    color: gray;
+    color: var(background-color-2);
     margin: 8px 0;
-    height: 100px;
+    // height: 100px;
     display: -webkit-box;
   -webkit-line-clamp: 4; /* Define o número máximo de linhas */
   -webkit-box-orient: vertical;
@@ -82,8 +83,7 @@ h2{
     background-color: #333;
     padding: 4px 8px;
     border-radius: 4px;
-    font-size: 0.875rem;
-    color: #333;
+    font-size: small;
     color: rgba(255, 255, 255, 0.801);
   }
 
