@@ -21,6 +21,8 @@
 }
 
 .item {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 1.5rem;
   padding: 1rem;
   border-left: 4px solid var(--text-color-blue-green);
@@ -51,4 +53,3 @@
   color: var(--background-color);
   background-color: var(--text-color-blue-green);
 }
-

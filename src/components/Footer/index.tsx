@@ -1,69 +1,83 @@
 import { Container } from "./styles";
 
-import { FaGithub, FaInstagram, FaLinkedin, FaYoutube, FaWhatsapp } from "react-icons/fa";
+import {
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaYoutube,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { PiCodeFill } from "react-icons/pi";
-
 
 export function Footer() {
   return (
     <Container>
       <div className="line-footer">
         <div className="flex">
-
           <div className="btn-social">
-
-            <a href="https://www.instagram.com/lauanderson.rael?igsh=MWMxNDZjN3VhdjA3Nw==" target="blank">
-              <button style={{ color: 'DeepPink' }}>
+            <a
+              href="https://www.instagram.com/lauanderson.rael?igsh=MWMxNDZjN3VhdjA3Nw=="
+              target="blank"
+            >
+              <button style={{ color: "DeepPink" }}>
                 <FaInstagram />
               </button>
             </a>
             <a href="https://www.youtube.com/@lau_dicas" target="blank">
-              <button style={{ color: 'red' }} >
+              <button style={{ color: "red" }}>
                 <FaYoutube />
               </button>
             </a>
-            <a href="https://www.linkedin.com/in/lauanderson-rael-a68b2b16a/" target="blank">
-              <button style={{ color: 'RoyalBlue' }}>
+            <a
+              href="https://www.linkedin.com/in/lauanderson-rael-a68b2b16a/"
+              target="blank"
+            >
+              <button style={{ color: "RoyalBlue" }}>
                 <FaLinkedin />
               </button>
             </a>
             <a href="https://github.com/lauanderson-rael" target="blank">
-              <button style={{ color: 'gray' }}>
+              <button style={{ color: "gray" }}>
                 <FaGithub />
               </button>
             </a>
 
-            <a href="https://api.whatsapp.com/send?phone=98985571212&text=Ol%C3%A1,%20vim%20falar%20com%20voc%C3%AA" target="blank">
-              <button style={{ color: 'lime' }}>
+            <a
+              href="https://api.whatsapp.com/send?phone=98985571212&text=Ol%C3%A1,%20vim%20falar%20com%20voc%C3%AA"
+              target="blank"
+            >
+              <button style={{ color: "lime" }}>
                 <FaWhatsapp />
               </button>
             </a>
 
             <a href="mailto:lauanderson38@gmail.com" target="blank">
-              <button style={{ color: 'DimGray' }}>
+              <button style={{ color: "DimGray" }}>
                 <IoIosMail size={27} />
               </button>
             </a>
-
-
-
           </div>
 
           <div className="logo-footer">
-            <div style={{ color: 'var(--text-color-blue-green)', fontSize: '40px' }}>  <PiCodeFill /> </div>
+            <div
+              style={{
+                color: "var(--text-color-blue-green)",
+                fontSize: "40px",
+              }}
+            >
+              {" "}
+              <PiCodeFill />{" "}
+            </div>
           </div>
         </div>
       </div>
       <div className="line-footer">
-        <span>© 2024 Lauanderson Rael. Todos os direitos reservados</span>
+        <span>© 2025 Lauanderson Rael. Todos os direitos reservados</span>
       </div>
     </Container>
-  )
+  );
 }
-
-
-
 
 // import { Link } from "react-router-dom";
 // import { IoMdClose } from "react-icons/io";
@@ -130,8 +144,6 @@ export function Footer() {
 //               <BsList />
 //             </i>
 //           </div>
-
-
 
 //           <div className="menu-mobile" ref={referencia1} onClick={FecharMenu}>
 //             <div className="btn-fechar">

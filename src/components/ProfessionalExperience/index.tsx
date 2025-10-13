@@ -1,6 +1,4 @@
-
-import styles from './styles.module.css';
-
+import styles from "./styles.module.css";
 type Experience = {
   role: string;
   period: string;
@@ -10,25 +8,25 @@ type Experience = {
 
 const experienceData: Experience[] = [
   {
-    role: 'Estagiário de Desenvolvimento Web',
-    period: 'Ago/2025 – Atual',
-    note: 'Empresa: OKN',
+    role: "Estagiário de Desenvolvimento Web",
+    period: "Ago/2025 – Atual",
+    note: "Empresa: OKN",
     description: [
-      'Auxilio no desenvolvimento de aplicações web utilizando TypeScript e Node.js.',
-      'Implementação de testes end-to-end com Cypress.',
-      'Automação de processos com Python e Selenium.',
+      "Auxilio no desenvolvimento de aplicações web utilizando TypeScript e Node.js.",
+      "Implementação de testes end-to-end com Cypress.",
+      "Automação de processos com Python e Selenium.",
       "Criação de plugins para wordpress.",
     ],
   },
   {
-    role: 'Freelancer Python',
-    period: 'Jan/2025 – Fev/2025',
-    note: 'Trabalho freeLancer',
+    role: "Freelancer Python",
+    period: "Jan/2025 – Fev/2025",
+    note: "Trabalho freeLancer",
     description: [
-      'Desenvolvi uma automação para otimizar processos de manipulação de documentos PDF e Word.',
-      'Implementei interface gráfica para facilitar o uso por pessoas não técnicas.',
+      "Desenvolvi uma automação para otimizar processos de manipulação de documentos PDF e Word.",
+      "Implementei interface gráfica para facilitar o uso por pessoas não técnicas.",
     ],
-  }
+  },
 ];
 
 export function ProfessionalExperience() {
@@ -44,7 +42,9 @@ export function ProfessionalExperience() {
             {exp.note && <p className={styles.note}>{exp.note}</p>}
             <ul className={styles.description}>
               {exp.description.map((point, idx) => (
-                <li key={idx} className={styles.point}>{point}</li>
+                <li key={idx} className={styles.point}>
+                  {point}
+                </li>
               ))}
             </ul>
           </li>
