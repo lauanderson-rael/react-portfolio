@@ -4,7 +4,7 @@ import { MdDoubleArrow } from "react-icons/md";
 import { ContainerSkills } from "../../components/CardSkills/index"
 import { CardProject } from "../../components/CardProject";
 import { AcademicHistory } from "../../components/AcademicHistory/index.tsx";
-// import { ProfessionalExperience } from "../../components/ProfessionalExperience/index.tsx";
+import { ProfessionalExperience } from "../../components/ProfessionalExperience/index.tsx";
 import { useState } from "react";
 import Foto from "../../assets/transp.png";
 import Foto2 from "../../assets/foto3.jpg";
@@ -110,9 +110,9 @@ export function Main() {
 
                 <div className="btn-contato curriculo">
                   <a
-                    href="https://drive.google.com/file/d/1of_2eZM5SPaHP07UAEaOd2vOmB7yVhT1/view?usp=drivesdk"
+                    href="https://drive.google.com/file/d/1zcq-K10ANrxhRqBEkNsU-PKGuSpHYkEn/view?usp=sharing"
                     target="blank"
-                    download={"curriculo.pdf"}>
+                    download={"curriculo_lauanderson.pdf"}>
                     <button> <FaCloudDownloadAlt style={{ width: "30px" }} /> Download CV</button>
                   </a>
                 </div>
@@ -153,7 +153,7 @@ export function Main() {
 	       <section style={{ alignItems: "center"}}>
 		  
 		    <AcademicHistory/>
-			{/*  <ProfessionalExperience/> */}
+			 <ProfessionalExperience/>
 	       </section>
 		  
 	

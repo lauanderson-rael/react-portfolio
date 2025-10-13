@@ -10,23 +10,25 @@ type Experience = {
 
 const experienceData: Experience[] = [
   {
+    role: 'Estagiário de Desenvolvimento Web',
+    period: 'Ago/2025 – Atual',
+    note: 'Empresa: OKN',
+    description: [
+      'Auxilio no desenvolvimento de aplicações web utilizando TypeScript e Node.js.',
+      'Implementação de testes end-to-end com Cypress.',
+      'Automação de processos com Python e Selenium.',
+      "Criação de plugins para wordpress.",
+    ],
+  },
+  {
     role: 'Freelancer Python',
     period: 'Jan/2025 – Fev/2025',
-    note: 'Automação de Processos com Python (Repositório no Github)',
+    note: 'Trabalho freeLancer',
     description: [
       'Desenvolvi uma automação para otimizar processos de manipulação de documentos PDF e Word.',
       'Implementei interface gráfica para facilitar o uso por pessoas não técnicas.',
     ],
-  },
-  {
-    role: 'Freelancer',
-    period: 'Mai/2024 – Ago/2024',
-    note: 'Aplicação de Apostas Esportivas (Link do projeto)',
-    description: [
-      'Desenvolvimento front-end de uma aplicação web, criação de páginas web integrativas e responsivas.',
-      'Tecnologias: HTML, CSS e JavaScript.',
-    ],
-  },
+  }
 ];
 
 export function ProfessionalExperience() {
