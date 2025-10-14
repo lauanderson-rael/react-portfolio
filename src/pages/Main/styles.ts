@@ -4,20 +4,27 @@ export const Container = styled.main`
   transition: var(--transition);
 
   // temas
-  h2, p{
+  h2,
+  p {
     color: var(--text-color);
   }
 
   // TELA 1
   section.topo-do-site {
     padding: 100px 8% 0px 8%;
-    min-height: 80vh;
+    min-height: 88vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
     .flex {
       justify-content: space-around;
       align-items: center;
+      gap: 50px;
     }
-    .arrow-desktop{
+    .arrow-desktop {
       color: var(--text-color);
       rotate: 90deg;
       margin-top: 30px;
@@ -28,21 +35,21 @@ export const Container = styled.main`
     }
 
     // ANIMAÇÃO DA SETA DESKTOP
-  @keyframes flutuar2 {
-    0% {
-      top: 0;
+    @keyframes flutuar2 {
+      0% {
+        top: 0;
+      }
+      100% {
+        top: 30px;
+      }
     }
-    100% {
-      top: 30px;
-    }
-  }
 
     .txt-topo-site strong {
       font-size: 55px;
       color: var(--text-color-blue-green);
     }
 
-    .informacoes{
+    .informacoes {
       background-color: none;
       padding: 0;
       margin-bottom: 30px;
@@ -51,10 +58,6 @@ export const Container = styled.main`
       font-size: large;
       margin: 10px 0;
       padding: 0;
-    }
-
-    .img-topo-site{
-
     }
     .img-topo-site img {
       width: 300px;
@@ -67,7 +70,7 @@ export const Container = styled.main`
       box-shadow: 1px 1px 0.5rem var(--text-color-blue-green);
     }
 
-    .scroll{
+    .scroll {
       color: #fff;
       display: flex;
       flex-direction: column;
@@ -80,36 +83,34 @@ export const Container = styled.main`
 
     //responsivo
     @media (max-width: 1020px) {
-      .img-topo-site img{
+      .img-topo-site img {
         animation: flutuar 2s ease-in-out infinite alternate;
         will-change: transform;
-
       }
       padding: 10px 8%;
 
-      .arrow-desktop{
+      .arrow-desktop {
         display: none;
       }
 
-      .btn-contato button{
+      .btn-contato button {
         font-size: small;
       }
       .txt-topo-site strong {
         font-size: 32px;
       }
-      .txt-topo-site p{
+      .txt-topo-site p {
         font-size: medium;
         margin: 0;
       }
-      .informacoes{
+      .informacoes {
         margin-top: 30px;
       }
       .flex {
         flex-direction: column-reverse;
-         height: auto;
-         min-height: 90vh; /* usa vh como base mínima */
-         padding-bottom: 20px;
-
+        height: auto;
+        min-height: 90vh; /* usa vh como base mínima */
+        padding-bottom: 20px;
       }
 
       .img-topo-site img {
@@ -125,15 +126,13 @@ export const Container = styled.main`
 
   // ANIMAÇÃO IMAGEM MOBILE
   @keyframes flutuar {
-  0% {
-    transform: translateY(0px);
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(30px);
+    }
   }
-  100% {
-    transform: translateY(30px);
-  }
-}
-
-
 
   // SESSAO SOBRE - TELA 2
   .sobre {
@@ -149,7 +148,7 @@ export const Container = styled.main`
       width: 344px;
       border-radius: 25px;
     }
-    .img-sobre-mobile img{
+    .img-sobre-mobile img {
       display: none;
     }
     .txt-sobre {
@@ -175,7 +174,7 @@ export const Container = styled.main`
         width: 50px;
         height: 50px;
         border-radius: 20%;
-        border:none;
+        border: none;
         background-color: transparent;
         color: var(--text-color-blue-green);
         font-size: 25px;
@@ -184,13 +183,12 @@ export const Container = styled.main`
         margin: 0 0px; // cima baixo / laterais
         transition: all.2s;
       }
-        
     }
     // responsivo - sobre
     @media (max-width: 1020px) {
       .btn-social button {
-      font-size: 20px
-    }
+        font-size: 20px;
+      }
       padding: 30px 4%;
       .flex {
         flex-direction: column;
@@ -206,7 +204,7 @@ export const Container = styled.main`
       .img-sobre img {
         display: none;
       }
-      .img-sobre-mobile img{
+      .img-sobre-mobile img {
         width: 100%;
         background-color: gray;
         object-fit: contain;
@@ -217,73 +215,70 @@ export const Container = styled.main`
     }
   }
 
-// ESPECIALIDADES - TELA 3
-.especialidades {
-  padding: 80px 8%;
-  h2 span {
-    color: var(--text-color-blue-green);
-  }
-  .flex {
-    gap: 60px;
-  }
-
-// COMPONENTES- SKILLS
-  .especialidades-box {
-    color: var(--text-color);
-    padding: 20px;
-    margin: 0 auto;
-    margin-top: 45px;
-    border-radius: 20px;
-    border: 1px solid #7c7c7c;
-    max-width: 700px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .icone {
-      font-size: 45px;
-      font-size: 30px;
+  // ESPECIALIDADES - TELA 3
+  .especialidades {
+    padding: 80px 8%;
+    h2 span {
       color: var(--text-color-blue-green);
     }
-    strong{
-      margin-bottom: 30px;
+    .flex {
+      gap: 60px;
     }
 
-    .flex-skills{
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
+    // COMPONENTES- SKILLS
+    .especialidades-box {
+      color: var(--text-color);
+      padding: 20px;
+      margin: 0 auto;
+      margin-top: 45px;
+      border-radius: 20px;
+      border: 1px solid #7c7c7c;
+      max-width: 700px;
 
-    }
-    .center{
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      .icone {
+        font-size: 45px;
+        font-size: 30px;
+        color: var(--text-color-blue-green);
+      }
+      strong {
+        margin-bottom: 30px;
+      }
+
+      .flex-skills {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    // responsivo
+    @media (max-width: 1020px) {
+      padding: 80px 4%;
+      .especialidades-box {
+        padding: 0;
+        padding: 20px;
+      }
+      .especialidades-box .flex-skills {
+        /* gap: 15px; */
+      }
+      .especialidades-box .center p {
+        font-size: xx-small;
+      }
     }
   }
 
-  // responsivo
-  @media (max-width: 1020px) {
-    padding: 80px 4%;
-    .especialidades-box {
-      padding: 0;
-      padding: 20px;
-    }
-    .especialidades-box .flex-skills{
-      /* gap: 15px; */
-      
-    }
-    .especialidades-box .center p{
-      font-size: xx-small;
-    }
-  }
-}
-
-
-// SESSAO PORTIFOLIO - TELA 4
+  // SESSAO PORTIFOLIO - TELA 4
   .portfolio {
     margin-top: 30px;
     padding: 80px 8%;
@@ -294,7 +289,6 @@ export const Container = styled.main`
       margin-top: 40px;
       display: grid;
       grid-template-columns: repeat(3, max-content);
-
     }
   }
 
@@ -305,16 +299,14 @@ export const Container = styled.main`
     color: white;
     cursor: pointer;
     border-radius: 10px;
-
   }
 
   // responsivo - portfolio
-  @media (min-width: 769px) and (max-width: 1020px){
-    .portfolio .grid{
+  @media (min-width: 769px) and (max-width: 1020px) {
+    .portfolio .grid {
       display: grid;
       grid-template-columns: repeat(2, 360px);
     }
-
   }
 
   @media (max-width: 768px) {
@@ -329,12 +321,11 @@ export const Container = styled.main`
       justify-content: center;
       align-items: center;
     }
-    .portfolio{
+    .portfolio {
       padding: 80px 1%;
     }
   }
 `;
-
 
 // SESSÃO FORMULARIO - TELA 5
 export const SessaoFormulario = styled.section`
@@ -353,13 +344,12 @@ export const SessaoFormulario = styled.section`
     input,
     textarea {
       width: 100%;
-      background-color:rgb(231, 231, 231);
+      background-color: rgb(231, 231, 231);
       border: 0;
       outline: none;
       padding: 20px 15px; // cima baixo - laterais
       border-radius: 15px;
       /* font-size: 18px; */
-
     }
 
     textarea {
@@ -378,7 +368,6 @@ export const SessaoFormulario = styled.section`
       background-color: var(--text-color-blue-green);
       cursor: pointer;
       transition: all.2s;
-
     }
 
     input:hover {
@@ -389,25 +378,23 @@ export const SessaoFormulario = styled.section`
 
   // botao limpar
   input[type="reset"] {
-      color: #000;
-      font-weight: 700;
-      background-color: #fff;
-      cursor: pointer;
-      transition: all.2s;
-      border: 1px solid var(--text-color);
-    }
-    input[type="reset"]:hover {
-      box-shadow: 0px 0px 8px var(--text-color-blue-green);
-      transform: scale(1.03);
-    }
+    color: #000;
+    font-weight: 700;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all.2s;
+    border: 1px solid var(--text-color);
+  }
+  input[type="reset"]:hover {
+    box-shadow: 0px 0px 8px var(--text-color-blue-green);
+    transform: scale(1.03);
+  }
   // limpar
 
-  @media (max-width: 1020px){
-    form input, form textarea{
+  @media (max-width: 1020px) {
+    form input,
+    form textarea {
       font-size: small;
-
     }
-    }
+  }
 `;
-
-
