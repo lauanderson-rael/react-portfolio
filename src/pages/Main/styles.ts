@@ -87,7 +87,7 @@ export const Container = styled.main`
         animation: flutuar 2s ease-in-out infinite alternate;
         will-change: transform;
       }
-      padding: 10px 8%;
+      //padding: 10px 8%;
 
       .arrow-desktop {
         display: none;
