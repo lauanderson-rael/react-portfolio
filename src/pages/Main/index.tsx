@@ -124,7 +124,7 @@ export function Main() {
 
                 <div className="btn-contato curriculo">
                   <a
-                    href="https://drive.google.com/file/d/1zcq-K10ANrxhRqBEkNsU-PKGuSpHYkEn/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1NZHPgrfC6Ucz-M2dTMRGl9h1Uj0jWq9i/view?usp=sharing"
                     target="blank"
                     download={"curriculo_lauanderson.pdf"}
                   >
