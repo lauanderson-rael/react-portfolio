@@ -9,6 +9,7 @@ import Login from "./pages/Login/login";
 import ProtectedPage from "./pages/ProtectedPage";
 import Page404 from "./pages/page404";
 import ScrollToTop from "./components/ScrollToTop";
+import { Analytics } from "@vercel/analytics/react";
 
 
 function Layout() {
@@ -42,7 +43,7 @@ function App() {
 
         </Routes>
       </BrowserRouter>
-
+      <Analytics />
     </>
   );
 }
