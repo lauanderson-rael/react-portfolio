@@ -13,13 +13,14 @@ import { CardProject } from "../../components/CardProject";
 import { AcademicHistory } from "../../components/AcademicHistory/index.tsx";
 import { ProfessionalExperience } from "../../components/ProfessionalExperience/index.tsx";
 import { useState } from "react";
-import Foto from "../../assets/transp.png";
+import Foto from "../../assets/perfil.png";
 import Foto2 from "../../assets/foto3.png";
 import { projetos } from "./arrayProjects.ts";
 import { contagemPorCategoria } from "./arrayProjects.ts";
+
 export function Main() {
   const [categoriaSelecionada, setCategoriaSelecionada] = useState("todos");
-  const categorias = ["todos", "frontend", "backend", "fullStack", "design"];
+  const categorias = ["todos", "frontend", "backend", "fullStack", "mobile", "design"];
   const projetosFiltrados =
     categoriaSelecionada === "todos"
       ? projetos
@@ -124,7 +125,7 @@ export function Main() {
 
                 <div className="btn-contato curriculo">
                   <a
-                    href="https://drive.google.com/file/d/1NZHPgrfC6Ucz-M2dTMRGl9h1Uj0jWq9i/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1-Dranqc6snOh3sVkwXV36S100P-LQBAH/view?usp=sharing"
                     target="blank"
                     download={"curriculo_lauanderson.pdf"}
                   >

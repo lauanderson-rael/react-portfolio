@@ -125,7 +125,8 @@ h2 span {
 /* tema escuro*/
 :root {
   --background-color2: #ffffffe1;
-  --background-color3: #101010e1;
+  /* --background-color3: #101010e1; */
+   --background-color3: #262626e1;
   --background-color: #000;
   --background-color-gray: #000;
   --text-color: #c4c4c4;

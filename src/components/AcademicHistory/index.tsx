@@ -36,14 +36,14 @@ export function AcademicHistory() {
               <span className={styles.period}>{entry.period}</span>
 
               {entry.studying && (
-                <span className={styles.studying}>Cursando</span>
+                <span className={styles.studying}>Cursando 6/6</span>
               )}
             </div>
 
             <div>
               <img
                 style={{
-                  backgroundColor: "#fff",
+                  //backgroundColor: "#fff",
                   borderRadius: "5px",
                   padding: "3px 0px",
                 }}

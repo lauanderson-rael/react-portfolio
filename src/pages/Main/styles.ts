@@ -62,12 +62,12 @@ export const Container = styled.main`
     .img-topo-site img {
       width: 300px;
       height: 300px;
-      border: 8px solid var(--text-color-blue-green);
-      background: var(--text-color-blue-green);
+      border: 4px solid var(--text-color-blue-green);
+      // background: var(--text-color-blue-green);
       border-radius: 50%;
       position: relative; // para funcionar animacao
-      filter: drop-shadow(0 0 0.8rem var(--text-color-blue-green));
-      box-shadow: 1px 1px 0.5rem var(--text-color-blue-green);
+      //filter: drop-shadow(0 0 0.4rem var(--text-color-blue-green));
+      // box-shadow: 1px 1px 0.5rem var(--text-color-blue-green);
     }
 
     .scroll {

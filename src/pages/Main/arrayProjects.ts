@@ -1,6 +1,6 @@
 import p1 from "../../assets/p1.png"
 import p2 from "../../assets/p2.png"
-import p3 from "../../assets/p3.png"
+//import p3 from "../../assets/p3.png"
 import p4 from "../../assets/p4.png"
 import p5 from '../../assets/p5.png'
 import p6 from '../../assets/p6.png'
@@ -23,6 +23,25 @@ export const projetos = [
       category: "frontend",
     },
     {
+      image: p2,
+      title: "Connect APP",
+      description: "Aplicativo mobile desenvolvido para gestão de eventos e engajamento acadêmico. Possui check-in via QR Code, sistema de perguntas e respostas (Q&A) com votação, quizzes interativos e geração de relatórios de participação para docentes.",
+      projectLink: "https://connect-ifma-app-page-alpha.vercel.app/",
+      repoLink: "https://github.com/DennisGabriel-Dev/connect_app",
+      technologies: ["React Native", "TypeScript", "Expo","StyleSheet"],
+      category: "mobile",
+    },
+     {
+    image: p11,
+    title: "Lista de Compras APP",
+    description: "Aplicativo mobile focado em UX para gerenciamento de compras. Implementa persistência de dados local com AsyncStorage, navegação moderna via Expo Router e suporte total a TypeScript para maior segurança no código.",
+    projectLink: "https://github.com/lauanderson-rael/rn-shopping-list",
+    repoLink: "https://github.com/lauanderson-rael/rn-shopping-list",
+    technologies: ["React Native", "Expo", "TypeScript", "AsyncStorage"],
+    category: "mobile",
+  },
+
+  {
       image: p7,
       title: "SindAdmin",
       description: "Sistema Node.js que automatiza a geração de documentos sindicais em formato .docx e .pdf. Possue autenticação JWT. \nuser: admin , password: admin",
@@ -30,15 +49,6 @@ export const projetos = [
       repoLink: "https://github.com/lauanderson-rael/node-app-sind-admin",
       technologies: ["ExpressJS", "TailwindCSS"],
       category: "fullStack",
-    },
-    {
-      image: p2,
-      title: "Lista de Heróis",
-      description: "Nesse projeto fiz o consumo de uma Api Rest, realizei requisições GET com Axios e também adicionei algumas funcionalidades como as opções de listagem e filtragem.",
-      projectLink: "https://react-list-heroes-chi.vercel.app/",
-      repoLink: "https://github.com/lauanderson-rael/react-list-heroes",
-      technologies: ["React", "CSS"],
-      category: "frontend",
     },
     {
       image: p5,
@@ -49,15 +59,15 @@ export const projetos = [
       technologies: ["react", "Styled-Components"],
       category: "frontend",
     },
-    {
-      image: p3,
-      title: "Sistema de estoque",
-      description: "Nesse projeto desenvolvi um Sistema de Estoque, aplicacao full Stack com padrão MVC. Para as views utulizei handlebars e no ORM utilizei sequelize facilitando a manipulação do Banco de dados.",
-      projectLink: "https://mvcestoque-production.up.railway.app/",
-      repoLink: "https://github.com/lau-ifma/mvc_estoque",
-      technologies: ["Handlebars", "Express","MySQL", "Bootstrap"],
-      category: "fullStack",
-    },
+    // {
+    //   image: p3,
+    //   title: "Sistema de estoque",
+    //   description: "Nesse projeto desenvolvi um Sistema de Estoque, aplicacao full Stack com padrão MVC. Para as views utulizei handlebars e no ORM utilizei sequelize facilitando a manipulação do Banco de dados.",
+    //   projectLink: "https://mvcestoque-production.up.railway.app/",
+    //   repoLink: "https://github.com/lau-ifma/mvc_estoque",
+    //   technologies: ["Handlebars", "Express","MySQL", "Bootstrap"],
+    //   category: "fullStack",
+    // },
     {
       image: p4,
       title: "Repositorios Favoritos",
@@ -78,7 +88,7 @@ export const projetos = [
     },
     {
       image: p8,
-      title: "Figma - Pré-IFMA",
+      title: "Figma - Pré-IFMA (mobile)",
       description: "Prótotipo mobile do Pré-IFMA. Uma aplicação que estou desenvolvendo em grupo utilizando metodologias ágeis como Scrum e kanban. Esse projeto faz parte de um trabalho da disciplina 'Engenharia de Software I'. ",
       projectLink: "https://www.figma.com/design/MYT7Ix1igipVti23Ch3HUW/Prototipo-Eng.Software?node-id=0-1&p=f",
       repoLink: "https://www.figma.com/design/MYT7Ix1igipVti23Ch3HUW/Prototipo-Eng.Software?node-id=0-1&p=f",
@@ -105,18 +115,9 @@ export const projetos = [
       category: "fullStack",
     },
 	{
-      image: p11,
-      title: "Figma - Pré-IFMA (desktop)",
-      description: "Prótotipo desktop do Pré-IFMA. Uma aplicação que estou desenvolvendo em grupo utilizando metodologias ágeis como Scrum e kanban. Esse projeto faz parte de um trabalho da disciplina 'Engenharia de Software I'. ",
-      projectLink: "https://www.figma.com/design/CygWutKwHdxxKIloCNNgog/prototipo-dektop?m=auto&t=PIfjca2r3kJgH5Ex-6",
-      repoLink:  "https://www.figma.com/design/CygWutKwHdxxKIloCNNgog/prototipo-dektop?m=auto&t=PIfjca2r3kJgH5Ex-6",
-      technologies: ["Figma"],
-      category: "design",
-    },
-	{
       image: p12,
       title: "Portfólio Online",
-      description: "Meu portfólio online, onde eu apresento um pouco sobre mim, mostro minhas habilidades e meus projetos desenvolvidos até o momento. Além disso, o projeto contém um blog integrado, onde é possivel ver notícias sobre tecnologia.",
+      description: "Meu portfólio online, onde eu apresento um pouco sobre mim, e alguns de meus projetos desenvolvidos até o momento. Além disso, o projeto contém um blog de tecnologia integrado.",
       projectLink: "https://lauanderson-portfolio.vercel.app/",
       repoLink:  "https://github.com/lauanderson-rael/react-portfolio",
       technologies: ["React", "MongoDB", "ExpressJS"],

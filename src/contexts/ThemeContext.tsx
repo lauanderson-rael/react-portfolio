@@ -1,22 +1,22 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, ReactNode, useEffect } from "react";
 
-// Tipos para o contexto
 type ThemeContextType = {
   theme: "light" | "dark";
   toggleTheme: () => void;
 };
 
-// Criação do contexto
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-// Provedor do contexto
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+
+  // Garante que o atributo data-theme esteja presente desde o primeiro render 
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
 
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme); // Atualiza o atributo do tema no `html`
+    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
   };
 
   return (
@@ -26,7 +26,6 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-// Hook para usar o tema
 export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (!context) {

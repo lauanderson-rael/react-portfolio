@@ -1,22 +1,21 @@
 
 import {
-  SiExpress, SiJavascript,
-  SiTailwindcss, SiTypescript, SiBootstrap,
-  SiMongodb, SiWordpress, SiSequelize, SiDjango, SiFastapi,
+  SiExpress, SiJavascript, SiTailwindcss, SiTypescript,
+  SiMongodb, SiFastapi, SiNginx, SiGooglecloud,
+  SiNestjs,
+  SiPrisma,
 } from "react-icons/si";
 import { FcLinux } from "react-icons/fc";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { FaGitAlt, FaGithub, FaReact, FaDocker, FaFigma } from "react-icons/fa";
+import { FaGitAlt, FaReact, FaDocker, FaFigma } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 
-import { FaProjectDiagram, FaColumns } from 'react-icons/fa';
-
 export const ContainerSkills = () => {
-
   return (
     <>
+      {/* 1. FRONT-END & MOBILE*/}
       <div className="especialidades-box">
-        <strong>Front-end</strong>
+        <strong>Front-end & Mobile</strong>
         <div className="flex-skills">
           <div className="center">
             <div className="icone"> <SiJavascript fill="#f5d001" /></div>
@@ -29,8 +28,8 @@ export const ContainerSkills = () => {
           </div>
 
           <div className="center">
-            <div className="icone"> <FaReact fill="aqua"/></div>
-            <p>React</p>
+            <div className="icone"> <FaReact fill="#61dafb"/></div>
+            <p>React / Native</p>
           </div>
 
           <div className="center">
@@ -39,71 +38,65 @@ export const ContainerSkills = () => {
           </div>
 
           <div className="center">
-            <div className="icone"> <SiTailwindcss fill="aqua" /></div>
-            <p>TailwindCSS</p>
+            <div className="icone"> <SiTailwindcss fill="#61dafb" /></div>
+            <p>Tailwind</p>
           </div>
 
           <div className="center">
-            <div className="icone"> <SiBootstrap fill="#f003d0" /></div>
-            <p>Bootstrap</p>
+            <div className="icone"> <FaFigma fill="#f357f0ff" /></div>
+            <p>Figma</p>
           </div>
         </div>
       </div>
 
+      {/* 2. BACK-END & DATA*/}
       <div className="especialidades-box">
-        <strong>Back-end</strong>
-        <div className="flex-skills" >
-
+        <strong>Back-end & Databases</strong>
+        <div className="flex-skills">
           <div className="center">
             <div className="icone"> <SiExpress fill="gray" /></div>
             <p>Express.js</p>
           </div>
 
           <div className="center">
-            <div className="icone"> <SiDjango  fill="#008648"/></div>
-            <p>Django</p>
+            <div className="icone"> <SiNestjs fill="#e02347ff" /></div>
+            <p>NestJS</p>
           </div>
+
+          {/* <div className="center">
+            <div className="icone"> <SiDjango fill="#008648"/></div>
+            <p>Django</p>
+          </div> */}
 
           <div className="center">
             <div className="icone"> <SiFastapi fill="#03c96d"/></div>
-            <p>Fastapi</p>
+            <p>FastAPI</p>
           </div>
 
           <div className="center">
-            <div className="icone"> <SiSequelize fill="#1f77fc" /></div>
-            <p>Sequelize</p>
+            <div className="icone"> <SiPrisma fill="#0e2647ff" /></div>
+            <p>Prisma ORM</p>
           </div>
 
           <div className="center">
             <div className="icone"> <SiMongodb fill="#02af19"/></div>
-            <p>Mongo DB</p>
+            <p>MongoDB</p>
           </div>
 
           <div className="center">
             <div className="icone"> <BiLogoPostgresql fill="#1f77fc"/></div>
-            <p>Postgresql</p>
+            <p>PostgreSQL</p>
           </div>
-
         </div>
       </div>
 
+      {/* 3. ECOSYSTEM & INFRA*/}
       <div className="especialidades-box">
-        <strong>Ferramentas e Metodologias</strong>
+        <strong>Infra</strong>
         <div className="flex-skills">
-
           <div className="center">
             <div className="icone"> <FaGitAlt fill="#fc531f"/></div>
             <p>Git</p>
-          </div>
-
-          <div className="center">
-            <div className="icone"> <FaGithub fill="gray"/></div>
-            <p>Github</p>
-          </div>
-
-          <div className="center">
-            <div className="icone"> <FcLinux /></div>
-            <p>Linux</p>
           </div>
 
           <div className="center">
@@ -111,28 +104,27 @@ export const ContainerSkills = () => {
             <p>Docker</p>
           </div>
 
-           <div className="center">
-            <div className="icone"> <FaFigma  fill="pink" /></div>
-            <p>Figma</p>
+          <div className="center">
+            <div className="icone"> <SiGooglecloud fill="#4285F4" /></div>
+            <p>GCP</p>
           </div>
 
           <div className="center">
-            <div className="icone"> <SiWordpress fill="#1f77fc"/></div>
-            <p>Wordpress</p>
+            <div className="icone"> <FcLinux /></div>
+            <p>Linux</p>
           </div>
 
            <div className="center">
-      <div className="icone"> <FaProjectDiagram fill="#ffc107"/></div>
-      <p>Scrum</p>
-    </div>
+             <div className="icone"> <SiNginx fill="#009639" /></div>
+             <p>Nginx</p>
+           </div>
 
-    <div className="center">
-      <div className="icone"> <FaColumns fill="#17a2b8"/></div>
-      <p>Kanban</p>
-    </div>
-
+          {/* <div className="center">
+            <div className="icone"> <FaProjectDiagram fill="#ffc107"/></div>
+            <p>Scrum</p>
+          </div> */}
         </div>
       </div>
     </>
-  )
-}
+  );
+};
