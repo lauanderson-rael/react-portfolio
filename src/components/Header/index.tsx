@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Container } from "./styles";
-import { IoMdClose } from "react-icons/io";
+import { IoMdClose, IoMdHome } from "react-icons/io";
 import { BsList } from "react-icons/bs";
 import { PiCodeFill } from "react-icons/pi";
 import "../../pages/Main/index";
@@ -52,7 +52,7 @@ export function Header() {
             </li>
 
             <li className="header-home">
-              <Link to={"/"}>Voltar</Link>
+              <Link to={"/"}><IoMdHome size={22}/></Link>
             </li>
             <li className="header-home">
               <Link to={"/login"}>Admin</Link>
@@ -102,7 +102,13 @@ export function Header() {
                 </li>
 
                 <li className="header-home">
-                  <Link to={"/"}>Voltar</Link>
+                   <Link to={"/"}>
+                 
+                   
+                  
+                      <IoMdHome size={22}/> 
+                 
+                   </Link>
                 </li>
 
                 <li className="header-home">
