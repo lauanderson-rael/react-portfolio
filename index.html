@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <script>
       (function() {
@@ -7,25 +7,66 @@
         document.documentElement.setAttribute('data-theme', theme === 'dark' ? 'dark' : 'light');
       })();
     </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO primário -->
+    <title>Lauanderson Rael | Desenvolvedor Full Stack</title>
+    <meta name="description" content="Portfólio de Lauanderson Rael, Desenvolvedor Full Stack especializado em React, Next.js, Node.js, React Native e Python. Estudante de ADS no IFMA." />
+    <meta name="keywords" content="Lauanderson Rael, desenvolvedor full stack, portfólio, React, Next.js, Node.js, React Native, Python, IFMA, programador, frontend, backend" />
+    <meta name="author" content="Lauanderson Rael" />
+    <link rel="canonical" href="https://lauanderson-portfolio.vercel.app/" />
+
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lauanderson-portfolio.vercel.app/" />
+    <meta property="og:title" content="Lauanderson Rael | Desenvolvedor Full Stack" />
+    <meta property="og:description" content="Portfólio de Lauanderson Rael — projetos em React, Next.js, Node.js, React Native e Python." />
+    <meta property="og:image" content="https://lauanderson-portfolio.vercel.app/og-image.png" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Portfólio Lauanderson Rael" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lauanderson Rael | Desenvolvedor Full Stack" />
+    <meta name="twitter:description" content="Portfólio de Lauanderson Rael — projetos em React, Next.js, Node.js, React Native e Python." />
+    <meta name="twitter:image" content="https://lauanderson-portfolio.vercel.app/og-image.png" />
+
+    <!-- Dados estruturados JSON-LD (Person) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Lauanderson Rael",
+      "url": "https://lauanderson-portfolio.vercel.app/",
+      "jobTitle": "Desenvolvedor Full Stack",
+      "description": "Desenvolvedor Full Stack especializado em React, Next.js, Node.js, React Native e Python. Estudante de Análise e Desenvolvimento de Sistemas no IFMA.",
+      "image": "https://lauanderson-portfolio.vercel.app/og-image.png",
+      "email": "lauanderson38@gmail.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/lauanderson-rael-a68b2b16a/",
+        "https://github.com/lauanderson-rael",
+        "https://www.instagram.com/lauanderson.rael",
+        "https://www.youtube.com/@lau_dicas"
+      ],
+      "knowsAbout": ["React", "Next.js", "Node.js", "React Native", "Python", "TypeScript", "Docker", "Git"]
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-69Y1KSBY44"></script>
-      <script>
+    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
       gtag('config', 'G-69Y1KSBY44');
     </script>
-    <!-- Google tag (gtag.js) -->
-    
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio | Lauanderson Rael</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-
   </body>
 </html>

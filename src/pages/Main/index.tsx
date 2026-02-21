@@ -53,7 +53,7 @@ export function Main() {
                 <div className="informacoes">
                   <p>Olá, eu sou</p>
 
-                  <strong>Lauanderson Rael</strong>
+                  <h1>Lauanderson Rael</h1>
 
                   <p>Desenvolvedor Full Stack</p>
                 </div>
@@ -86,7 +86,7 @@ export function Main() {
               </div>
 
               <div className="img-topo-site">
-                <img src={Foto} alt="foto perfil" />
+                <img src={Foto} alt="Foto de perfil de Lauanderson Rael, Desenvolvedor Full Stack" />
               </div>
             </div>
 

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lauanderson-portfolio.vercel.app/sitemap.xml
