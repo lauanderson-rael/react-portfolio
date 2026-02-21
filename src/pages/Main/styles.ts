@@ -117,9 +117,14 @@ export const Container = styled.main`
         width: 250px;
         height: 250px;
       }
-      .btn-contato {
+      .btn-contato { 
         display: flex;
         justify-content: center;
+      }
+
+      // ajuste mobile
+      section.topo-do-site {
+        padding: 40px 8% 0px 8%;
       }
     }
   }
