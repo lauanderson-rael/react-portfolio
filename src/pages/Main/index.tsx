@@ -20,6 +20,24 @@ import { contagemPorCategoria } from "./arrayProjects.ts";
 
 export function Main() {
   const [categoriaSelecionada, setCategoriaSelecionada] = useState("todos");
+  const [formData, setFormData] = useState({
+    nome: "",
+    email: "",
+    celular: "",
+    mensagem: ""
+  });
+  
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const { nome, email, celular, mensagem } = formData;
+    const subject = `Contato de ${nome}`;
+    const body = `Nome: ${nome}\nEmail: ${email}\nCelular: ${celular}\n\nMensagem:\n${mensagem}`;
+    window.location.href = `mailto:lauanderson38@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
+  const handleReset = () => {
+    setFormData({ nome: "", email: "", celular: "", mensagem: "" });
+  };
   const categorias = ["todos", "frontend", "backend", "fullStack", "mobile", "design"];
   const projetosFiltrados =
     categoriaSelecionada === "todos"
@@ -246,35 +264,40 @@ export function Main() {
               Fale<span> comigo</span>
             </h2>
 
-            <form
-              action="mailto:lauanderson38@gmail.com"
-              method="POST"
-              encType="text/plain"
-            >
+            <form onSubmit={handleSubmit}>
               <input
                 type="text"
-                name=""
-                id=""
                 placeholder="Seu nome completo"
+                value={formData.nome}
+                onChange={(e) => setFormData({...formData, nome: e.target.value})}
                 required
               />
               <input
                 type="text"
-                name=""
-                id=""
                 placeholder="Seu e-mail"
+                value={formData.email}
+                onChange={(e) => setFormData({...formData, email: e.target.value})}
                 required
               />
 
-              <input type="text" name="" id="" placeholder="Seu celular" />
-              <textarea name="" id="" placeholder="Sua mensagem"></textarea>
+              <input 
+                type="text" 
+                placeholder="Seu celular" 
+                value={formData.celular}
+                onChange={(e) => setFormData({...formData, celular: e.target.value})}
+              />
+              <textarea 
+                placeholder="Sua mensagem"
+                value={formData.mensagem}
+                onChange={(e) => setFormData({...formData, mensagem: e.target.value})}
+              ></textarea>
 
               <div
                 className="btn-enviar"
                 style={{ display: "flex", gap: "10px" }}
               >
                 <input type="submit" value="ENVIAR" />
-                <input type="reset" value="LIMPAR" />
+                <input type="button" value="LIMPAR" onClick={handleReset} />
               </div>
             </form>
           </div>

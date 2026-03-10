@@ -2,37 +2,78 @@ import { useState, useEffect } from "react";
 import { Container, SessaoFormulario } from "./styles";
 
 type Post = {
-  _id: string;
-  titulo: string;
-  descricao: string;
-  imgUrl: string;
-  alt: string;
-  link: string;
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+  category: string[];
 };
 
 export default function Blog() {
   const [post, setPost] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
+  const [formData, setFormData] = useState({
+    nome: "",
+    email: "",
+    celular: "",
+    mensagem: ""
+  });
 
-  const postsRev = post.slice().reverse();
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const { nome, email, celular, mensagem } = formData;
+    const subject = `Pergunta de ${nome}`;
+    const body = `Nome: ${nome}\nEmail: ${email}\nCelular: ${celular}\n\nMensagem:\n${mensagem}`;
+    window.location.href = `mailto:lauanderson38@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
+  const handleReset = () => {
+    setFormData({ nome: "", email: "", celular: "", mensagem: "" });
+  };
+
+  const postsRev = post; // CurrentsAPI returns sorted by date usually
 
   // Filtro baseado no título
   const filteredPosts = postsRev.filter((item) =>
-    item.titulo.toLowerCase().includes(searchTerm.toLowerCase())
+    item.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   // Carregamento inicial dos dados
-  useEffect(() => {
-    async function loadApi() {
-      const api = import.meta.env.VITE_API_URL + "/posts";
-      const res = await fetch(api);
-      const json = await res.json();
-      setPost(json);
+ useEffect(() => {
+  async function loadApi() {
+    const apiKey = import.meta.env.VITE_CURRENTS_API_KEY;
+
+    const keywords = encodeURIComponent(
+      "programação OR tecnologia OR inteligência artificial OR IA"
+    );
+
+    const url = `https://api.currentsapi.services/v1/search?keywords=${keywords}&language=pt&country=BR&category=technology`;
+
+    try {
+      const res = await fetch(url, {
+        headers: {
+          Authorization: apiKey
+        }
+      });
+
+      const data = await res.json();
+
+      if (data.status === "ok") {
+        setPost(data.news);
+      } else {
+        console.error("Erro na API:", data);
+      }
+    } catch (error) {
+      console.error("Erro ao carregar notícias:", error);
+    } finally {
       setLoading(false);
     }
-    loadApi();
-  }, []);
+  }
+
+  loadApi();
+}, []);
 
   if (loading) {
     return (
@@ -84,16 +125,16 @@ export default function Blog() {
           <main style={{ flex: 1 }}>
             {filteredPosts.length > 0 ? (
               filteredPosts.map((item) => (
-                <article key={item._id}>
-                  <img src={item.imgUrl} alt={item.titulo} />
+                <article key={item.id}>
+                  <img src={item.image !== "None" ? item.image : "https://via.placeholder.com/400x200?text=No+Image"} alt={item.title} />
                   <div className="content">
-                    <h2>{item.titulo}</h2>
-                    <p>{item.descricao}</p>
+                    <h2>{item.title}</h2>
+                    <p>{item.description}</p>
                   </div>
                   <div style={{ marginTop: "5px" }}>
-                    <strong>Categoria: </strong> <span>Tecnologia</span>
+                    <strong>Categoria: </strong> <span>{item.category.join(", ") || "Tecnologia"}</span>
                   </div>
-                  <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
                     <button> Ler mais</button>
                   </a>
                 </article>
@@ -139,19 +180,36 @@ export default function Blog() {
             Faça sua <span>Pergunta</span>
           </h2>
 
-          <form
-            action="mailto:lauanderson38@gmail.com"
-            method="POST"
-            encType="text/plain"
-          >
-            <input type="text" placeholder="Seu nome completo" required />
-            <input type="text" placeholder="Seu e-mail" required />
-            <input type="text" placeholder="Seu celular" />
-            <textarea placeholder="Sua mensagem"></textarea>
+          <form onSubmit={handleSubmit}>
+            <input 
+              type="text" 
+              placeholder="Seu nome completo" 
+              value={formData.nome}
+              onChange={(e) => setFormData({...formData, nome: e.target.value})}
+              required 
+            />
+            <input 
+              type="text" 
+              placeholder="Seu e-mail" 
+              value={formData.email}
+              onChange={(e) => setFormData({...formData, email: e.target.value})}
+              required 
+            />
+            <input 
+              type="text" 
+              placeholder="Seu celular" 
+              value={formData.celular}
+              onChange={(e) => setFormData({...formData, celular: e.target.value})}
+            />
+            <textarea 
+              placeholder="Sua mensagem"
+              value={formData.mensagem}
+              onChange={(e) => setFormData({...formData, mensagem: e.target.value})}
+            ></textarea>
 
             <div className="btn-enviar">
               <input type="submit" value="ENVIAR" />
-              <input type="reset" value="LIMPAR" />
+              <input type="button" value="LIMPAR" onClick={handleReset} />
             </div>
           </form>
         </div>
