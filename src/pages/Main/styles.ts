@@ -396,6 +396,46 @@ export const SessaoFormulario = styled.section`
   }
   // limpar
 
+  // tabs
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-top: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tab-button {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    background-color: rgb(231, 231, 231);
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .tab-button.active {
+    background-color: var(--text-color-blue-green);
+    color: var(--background-color);
+  }
+
+  .tab-button:hover:not(.active) {
+    background-color: #ddd;
+  }
+  // tabs
+
   @media (max-width: 1020px) {
     form input,
     form textarea {

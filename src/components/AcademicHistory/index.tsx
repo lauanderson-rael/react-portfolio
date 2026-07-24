@@ -12,8 +12,8 @@ const academicData: AcademicEntry[] = [
   {
     degree: "Técnologo em Análise e Desenvolvimento de Sistemas",
     institution: "Instituto Federal do Maranhão - IFMA",
-    period: "Jul/2023 - Ago/2026",
-    studying: true,
+    period: "Jul/2023 - Jun/2026",
+    studying: false,
   },
   {
     degree: "Técnico em Informática",

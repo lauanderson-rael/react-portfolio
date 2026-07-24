@@ -13,6 +13,47 @@ import { RiNextjsFill } from "react-icons/ri";
 export const ContainerSkills = () => {
   return (
     <>
+      {/* 0. IA & FERRAMENTAS */}
+      <div className="especialidades-box">
+        <strong>IA & Ferramentas</strong>
+        <div className="flex-skills">
+          <div className="center">
+            <div className="icone">
+              <img src="/logos-ia/opencode.png" alt="OpenCode" style={{ width: 36, borderRadius: 6, objectFit: "contain" }} />
+            </div>
+            <p>OpenCode</p>
+          </div>
+
+          <div className="center">
+            <div className="icone">
+              <img src="/logos-ia/codex.png" alt="Codex" style={{ width: 36, borderRadius: 6, objectFit: "contain" }} />
+            </div>
+            <p>Codex</p>
+          </div>
+
+          <div className="center">
+            <div className="icone">
+              <img src="/logos-ia/claudecode.png" alt="Claude Code" style={{ width: 36, borderRadius: 6, objectFit: "contain" }} />
+            </div>
+            <p>Claude Code</p>
+          </div>
+
+          <div className="center">
+            <div className="icone">
+              <span style={{ fontSize: "28px", fontWeight: 700, color: "#a855f7" }}>SDD</span>
+            </div>
+            <p>Spec-Driven Dev</p>
+          </div>
+
+          <div className="center">
+            <div className="icone">
+              <img src="/logos-ia/speckit.jpeg" alt="SpecKit" style={{ width: 36, borderRadius: 6, objectFit: "contain" }} />
+            </div>
+            <p>SpecKit</p>
+          </div>
+        </div>
+      </div>
+
       {/* 1. FRONT-END & MOBILE*/}
       <div className="especialidades-box">
         <strong>Front-end & Mobile</strong>
