@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Routes, Route, Outlet} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet, useLocation} from "react-router-dom";
 import { Main } from "./pages/Main";
 import Blog from "./pages/Blog";
 import Youtube from "./pages/Youtube";
@@ -10,6 +10,8 @@ import Login from "./pages/Login/login";
 import ProtectedPage from "./pages/ProtectedPage";
 import Page404 from "./pages/page404";
 import ScrollToTop from "./components/ScrollToTop";
+import { useRef } from "react";
+import { gsap, prefersReducedMotion, useGSAP } from "./lib/gsap";
 
 
 function Layout() {
@@ -18,11 +20,37 @@ function Layout() {
     <ThemeProvider >
         <Header/>
         <main>
-          <Outlet /> {/* Renderiza as rotas filhas */}
+          <RouteFade />
         </main>
         <Footer/>
     </ThemeProvider>
     </>
+  );
+}
+
+/** Fade sutil de 250ms ao trocar de rota (escopo = wrapper, skill gsap-react). */
+function RouteFade() {
+  const location = useLocation();
+  const root = useRef<HTMLDivElement | null>(null);
+
+  useGSAP(
+    () => {
+      if (prefersReducedMotion() || !root.current) return;
+      gsap.from(root.current, {
+        opacity: 0,
+        y: 8,
+        duration: 0.25,
+        ease: "power1.out",
+        clearProps: "transform,opacity",
+      });
+    },
+    { scope: root, dependencies: [location.pathname] },
+  );
+
+  return (
+    <div ref={root}>
+      <Outlet /> {/* Renderiza as rotas filhas */}
+    </div>
   );
 }
 

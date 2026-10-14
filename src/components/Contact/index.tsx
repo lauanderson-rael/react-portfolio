@@ -2,6 +2,8 @@ import { useState } from "react";
 import { SessaoFormulario } from "./styles";
 import { IoIosMail } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa";
+import { gsap, prefersReducedMotion, useGSAP } from "../../lib/gsap";
+import { useRef } from "react";
 
 export function Contact() {
   const [activeTab, setActiveTab] = useState<"email" | "whatsapp">("email");
@@ -11,6 +13,40 @@ export function Contact() {
     celular: "",
     mensagem: "",
   });
+  const root = useRef<HTMLElement | null>(null);
+
+  // Reveal da seção + re-anima o form ao trocar de aba (skill: dependencies + revertOnUpdate).
+  useGSAP(
+    () => {
+      if (prefersReducedMotion() || !root.current) return;
+      gsap.from(".contact-reveal", {
+        y: 20,
+        opacity: 0,
+        duration: 0.5,
+        ease: "power2.out",
+        stagger: 0.08,
+        clearProps: "transform,opacity",
+        scrollTrigger: { trigger: root.current, start: "top 85%", once: true },
+      });
+    },
+    { scope: root },
+  );
+
+  useGSAP(
+    () => {
+      if (prefersReducedMotion() || !root.current) return;
+      const form = root.current.querySelector("form");
+      if (!form) return;
+      gsap.from(form, {
+        y: 14,
+        opacity: 0,
+        duration: 0.35,
+        ease: "power2.out",
+        clearProps: "transform,opacity",
+      });
+    },
+    { scope: root, dependencies: [activeTab], revertOnUpdate: true },
+  );
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,13 +75,13 @@ export function Contact() {
   };
 
   return (
-    <SessaoFormulario>
+    <SessaoFormulario ref={root}>
       <div>
-        <h2 className="titulo">
+        <h2 className="titulo contact-reveal">
           Fale<span> comigo</span>
         </h2>
 
-        <div className="tabs">
+        <div className="tabs contact-reveal">
           <button
             type="button"
             className={`tab-button ${activeTab === "email" ? "active" : ""}`}

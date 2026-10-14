@@ -1,13 +1,16 @@
 import { FaLink } from "react-icons/fa";
 import styles from "./styles.module.css";
+import { useReveal } from "../../hooks/useReveal";
 
 export function ProfessionalExperience() {
+  // Cascata dos cards de experiência ao entrar na viewport (escopo = esta seção).
+  const root = useReveal<HTMLElement>({ selector: ".reveal-item", y: 24, stagger: 0.12 });
   return (
-    <section className={styles.container}>
+    <section className={styles.container} ref={root}>
       <h2 className={styles.title}>Experiência Profissional</h2>
 
       {/* Card OKN */}
-      <div className={styles.item}>
+      <div className={`${styles.item} reveal-item`}>
         <div className={styles.itemHeader}>
           <h3 className={styles.company}>OKN</h3>
           <span className={styles.period}>Ago/2025 – Atual</span>
@@ -54,7 +57,7 @@ export function ProfessionalExperience() {
       </div>
 
       {/* Card Freelancer */}
-      <div className={styles.item}>
+      <div className={`${styles.item} reveal-item`}>
         <div className={styles.itemHeader}>
           <h3 className={styles.role}>Freelancer Python</h3>
           <span className={styles.period}>Jan/2025 – Fev/2025</span>

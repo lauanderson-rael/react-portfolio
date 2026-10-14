@@ -1,5 +1,6 @@
 import styles from "./styles.module.css";
 import logoIfma from "../../assets/logo-ifma.png";
+import { useReveal } from "../../hooks/useReveal";
 
 type AcademicEntry = {
   degree: string;
@@ -24,12 +25,14 @@ const academicData: AcademicEntry[] = [
 ];
 
 export function AcademicHistory() {
+  // Cascata dos itens de formação ao entrar na viewport (escopo = esta seção).
+  const root = useReveal<HTMLElement>({ selector: ".reveal-item", y: 24, stagger: 0.12 });
   return (
-    <section className={styles.container}>
+    <section className={styles.container} ref={root}>
       <h2 className={styles.title}> Formação Acadêmica</h2>
       <ul className={styles.list}>
         {academicData.map((entry, index) => (
-          <li key={index} className={styles.item}>
+          <li key={index} className={`${styles.item} reveal-item`}>
             <div>
               <h3 className={styles.degree}>{entry.degree}</h3>
               <p className={styles.institution}>{entry.institution}</p>

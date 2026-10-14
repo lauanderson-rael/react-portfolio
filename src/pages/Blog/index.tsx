@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   Container,
   BlogHero,
@@ -11,6 +11,7 @@ import {
 } from "./styles";
 import { FiSearch, FiArrowUpRight } from "react-icons/fi";
 import { Contact } from "../../components/Contact";
+import { gsap, prefersReducedMotion, useGSAP } from "../../lib/gsap";
 
 type Post = {
   id: string;
@@ -25,6 +26,32 @@ export default function Blog() {
   const [post, setPost] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
+  const root = useRef<HTMLDivElement | null>(null);
+
+  // Entrada do hero + stagger dos cards após carregar (escopo = página).
+  useGSAP(
+    () => {
+      if (prefersReducedMotion() || !root.current || loading) return;
+      gsap.from(".blog-hero-anim", {
+        y: 20,
+        opacity: 0,
+        duration: 0.55,
+        ease: "power2.out",
+        stagger: 0.08,
+        clearProps: "transform,opacity",
+      });
+      gsap.from(".post-card-anim", {
+        y: 24,
+        opacity: 0,
+        duration: 0.5,
+        ease: "power2.out",
+        stagger: 0.06,
+        clearProps: "transform,opacity",
+        scrollTrigger: { trigger: ".post-grid-anim", start: "top 85%", once: true },
+      });
+    },
+    { scope: root, dependencies: [loading] },
+  );
 
   const filteredPosts = post.filter((item) =>
     item.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -75,9 +102,9 @@ export default function Blog() {
 
   return (
     <>
-      <Container>
+      <Container ref={root}>
         {/* HERO E BARRA DE BUSCA */}
-        <BlogHero>
+        <BlogHero className="blog-hero-anim">
           <h1>
             Lau<span>Blog</span>
           </h1>
@@ -98,10 +125,10 @@ export default function Blog() {
         </BlogHero>
 
         {/* LISTAGEM DOS POSTS */}
-        <PostGrid>
+        <PostGrid className="post-grid-anim">
           {filteredPosts.length > 0 ? (
             filteredPosts.map((item) => (
-              <PostCard key={item.id}>
+              <PostCard key={item.id} className="post-card-anim">
                 <div className="card-image">
                   <img
                     src={

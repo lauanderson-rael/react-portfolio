@@ -3,12 +3,15 @@ import { VideoGrid, VideoCardItem } from "../../components/VideoCard";
 import { videos } from "./videos";
 import { Contact } from "../../components/Contact";
 import { FaYoutube } from "react-icons/fa";
+import { useReveal } from "../../hooks/useReveal";
 
 export default function Youtube() {
+  const heroRef = useReveal<HTMLDivElement>({ y: 20 });
+  const gridRef = useReveal<HTMLElement>({ selector: ".video-card-anim", y: 24, stagger: 0.08 });
   return (
     <Container>
       {/* HERO SECTION */}
-      <YoutubeHero>
+      <YoutubeHero ref={heroRef}>
         <h1>
           Meu Canal no <span>YouTube</span>
         </h1>
@@ -28,9 +31,11 @@ export default function Youtube() {
       </YoutubeHero>
 
       {/* GRID DE VÍDEOS */}
-      <VideoGrid>
+      <VideoGrid ref={gridRef}>
         {videos.map((item) => (
-          <VideoCardItem key={item.id} video={item} />
+          <div key={item.id} className="video-card-anim">
+            <VideoCardItem video={item} />
+          </div>
         ))}
       </VideoGrid>
 

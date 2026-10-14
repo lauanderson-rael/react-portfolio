@@ -9,10 +9,12 @@ import {
 } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { PiCodeFill } from "react-icons/pi";
+import { useReveal } from "../../hooks/useReveal";
 
 export function Footer() {
+  const root = useReveal<HTMLElement>({ selector: ".btn-social a", y: 12, stagger: 0.05 });
   return (
-    <Container>
+    <Container ref={root}>
       <div className="line-footer">
         <div className="flex">
           <div className="btn-social">

@@ -16,7 +16,9 @@ import { VideoGrid, VideoCardItem } from "../../components/VideoCard";
 import { Contact } from "../../components/Contact";
 import { videos } from "../Youtube/videos";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { gsap, prefersReducedMotion, responsiveDuration, useGSAP } from "../../lib/gsap";
+import { useReveal } from "../../hooks/useReveal";
 import Foto from "../../assets/perfil.jpg";
 import Foto2 from "../../assets/formatura-pe.jpg";
 import { projetos } from "./arrayProjects.ts";
@@ -24,6 +26,66 @@ import { contagemPorCategoria } from "./arrayProjects.ts";
 
 export function Main() {
   const [categoriaSelecionada, setCategoriaSelecionada] = useState("todos");
+  const heroRef = useRef<HTMLElement | null>(null);
+  const sobreRef = useReveal<HTMLElement>({ selector: ".reveal-sobre", y: 28, stagger: 0.1 });
+  const skillsRef = useReveal<HTMLElement>({ selector: ".especialidades-box", y: 28, stagger: 0.12 });
+  const youtubeRef = useReveal<HTMLElement>({ y: 24 });
+  const gridRef = useRef<HTMLDivElement | null>(null);
+
+  // Entrada do hero: textos + foto + botões (escopo = seção hero).
+  useGSAP(
+    () => {
+      if (prefersReducedMotion() || !heroRef.current) return;
+      const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
+      tl.from(".txt-topo-site .informacoes > *", {
+        y: 24,
+        opacity: 0,
+        duration: responsiveDuration(0.6),
+        stagger: 0.1,
+        clearProps: "transform,opacity",
+      })
+        .from(
+          ".img-topo-site img",
+          {
+            scale: 0.94,
+            opacity: 0,
+            duration: responsiveDuration(0.7),
+            clearProps: "transform,opacity",
+          },
+          "-=0.4",
+        )
+        .from(
+          ".txt-topo-site .btn-contato",
+          {
+            y: 16,
+            opacity: 0,
+            duration: responsiveDuration(0.45),
+            stagger: 0.08,
+            clearProps: "transform,opacity",
+          },
+          "-=0.4",
+        );
+    },
+    { scope: heroRef },
+  );
+
+  // Entrada do grid via ScrollTrigger + re-anima quando o filtro muda
+  // (dependencies + revertOnUpdate, skill gsap-react).
+  useGSAP(
+    () => {
+      if (prefersReducedMotion() || !gridRef.current) return;
+      gsap.from(gridRef.current.children, {
+        y: 20,
+        opacity: 0,
+        duration: responsiveDuration(0.45),
+        ease: "power2.out",
+        stagger: 0.06,
+        clearProps: "transform,opacity",
+        scrollTrigger: { trigger: gridRef.current, start: "top 85%", once: true },
+      });
+    },
+    { scope: gridRef, dependencies: [categoriaSelecionada], revertOnUpdate: true },
+  );
   const categorias = [
     "todos",
     "frontend",
@@ -37,7 +99,7 @@ export function Main() {
       ? projetos
       : projetos.filter((p) => p.category === categoriaSelecionada);
 
-  const estiloBotao = (ativo: any) => ({
+  const estiloBotao = (ativo: boolean) => ({
     padding: "10px 20px",
     borderRadius: "30px",
     border: ativo ? "none" : "1px solid black",
@@ -57,7 +119,7 @@ export function Main() {
           color: "var(--text-color)",
         }}
       >
-        <section className="topo-do-site" id="inicio">
+        <section className="topo-do-site" id="inicio" ref={heroRef}>
           <div className="interface topoo">
             <div className="flex">
               <div className="txt-topo-site">
@@ -110,14 +172,14 @@ export function Main() {
           </div>
         </section>
 
-        <section className="sobre" id="sobre">
+        <section className="sobre" id="sobre" ref={sobreRef}>
           <div className="interface">
             <div className="flex">
-              <div className="img-sobre">
+              <div className="img-sobre reveal-sobre">
                 <img src={Foto2} alt="foto sessão sobre" />
               </div>
 
-              <div className="txt-sobre">
+              <div className="txt-sobre reveal-sobre">
                 <h2>
                   Sobre{" "}
                   <b style={{ color: "var(--text-color-blue-green)" }}>mim</b>
@@ -198,7 +260,7 @@ export function Main() {
           <ProfessionalExperience />
         </section>
 
-        <section className="especialidades" id="especialidades">
+        <section className="especialidades" id="especialidades" ref={skillsRef}>
           <div className="interface">
             <h2 className="titulo">
               Minhas <span>habilidades</span>
@@ -237,10 +299,10 @@ export function Main() {
             </div>
 
             {/* Projetos */}
-            <div className="grid">
-              {projetosFiltrados.map((projeto, index) => (
+            <div className="grid" ref={gridRef}>
+              {projetosFiltrados.map((projeto) => (
                 <CardProject
-                  key={index}
+                  key={projeto.title}
                   image={projeto.image}
                   title={projeto.title}
                   description={projeto.description}
@@ -254,7 +316,7 @@ export function Main() {
         </section>
 
         {/* SEÇÃO CANAL NO YOUTUBE */}
-        <section className="youtube-preview" id="youtube">
+        <section className="youtube-preview" id="youtube" ref={youtubeRef}>
           <div className="interface">
             <h2 className="titulo">
               Meu Canal no <span>YouTube</span>
