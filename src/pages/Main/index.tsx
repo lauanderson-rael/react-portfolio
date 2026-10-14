@@ -17,14 +17,21 @@ import { Contact } from "../../components/Contact";
 import { videos } from "../Youtube/videos";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Foto from "../../assets/perfil.png";
-import Foto2 from "../../assets/foto3.png";
+import Foto from "../../assets/perfil.jpg";
+import Foto2 from "../../assets/formatura-pe.jpg";
 import { projetos } from "./arrayProjects.ts";
 import { contagemPorCategoria } from "./arrayProjects.ts";
 
 export function Main() {
   const [categoriaSelecionada, setCategoriaSelecionada] = useState("todos");
-  const categorias = ["todos", "frontend", "backend", "fullStack", "mobile", "design"];
+  const categorias = [
+    "todos",
+    "frontend",
+    "backend",
+    "fullStack",
+    "mobile",
+    "design",
+  ];
   const projetosFiltrados =
     categoriaSelecionada === "todos"
       ? projetos
@@ -90,7 +97,10 @@ export function Main() {
               </div>
 
               <div className="img-topo-site">
-                <img src={Foto} alt="Foto de perfil de Lauanderson Rael, Desenvolvedor Full Stack" />
+                <img
+                  src={Foto}
+                  alt="Foto de perfil de Lauanderson Rael, Desenvolvedor Full Stack"
+                />
               </div>
             </div>
 
@@ -117,14 +127,14 @@ export function Main() {
                 </div>
                 <p>
                   Olá, sou Lauanderson, um apaixonado por tecnologia e
-                  desenvolvimento web. Graduado em Análise e
-                  Desenvolvimento de Sistemas pelo IFMA em 2026. Possuo experiência em
+                  desenvolvimento web. Graduado em Análise e Desenvolvimento de
+                  Sistemas pelo IFMA em 2026. Possuo experiência em
                   desenvolvimento full stack, atuando como Desenvolvedor Júnior
-                  atualmente, onde aplico IA ao desenvolvimento de software, SDD e
-                  ferramentas como SpecKit, Codex e MCP. Tenho experiência com
+                  atualmente, onde aplico IA ao desenvolvimento de software, SDD
+                  e ferramentas como SpecKit, Codex e MCP. Tenho experiência com
                   React, Next.js, Node.js, TypeScript e Python. Além disso,
                   possuo conhecimentos em Linux, Docker e boas práticas de
-                  versionamento com Git e GitHub. 
+                  versionamento com Git e GitHub.
                 </p>
 
                 <div className="btn-contato curriculo">
@@ -265,7 +275,7 @@ export function Main() {
             >
               <Link to="/youtube" className="youtube-link-btn">
                 <FaYoutube /> Ver mais vídeos
-              </Link> 
+              </Link>
             </div>
           </div>
         </section>
