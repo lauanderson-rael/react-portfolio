@@ -66,7 +66,7 @@ export const videos: VideoItem[] = [
     title:
       "Como INSTALAR e CONFIGURAR o OpenCode Desktop + Criando um JOGO com IA!",
     description:
-      "Aprenda a instalar e configurar o OpenCode Desktop e descubra como usar inteligência artificial para criar um jogo na prática, mesmo sem desenvolver tudo manualmente.",
+      "Aprenda a instalar e configurar o OpenCode Desktop e descubra como usar IA para criar um jogo na prática.",
     type: "video",
     embedUrl: "https://www.youtube.com/embed/GYEAONwnBuo",
     watchUrl: "https://youtu.be/GYEAONwnBuo",
