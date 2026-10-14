@@ -62,6 +62,17 @@ export const videos: VideoItem[] = [
     badge: "Vídeo Tutorial",
   },
   {
+    id: "opencode-desktop-ia",
+    title:
+      "Como INSTALAR e CONFIGURAR o OpenCode Desktop + Criando um JOGO com IA!",
+    description:
+      "Aprenda a instalar e configurar o OpenCode Desktop e descubra como usar inteligência artificial para criar um jogo na prática, mesmo sem desenvolver tudo manualmente.",
+    type: "video",
+    embedUrl: "https://www.youtube.com/embed/GYEAONwnBuo",
+    watchUrl: "https://youtu.be/GYEAONwnBuo",
+    badge: "Vídeo Tutorial",
+  },
+  {
     id: "deploy-nodejs-gcp",
     title: "Deploy de API Node.js no GCP com Nginx, PM2 e SSL Grátis",
     description:

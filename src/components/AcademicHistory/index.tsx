@@ -4,6 +4,7 @@ import { useReveal } from "../../hooks/useReveal";
 
 type AcademicEntry = {
   degree: string;
+  level: string;
   institution: string;
   period: string;
   studying: boolean;
@@ -12,12 +13,14 @@ type AcademicEntry = {
 const academicData: AcademicEntry[] = [
   {
     degree: "Técnologo em Análise e Desenvolvimento de Sistemas",
+    level: "Formação Superior",
     institution: "Instituto Federal do Maranhão - IFMA",
     period: "Jul/2023 - Jun/2026",
     studying: false,
   },
   {
     degree: "Técnico em Informática",
+    level: "Ensino Médio Técnico",
     institution: "Instituto Federal do Maranhão - IFMA",
     period: "Fev/2019 - Fev/2022",
     studying: false,
@@ -55,6 +58,7 @@ export function AcademicHistory() {
                 width={60}
               />
             </div>
+            <span className={styles.levelBadge}>{entry.level}</span>
           </li>
         ))}
       </ul>
