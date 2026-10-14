@@ -8,15 +8,15 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 1020px){
-  p{
+@media (max-width: 1020px) {
+  p {
     font-size: small;
   }
 }
 
 body {
   background-color: #000;
-/*   height: 100vh; */
+  /*   height: 100vh; */
   height: 100dvh;
 }
 
@@ -24,7 +24,6 @@ body {
   max-width: 1280px;
   margin: 0 auto;
 }
-
 
 .btn-contato button {
   padding: 10px 40px;
@@ -44,25 +43,26 @@ body {
   transform: scale(1.03);
 }
 
-.curriculo button, .github button {
+.curriculo button,
+.github button {
   background-color: rgb(255, 255, 255);
   color: rgb(45, 45, 45);
   margin-bottom: 25px;
   border: 1px solid var(--text-color);
-
 }
-.curriculo button:hover, .github button:hover {
+.curriculo button:hover,
+.github button:hover {
   box-shadow: 0px 0px 8px rgb(30, 30, 30);
   transform: scale(1.03);
 }
 @media (max-width: 1020px) {
-  .curriculo{
+  .curriculo {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .curriculo button{
+  .curriculo button {
     font-size: small;
   }
 }
@@ -98,8 +98,6 @@ h2 span {
   }
 }
 
-
-
 /* Atribui estilos básicos à scrollbar */
 ::-webkit-scrollbar {
   width: 10px; /* largura da scrollbar */
@@ -125,15 +123,13 @@ h2 span {
 /* tema escuro*/
 :root {
   --background-color2: #ffffffe1;
-  /* --background-color3: #101010e1; */
-   --background-color3: #262626e1;
-  --background-color: #000;
-  --background-color-gray: #000;
+  --background-color3: #262626e1;
+  --background-color: #0b0c0f; /*back home*/
+  --background-color-gray: #050607; /*header*/
   --text-color: #c4c4c4;
   --text-color2: #1b1b1b;
   --text-color-blue-green: #00ff08;
   --transition: all 1s;
-
 }
 
 /* tema claro*/
