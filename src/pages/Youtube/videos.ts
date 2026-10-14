@@ -63,8 +63,7 @@ export const videos: VideoItem[] = [
   },
   {
     id: "opencode-desktop-ia",
-    title:
-      "Como INSTALAR e CONFIGURAR o OpenCode Desktop + Criando um JOGO com IA!",
+    title: "Como INSTALAR e CONFIGURAR o OpenCode Desktop",
     description:
       "Aprenda a instalar e configurar o OpenCode Desktop e descubra como usar IA para criar um jogo na prática.",
     type: "video",
